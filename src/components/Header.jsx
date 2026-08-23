@@ -19,10 +19,16 @@ export default function Header() {
           <a href="#about" className="nav-link" onClick={() => setMobileOpen(false)}>About Us</a>
           <a href="#services" className="nav-link" onClick={() => setMobileOpen(false)}>Services</a>
           <a href="#quote" className="nav-link" onClick={() => setMobileOpen(false)}>Contact</a>
+          
+          <div className="mobile-cta-wrapper">
+            <a href="#quote" className="btn btn-primary" style={{ width: '100%' }} onClick={() => setMobileOpen(false)}>
+              Get a Free Quote
+            </a>
+          </div>
         </nav>
 
         <div className="nav-actions">
-          <a href="#quote" className="nav-cta-btn">
+          <a href="#quote" className="nav-cta-btn desktop-cta">
             Get a Quote
           </a>
           <button 

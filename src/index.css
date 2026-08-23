@@ -1,6 +1,6 @@
 /* ==========================================================================
    ALLIANCE ARCHITECTURAL & INTERIOR CNC SOLUTION
-   LUXURY ARCHITECTURAL DESIGN SYSTEM (CRISP WHITE NAVBAR)
+   LUXURY ARCHITECTURAL DESIGN SYSTEM (100% FULLY RESPONSIVE MOBILE & TABLET)
    ========================================================================== */
 
 :root {
@@ -103,12 +103,6 @@ button, input, select, textarea {
   padding: 6rem 0;
 }
 
-@media (max-width: 768px) {
-  .section-padding {
-    padding: 4rem 0;
-  }
-}
-
 /* Typography & Left-Aligned Architectural Accents */
 .text-crimson {
   color: var(--crimson-primary);
@@ -120,9 +114,9 @@ button, input, select, textarea {
 
 .heading-lg {
   font-family: var(--font-heading);
-  font-size: clamp(2.2rem, 5vw, 4rem);
+  font-size: clamp(2rem, 5.5vw, 4rem);
   font-weight: 800;
-  line-height: 1.1;
+  line-height: 1.15;
   letter-spacing: -0.02em;
   color: var(--text-main);
   text-align: left;
@@ -130,7 +124,7 @@ button, input, select, textarea {
 
 .heading-md {
   font-family: var(--font-heading);
-  font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+  font-size: clamp(1.6rem, 4vw, 2.5rem);
   font-weight: 700;
   line-height: 1.2;
   color: var(--text-main);
@@ -147,7 +141,7 @@ button, input, select, textarea {
 
 .subheading {
   color: var(--text-muted);
-  font-size: 1.1rem;
+  font-size: clamp(0.95rem, 2vw, 1.1rem);
   max-width: 680px;
   margin-top: 0.75rem;
   text-align: left;
@@ -256,7 +250,7 @@ button, input, select, textarea {
   top: 0;
   left: 0;
   width: 100%;
-  height: 78px;
+  height: 75px;
   z-index: 1000;
   background: #FFFFFF;
   border-bottom: 1px solid var(--border-muted);
@@ -293,6 +287,12 @@ button, input, select, textarea {
   display: flex;
   align-items: center;
   gap: 2rem;
+}
+
+.mobile-cta-wrapper {
+  display: none;
+  width: 100%;
+  margin-top: 1.5rem;
 }
 
 .nav-link {
@@ -400,8 +400,8 @@ button, input, select, textarea {
 .full-video-hero {
   position: relative;
   min-height: 92vh;
-  padding-top: 150px;
-  padding-bottom: 90px;
+  padding-top: 140px;
+  padding-bottom: 80px;
   display: flex;
   align-items: center;
   overflow: hidden;
@@ -419,7 +419,7 @@ button, input, select, textarea {
   opacity: 1; /* 100% Crystal Clear Video Visibility */
 }
 
-/* Dark Vignette Overlay for Contrast (Cloudy White Removed) */
+/* Dark Vignette Overlay for Contrast */
 .full-video-dark-vignette {
   position: absolute;
   inset: 0;
@@ -1199,7 +1199,7 @@ input[type=range]::-webkit-slider-thumb {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 2rem;
+  padding: 1.5rem;
 }
 
 .modal-content {
@@ -1208,6 +1208,8 @@ input[type=range]::-webkit-slider-thumb {
   border-radius: var(--radius-lg);
   max-width: 700px;
   width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
   padding: 2.5rem;
   position: relative;
   box-shadow: var(--shadow-hover);
@@ -1229,54 +1231,128 @@ input[type=range]::-webkit-slider-thumb {
   color: var(--crimson-primary);
 }
 
-/* RESPONSIVE DESIGN */
+/* ==========================================================================
+   100% COMPREHENSIVE RESPONSIVE BREAKPOINTS (DESKTOP, TABLET, MOBILE)
+   ========================================================================== */
+
+/* Laptop / Large Tablet (1024px and below) */
 @media (max-width: 1024px) {
-  .quote-grid, .estimator-box {
-    grid-template-columns: 1fr;
-    gap: 2.5rem;
+  .section-padding {
+    padding: 5rem 0;
   }
-  
+
   .features-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
   }
-  
+
   .services-grid {
     grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .estimator-box {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    padding: 2.25rem;
   }
 
   .portfolio-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+
+  .quote-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
   }
 
   .footer-grid {
     grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
   }
 }
 
+/* Tablet Portrait & Mobile Landscape (768px and below) */
 @media (max-width: 768px) {
-  .nav-menu {
-    display: none;
+  .section-padding {
+    padding: 3.5rem 0;
   }
-  
-  .nav-menu.mobile-active {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 78px;
-    left: 0;
-    width: 100%;
-    background-color: rgba(245, 240, 232, 0.98);
-    padding: 1.5rem;
-    border-bottom: 1px solid var(--border-muted);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+
+  /* Header & Mobile Menu Drawer */
+  .desktop-cta {
+    display: none;
   }
 
   .mobile-menu-btn {
     display: flex;
   }
 
-  .features-grid, .portfolio-grid {
+  .nav-menu {
+    display: none;
+  }
+
+  .nav-menu.mobile-active {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    top: 75px;
+    left: 0;
+    width: 100%;
+    background-color: #FFFFFF;
+    padding: 2rem 1.5rem;
+    border-bottom: 1px solid var(--border-muted);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+    gap: 1rem;
+    z-index: 999;
+  }
+
+  .nav-menu.mobile-active .nav-link {
+    font-size: 1rem;
+    width: 100%;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  }
+
+  .mobile-cta-wrapper {
+    display: block;
+  }
+
+  /* Hero Section */
+  .full-video-hero {
+    min-height: 85vh;
+    padding-top: 120px;
+    padding-bottom: 60px;
+  }
+
+  .hero-sub {
+    font-size: 1rem;
+    margin-bottom: 1.75rem;
+  }
+
+  .hero-stats {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+  }
+
+  .stat-item h4 {
+    font-size: 1.4rem;
+  }
+
+  .stat-item p {
+    font-size: 0.78rem;
+  }
+
+  /* Features & Services */
+  .features-grid {
     grid-template-columns: 1fr;
+  }
+
+  .feature-card {
+    padding: 1.75rem 1.25rem;
   }
 
   .service-card {
@@ -1287,15 +1363,95 @@ input[type=range]::-webkit-slider-thumb {
     height: 220px;
   }
 
+  .service-content {
+    padding: 1.5rem;
+  }
+
+  /* Estimator */
   .pattern-options {
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .estimator-box {
+    padding: 1.5rem;
+  }
+
+  .preview-container {
+    padding: 1.25rem;
+  }
+
+  .jali-preview-canvas {
+    height: 200px;
+  }
+
+  .estimator-summary {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .estimator-summary .btn {
+    width: 100%;
+  }
+
+  /* Quote & Form */
+  .quote-form-card {
+    padding: 1.75rem;
+  }
+
   .form-grid-2 {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  /* Footer */
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .modal-content {
+    padding: 1.5rem;
+  }
+}
+
+/* Mobile Small (576px and below) */
+@media (max-width: 576px) {
+  .container {
+    padding: 0 1.1rem;
+  }
+
+  .hero-stats {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .portfolio-grid {
     grid-template-columns: 1fr;
   }
 
-  .footer-grid {
-    grid-template-columns: 1fr;
+  .filter-tabs {
+    gap: 0.5rem;
+  }
+
+  .filter-tab {
+    padding: 0.5rem 1rem;
+    font-size: 0.78rem;
+    width: 100%;
+    text-align: center;
+  }
+
+  .client-logo-img {
+    height: 32px;
+  }
+
+  .btn {
+    width: 100%;
   }
 }
