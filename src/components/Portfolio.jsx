@@ -33,14 +33,6 @@ const PORTFOLIO_ITEMS = [
     location: 'Kalamassery, Kochi',
     material: 'MDF Veneered Louvers',
     img: '/assets/commercial_1.jpg'
-  },
-  {
-    id: 5,
-    title: 'Geometric Balcony Privacy Screen',
-    category: 'Jali Screens',
-    location: 'Thrissur, Kerala',
-    material: 'Powder-Coated Aluminum CNC',
-    img: '/assets/hero_interior.jpg'
   }
 ];
 
