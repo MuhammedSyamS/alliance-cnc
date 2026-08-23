@@ -29,15 +29,17 @@ export default function Hero() {
           We design and build luxury home and shop interiors in Kerala. From custom CNC jali screens to full room renovations, we fabricate everything in our own factory with direct prices and no middleman markup.
         </p>
 
-        <div style={{ display: 'flex', gap: '1.25rem', flexWrap: 'wrap', alignItems: 'center' }}>
-          <a href="#quote" className="btn btn-primary">
+        {/* Horizontal CTA Buttons */}
+        <div className="hero-cta-group">
+          <a href="#quote" className="btn btn-primary hero-btn">
             Get a Free Quote
           </a>
-          <a href="#about" className="btn btn-outline">
+          <a href="#about" className="btn btn-outline hero-btn">
             Learn More
           </a>
         </div>
 
+        {/* Horizontal Statistics Row */}
         <div className="hero-stats hero-stats-contrast" style={{ maxWidth: '850px' }}>
           <div className="stat-item">
             <h4>0.1<span>mm</span></h4>

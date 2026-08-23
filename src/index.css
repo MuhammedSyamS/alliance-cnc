@@ -456,6 +456,20 @@ button, input, select, textarea {
   text-align: left;
 }
 
+/* Horizontal CTA Buttons Group Across Desktop & Mobile */
+.hero-cta-group {
+  display: flex;
+  flex-direction: row !important;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: nowrap;
+  max-width: 100%;
+}
+
+.hero-btn {
+  white-space: nowrap;
+}
+
 /* Hero Stats - Always 3-Column Horizontal Grid Across Desktop & Mobile */
 .hero-stats {
   display: grid;
@@ -1238,7 +1252,7 @@ button, input, select, textarea {
   }
 }
 
-/* Mobile (<768px): Dark Hamburger Drawer & Layout Rules */
+/* Mobile (<768px): Dark Hamburger Drawer & Horizontal Layout Rules */
 @media (max-width: 768px) {
   .desktop-cta {
     display: none;
@@ -1311,6 +1325,23 @@ button, input, select, textarea {
     margin-bottom: 1.75rem;
   }
 
+  /* Keep Hero CTA Buttons Horizontal Row on Mobile */
+  .hero-cta-group {
+    display: flex;
+    flex-direction: row !important;
+    gap: 0.6rem;
+    width: 100%;
+  }
+
+  .hero-cta-group .hero-btn {
+    flex: 1;
+    padding: 0.75rem 0.5rem;
+    font-size: clamp(0.72rem, 2.5vw, 0.85rem);
+    white-space: nowrap;
+    text-align: center;
+    min-height: 44px;
+  }
+
   /* Keep Hero Stats Horizontal (3-Column Row) on Mobile */
   .hero-stats {
     grid-template-columns: repeat(3, 1fr) !important;
@@ -1375,7 +1406,20 @@ button, input, select, textarea {
     gap: 1rem;
   }
 
-  /* Keep Hero Stats Horizontal Row on Small Devices */
+  /* Keep Hero CTA Buttons & Stats Horizontal Row on Small Devices */
+  .hero-cta-group {
+    display: flex;
+    flex-direction: row !important;
+    gap: 0.5rem;
+    width: 100%;
+  }
+
+  .hero-cta-group .hero-btn {
+    flex: 1;
+    padding: 0.7rem 0.4rem;
+    font-size: clamp(0.7rem, 2.4vw, 0.82rem);
+  }
+
   .hero-stats {
     grid-template-columns: repeat(3, 1fr) !important;
     gap: 0.5rem;
@@ -1403,7 +1447,7 @@ button, input, select, textarea {
     gap: 1rem;
   }
 
-  .btn {
+  .btn:not(.hero-btn) {
     width: 100%;
     min-height: 48px;
   }
