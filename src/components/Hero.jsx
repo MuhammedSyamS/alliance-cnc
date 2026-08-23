@@ -1,25 +1,14 @@
-import React, { useState, useRef } from 'react';
+import React from 'react';
 
 export default function Hero() {
-  const [isMuted, setIsMuted] = useState(true);
-  const videoRef = useRef(null);
-
-  const toggleMute = () => {
-    if (videoRef.current) {
-      videoRef.current.muted = !isMuted;
-      setIsMuted(!isMuted);
-    }
-  };
-
   return (
     <section className="hero full-video-hero" id="hero">
-      {/* 100% Clear Background Video (New Client Video) */}
+      {/* 100% Clear Background Video */}
       <video
-        ref={videoRef}
         className="full-hero-video"
         autoPlay
         loop
-        muted={isMuted}
+        muted
         playsInline
       >
         <source src="/assets/video/cnc_video.mp4" type="video/mp4" />
@@ -28,7 +17,7 @@ export default function Hero() {
         Your browser does not support HTML5 video.
       </video>
 
-      {/* Subtle Dark Vignette Shadow for Crisp Contrast (Cloudy White Removed) */}
+      {/* Subtle Dark Vignette Shadow for Crisp Contrast */}
       <div className="full-video-dark-vignette"></div>
 
       <div className="container full-hero-content">
@@ -47,13 +36,6 @@ export default function Hero() {
           <a href="#about" className="btn btn-outline">
             Learn More
           </a>
-          <button 
-            type="button" 
-            className="video-toggle-pill"
-            onClick={toggleMute}
-          >
-            <span>{isMuted ? '🔇 UNMUTE FACTORY SOUND' : '🔊 SOUND ON'}</span>
-          </button>
         </div>
 
         <div className="hero-stats hero-stats-contrast" style={{ maxWidth: '850px' }}>
