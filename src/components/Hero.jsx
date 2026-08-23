@@ -13,7 +13,7 @@ export default function Hero() {
 
   return (
     <section className="hero full-video-hero" id="hero">
-      {/* 100% Clear Background Video */}
+      {/* 100% Clear Background Video (New Client Video) */}
       <video
         ref={videoRef}
         className="full-hero-video"
@@ -22,6 +22,7 @@ export default function Hero() {
         muted={isMuted}
         playsInline
       >
+        <source src="/assets/video/cnc_video.mp4" type="video/mp4" />
         <source src="/assets/video/cnc.mp4" type="video/mp4" />
         <source src="/assets/video/hero_cnc_cutting.mp4" type="video/mp4" />
         Your browser does not support HTML5 video.
