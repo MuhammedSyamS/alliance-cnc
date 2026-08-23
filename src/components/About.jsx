@@ -5,7 +5,6 @@ export default function About({ onOpenAboutDetails }) {
     <section className="section-padding about-section" id="about" style={{ backgroundColor: 'var(--bg-base)', borderTop: '1px solid var(--border-muted)', borderBottom: '1px solid var(--border-muted)' }}>
       <div className="container">
         <div className="section-header">
-          <span className="arch-index">01. COMPANY BACKGROUND</span>
           <h2 className="heading-md">
             About <span className="text-crimson">Alliance</span>
           </h2>
