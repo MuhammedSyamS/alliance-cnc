@@ -66,7 +66,7 @@ export default function Portfolio() {
     <section className="portfolio section-padding" id="portfolio">
       <div className="container">
         <div className="section-header">
-          <span className="arch-index">04 // RECENT CRAFTSMANSHIP</span>
+          <span className="arch-index">RECENT CRAFTSMANSHIP</span>
           <h2 className="heading-md">Featured Kerala CNC Projects</h2>
           <p className="subheading">
             Browse through our portfolio of custom CNC routered partitions, parametric facades, and bespoke interior installations completed across Kerala.

@@ -43,7 +43,7 @@ export default function ServicesGrid() {
     <section className="services section-padding" id="services">
       <div className="container">
         <div className="section-header">
-          <span className="arch-index">02 // WHAT WE FABRICATE</span>
+          <span className="arch-index">WHAT WE FABRICATE</span>
           <h2 className="heading-md">Our Core Architectural Services</h2>
           <p className="subheading">
             State-of-the-art CNC routering, 3D laser engraving, and turnkey interior & exterior fabrication directly from our Ernakulam factory.

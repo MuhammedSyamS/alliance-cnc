@@ -31,14 +31,14 @@ export default function CncEdge() {
     <section className="cnc-edge section-padding" id="about">
       <div className="container">
         <div className="section-header">
-          <span className="arch-index">01 // WHY CHOOSE ALLIANCE</span>
+          <span className="arch-index">WHY CHOOSE ALLIANCE</span>
           <h2 className="heading-md">The ALLIANCE Factory Precision Standard</h2>
           <p className="subheading">
             Combining state-of-the-art multi-axis CNC machinery with experienced interior craftsmanship in Kalamassery, Kochi.
           </p>
         </div>
 
-        {/* Responsive Features Grid: 1 col on mobile (<640px), 2 cols on tablet, 4 cols on desktop */}
+        {/* Responsive Features Grid */}
         <div className="features-grid">
           {ADVANTAGES.map((item, idx) => (
             <div key={item.id} className="feature-card">

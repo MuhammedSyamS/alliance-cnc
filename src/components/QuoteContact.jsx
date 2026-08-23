@@ -56,7 +56,7 @@ export default function QuoteContact() {
     <section className="quote-section section-padding" id="quote">
       <div className="container">
         <div className="section-header">
-          <span className="arch-index">05 // START YOUR PROJECT</span>
+          <span className="arch-index">START YOUR PROJECT</span>
           <h2 className="heading-md">Get a Direct Factory Quote</h2>
           <p className="subheading">
             Upload your CAD drawings or design concepts for an immediate pricing estimation and technical material consultation from our Ernakulam engineering team.
