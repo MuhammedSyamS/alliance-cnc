@@ -41,14 +41,6 @@ const PORTFOLIO_ITEMS = [
     location: 'Thrissur, Kerala',
     material: 'Powder-Coated Aluminum CNC',
     img: '/assets/hero_interior.jpg'
-  },
-  {
-    id: 6,
-    title: 'Contemporary Living Room Wall Unit',
-    category: 'Interior Fitouts',
-    location: 'Kottayam, Kerala',
-    material: 'Marine Ply & Brass Inlays',
-    img: '/assets/residential_1.jpg'
   }
 ];
 
