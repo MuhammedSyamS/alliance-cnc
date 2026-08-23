@@ -1,194 +1,233 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 
-export default function QuoteContact({ initialQuoteData }) {
-  const [name, setName] = useState('');
-  const [phone, setPhone] = useState('');
-  const [service, setService] = useState('Residential Interior');
-  const [dimensions, setDimensions] = useState('');
-  const [description, setDescription] = useState('');
-  const [selectedFile, setSelectedFile] = useState(null);
-  const [dragOver, setDragOver] = useState(false);
+export default function QuoteContact() {
+  const [formData, setFormData] = useState({
+    name: '',
+    phone: '',
+    email: '',
+    material: 'WPC Waterproof Board (18mm)',
+    thickness: '18mm',
+    dimensions: '',
+    notes: ''
+  });
 
-  useEffect(() => {
-    if (initialQuoteData) {
-      if (initialQuoteData.service) setService(initialQuoteData.service);
-      if (initialQuoteData.dimensions) setDimensions(initialQuoteData.dimensions);
-      if (initialQuoteData.description) setDescription(initialQuoteData.description);
-    }
-  }, [initialQuoteData]);
+  const [uploadedFile, setUploadedFile] = useState(null);
+  const [isDragOver, setIsDragOver] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+  };
 
   const handleFileDrop = (e) => {
     e.preventDefault();
-    setDragOver(false);
-    if (e.dataTransfer.files.length > 0) {
-      const f = e.dataTransfer.files[0];
-      setSelectedFile({
-        name: f.name,
-        size: `${(f.size / (1024 * 1024)).toFixed(2)} MB`
-      });
+    setIsDragOver(false);
+    if (e.dataTransfer.files && e.dataTransfer.files[0]) {
+      setUploadedFile(e.dataTransfer.files[0]);
     }
   };
 
-  const handleFileChange = (e) => {
-    if (e.target.files.length > 0) {
-      const f = e.target.files[0];
-      setSelectedFile({
-        name: f.name,
-        size: `${(f.size / (1024 * 1024)).toFixed(2)} MB`
-      });
+  const handleFileSelect = (e) => {
+    if (e.target.files && e.target.files[0]) {
+      setUploadedFile(e.target.files[0]);
     }
-  };
-
-  const handleLoadSample = () => {
-    setSelectedFile({
-      name: 'alliance_sample_kerala_jali_design.dxf',
-      size: '4.25 MB (Sample CAD File)'
-    });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert(`Thank you, ${name || 'Customer'}! Your quote request for "${service}" has been received by our Kerala factory team. We will contact you at ${phone} shortly.`);
-    setName('');
-    setPhone('');
-    setDimensions('');
-    setDescription('');
-    setSelectedFile(null);
-  };
-
-  const handleWhatsApp = () => {
-    const custName = name || 'Customer';
-    const msg = `Hi Alliance Kerala Team, my name is ${custName}. I need a price quote for ${service} in Kerala (Size/Scope: ${dimensions || 'Custom Size'}). Please help me.`;
-    window.open(`https://wa.me/919847012345?text=${encodeURIComponent(msg)}`, '_blank');
+    setSubmitted(true);
+    setTimeout(() => {
+      setSubmitted(false);
+      setFormData({
+        name: '',
+        phone: '',
+        email: '',
+        material: 'WPC Waterproof Board (18mm)',
+        thickness: '18mm',
+        dimensions: '',
+        notes: ''
+      });
+      setUploadedFile(null);
+    }, 4000);
   };
 
   return (
-    <section className="section-padding quote-section" id="quote">
+    <section className="quote-section section-padding" id="quote">
       <div className="container">
         <div className="section-header">
-          <span className="arch-index">06. KERALA INQUIRY & CAD REVIEW</span>
-          <h2 className="heading-md">
-            Get a Free Quote & <span className="text-crimson">Drawing Review</span>
-          </h2>
+          <span className="arch-index">05 // START YOUR PROJECT</span>
+          <h2 className="heading-md">Get a Direct Factory Quote</h2>
           <p className="subheading">
-            Send us your project details, room sizes, or CAD drawing files for a fast factory price quote in Indian Rupees (₹).
+            Upload your CAD drawings or design concepts for an immediate pricing estimation and technical material consultation from our Ernakulam engineering team.
           </p>
         </div>
 
         <div className="quote-grid">
+          {/* Form Card */}
           <div className="quote-form-card">
-            <form onSubmit={handleSubmit}>
-              <div className="form-grid-2">
-                <div className="form-group">
-                  <label className="form-label">Your Name *</label>
-                  <input type="text" className="custom-input" placeholder="e.g. Ramesh Kumar" value={name} onChange={(e) => setName(e.target.value)} required />
-                </div>
-
-                <div className="form-group">
-                  <label className="form-label">Mobile / WhatsApp Number (India) *</label>
-                  <input type="tel" className="custom-input" placeholder="+91 98470 12345" value={phone} onChange={(e) => setPhone(e.target.value)} required />
-                </div>
+            {submitted ? (
+              <div style={{ textAlign: 'center', padding: '3rem 1rem' }}>
+                <span style={{ fontSize: '3rem' }}>✅</span>
+                <h3 className="heading-sm" style={{ marginTop: '1rem', color: 'var(--crimson-primary)' }}>Quote Request Received!</h3>
+                <p style={{ marginTop: '0.5rem', color: 'var(--text-muted)' }}>
+                  Our technical design team in Kalamassery, Kochi will review your specifications and call you within 24 hours.
+                </p>
               </div>
-
-              <div className="form-grid-2" style={{ marginTop: '1.25rem' }}>
-                <div className="form-group">
-                  <label className="form-label">Select Service *</label>
-                  <select className="custom-select" value={service} onChange={(e) => setService(e.target.value)} required>
-                    <option value="Kerala Home Interior">Kerala Home & Villa Interior Design</option>
-                    <option value="Commercial Shop Fitout">Shop & Commercial Fit-out</option>
-                    <option value="Custom CNC Jali Cutting">Custom CNC Jali & Wood Cutting Only</option>
-                    <option value="Exterior Building Facade">Exterior ACP & Elevation Facade</option>
-                  </select>
+            ) : (
+              <form onSubmit={handleSubmit} className="quote-form">
+                <div className="form-grid-2">
+                  <div className="form-group">
+                    <label className="form-label" htmlFor="name">Full Name *</label>
+                    <input 
+                      type="text" 
+                      id="name" 
+                      name="name" 
+                      className="custom-input touch-input" 
+                      required 
+                      placeholder="e.g. Rahul Nair" 
+                      value={formData.name}
+                      onChange={handleInputChange}
+                    />
+                  </div>
+                  <div className="form-group">
+                    <label className="form-label" htmlFor="phone">Phone Number *</label>
+                    <input 
+                      type="tel" 
+                      id="phone" 
+                      name="phone" 
+                      className="custom-input touch-input" 
+                      required 
+                      placeholder="e.g. +91 98470 12345" 
+                      value={formData.phone}
+                      onChange={handleInputChange}
+                    />
+                  </div>
                 </div>
 
-                <div className="form-group">
-                  <label className="form-label">Room Size / Dimensions</label>
-                  <input type="text" className="custom-input" placeholder="e.g. 4ft x 8ft panel or 3 BHK Villa in Kochi" value={dimensions} onChange={(e) => setDimensions(e.target.value)} />
+                <div className="form-grid-2" style={{ marginTop: '1.25rem' }}>
+                  <div className="form-group">
+                    <label className="form-label" htmlFor="email">Email Address</label>
+                    <input 
+                      type="email" 
+                      id="email" 
+                      name="email" 
+                      className="custom-input touch-input" 
+                      placeholder="rahul@example.com" 
+                      value={formData.email}
+                      onChange={handleInputChange}
+                    />
+                  </div>
+                  <div className="form-group">
+                    <label className="form-label" htmlFor="material">Preferred Material</label>
+                    <select 
+                      id="material" 
+                      name="material" 
+                      className="custom-select touch-input" 
+                      value={formData.material}
+                      onChange={handleInputChange}
+                    >
+                      <option value="WPC Waterproof Board (18mm)">WPC Monsoon Waterproof Board</option>
+                      <option value="Solid Teak Wood (12mm-25mm)">Solid Teak Wood</option>
+                      <option value="Exterior ACP Facade Cladding">ACP Exterior Cladding</option>
+                      <option value="MDF Interior Board">MDF Interior Panel</option>
+                      <option value="Brass / SS Sheet Inlay">Brass / Stainless Steel Sheet</option>
+                    </select>
+                  </div>
                 </div>
-              </div>
 
-              {/* CAD File Uploader Dropzone */}
-              <div className="form-group" style={{ marginTop: '1.25rem' }}>
-                <label className="form-label">Upload CAD / DXF / PDF Drawing File (Optional):</label>
-                
-                {!selectedFile ? (
+                <div className="form-group" style={{ marginTop: '1.25rem' }}>
+                  <label className="form-label" htmlFor="dimensions">Panel Dimensions (e.g., 6ft x 4ft)</label>
+                  <input 
+                    type="text" 
+                    id="dimensions" 
+                    name="dimensions" 
+                    className="custom-input touch-input" 
+                    placeholder="Width x Height in feet or mm" 
+                    value={formData.dimensions}
+                    onChange={handleInputChange}
+                  />
+                </div>
+
+                {/* Drag and Drop CAD File Dropzone */}
+                <div className="form-group" style={{ marginTop: '1.25rem' }}>
+                  <label className="form-label">Attach Vector CAD File / Drawing (.DXF, .DWG, .SVG, .PDF)</label>
                   <div 
-                    className={`dropzone ${dragOver ? 'dragover' : ''}`}
-                    onDragOver={(e) => { e.preventDefault(); setDragOver(true); }}
-                    onDragLeave={() => setDragOver(false)}
+                    className={`dropzone ${isDragOver ? 'dragover' : ''}`}
+                    onDragOver={(e) => { e.preventDefault(); setIsDragOver(true); }}
+                    onDragLeave={() => setIsDragOver(false)}
                     onDrop={handleFileDrop}
-                    onClick={() => document.getElementById('cad-file-input-react').click()}
+                    onClick={() => document.getElementById('cad-file-input').click()}
                   >
-                    <div className="dropzone-text">
-                      Drag & drop CAD drawing (.dxf, .dwg, .pdf) here, or <span className="text-crimson">Browse File</span>
-                    </div>
-                    <div className="dropzone-hint">Supports DXF, DWG, PDF, AI vector files up to 50MB</div>
-                    <input type="file" id="cad-file-input-react" style={{ display: 'none' }} onChange={handleFileChange} accept=".dxf,.dwg,.pdf,.ai,.zip,.png,.jpg" />
+                    <input 
+                      type="file" 
+                      id="cad-file-input" 
+                      style={{ display: 'none' }} 
+                      onChange={handleFileSelect}
+                      accept=".dxf,.dwg,.svg,.pdf,.png,.jpg,.jpeg"
+                    />
+                    <div style={{ fontSize: '1.75rem', color: 'var(--crimson-primary)' }}>📁</div>
+                    <p className="dropzone-text">
+                      {uploadedFile ? `Attached: ${uploadedFile.name}` : 'Drag & Drop your CAD or PDF drawing here'}
+                    </p>
+                    <p className="dropzone-hint">Supports DXF, DWG, SVG, PDF, or JPG images up to 25MB</p>
                   </div>
-                ) : (
-                  <div className="file-preview">
-                    <div>
-                      <span style={{ fontWeight: 700, color: 'var(--crimson-primary)' }}>ATTACHED FILE: </span>
-                      <span>{selectedFile.name}</span>
-                      <span style={{ color: 'var(--text-dim)', fontSize: '0.75rem', marginLeft: '0.4rem' }}>({selectedFile.size})</span>
-                    </div>
-                    <span style={{ cursor: 'pointer', fontWeight: 700, color: 'var(--crimson-primary)' }} onClick={() => setSelectedFile(null)}>REMOVE</span>
-                  </div>
-                )}
+                </div>
 
-                <button type="button" onClick={handleLoadSample} style={{ background: 'none', border: 'none', color: 'var(--text-muted)', fontSize: '0.78rem', textDecoration: 'underline', marginTop: '0.4rem', cursor: 'pointer' }}>
-                  Click here to test loading a sample CAD drawing file
+                <div className="form-group" style={{ marginTop: '1.25rem' }}>
+                  <label className="form-label" htmlFor="notes">Project Requirements / Notes</label>
+                  <textarea 
+                    id="notes" 
+                    name="notes" 
+                    className="custom-input" 
+                    rows="3"
+                    placeholder="Tell us about your project location, timeline, or design preferences..."
+                    value={formData.notes}
+                    onChange={handleInputChange}
+                  ></textarea>
+                </div>
+
+                <button 
+                  type="submit" 
+                  className="btn btn-primary touch-btn" 
+                  style={{ width: '100%', marginTop: '1.5rem', minHeight: '48px' }}
+                >
+                  Submit Quote Request →
                 </button>
-              </div>
-
-              <div className="form-group" style={{ marginTop: '1.25rem' }}>
-                <label className="form-label">Project Notes & Material Preference:</label>
-                <textarea className="custom-input" rows="3" placeholder="Tell us about your project, material choice (Teak Wood, WPC Waterproof, Marine Plywood, MDF, ACP, Brass), or location in Kerala..." value={description} onChange={(e) => setDescription(e.target.value)}></textarea>
-              </div>
-
-              <div style={{ marginTop: '2rem', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-                <button type="submit" className="btn btn-primary" style={{ width: '100%' }}>
-                  Submit Request for Free Price Quote
-                </button>
-
-                <button type="button" className="btn btn-whatsapp" onClick={handleWhatsApp} style={{ width: '100%' }}>
-                  Chat Instantly on WhatsApp (+91 98470 12345)
-                </button>
-              </div>
-            </form>
+              </form>
+            )}
           </div>
 
+          {/* Direct Contact Info & Workshop Card */}
           <div className="contact-info-card">
             <div className="info-box">
-              <div style={{ marginBottom: '1.5rem' }}>
-                <img 
-                  src="/assets/logo/alliance_new_logo.png" 
-                  alt="Alliance Workshop Kerala Logo" 
-                  style={{ height: '38px', width: 'auto' }}
-                />
-              </div>
-
+              <h3 className="heading-sm" style={{ marginBottom: '1.25rem' }}>Direct Workshop Contacts</h3>
+              
               <div className="info-item">
                 <div className="info-text">
-                  <span className="arch-index">KERALA FACTORY ADDRESS</span>
-                  <h4>Factory & Main Office</h4>
-                  <p>Industrial Zone, Kalamassery, Ernakulam<br />Kochi, Kerala - 683104, India</p>
+                  <h4>Factory Location</h4>
+                  <p>Industrial Zone, Kalamassery, Ernakulam, Kochi, Kerala - 683104</p>
                 </div>
               </div>
 
               <div className="info-item">
                 <div className="info-text">
-                  <span className="arch-index">CONTACT LINES</span>
-                  <h4>Call or WhatsApp Us</h4>
-                  <p>Direct Phone: +91 98470 12345 / 0484 2345678<br />WhatsApp: +91 98470 12345</p>
+                  <h4>Direct Factory Phone</h4>
+                  <p><a href="tel:+919847012345" style={{ color: 'var(--crimson-primary)', fontWeight: 700 }}>+91 98470 12345</a> | 0484 2345678</p>
                 </div>
               </div>
 
               <div className="info-item">
                 <div className="info-text">
-                  <span className="arch-index">COVERAGE DISTRICTS</span>
-                  <h4>All Kerala Delivery & Fitting</h4>
-                  <p>Ernakulam, Calicut, Trivandrum, Thrissur, Kottayam, Malappuram, Kannur & All Kerala Districts</p>
+                  <h4>WhatsApp Drawing Review</h4>
+                  <p><a href="https://wa.me/919847012345" target="_blank" rel="noreferrer" style={{ color: '#25D366', fontWeight: 700 }}>💬 Chat on WhatsApp (+91 98470 12345)</a></p>
+                </div>
+              </div>
+
+              <div className="info-item">
+                <div className="info-text">
+                  <h4>Working Hours</h4>
+                  <p>Monday – Saturday: 8:30 AM – 7:00 PM</p>
                 </div>
               </div>
             </div>
@@ -196,9 +235,9 @@ export default function QuoteContact({ initialQuoteData }) {
             <div className="map-simulation">
               <div className="map-sim-bg"></div>
               <div className="map-pin-box">
-                <span className="arch-index">LOCATION MAP</span>
-                <div style={{ fontWeight: 700, fontSize: '0.9rem' }}>ALLIANCE CNC Factory - Kalamassery, Kochi</div>
-                <div style={{ fontSize: '0.78rem', color: 'var(--text-muted)' }}>Kerala - Visitors Welcome to See Materials</div>
+                <span style={{ fontSize: '1.25rem' }}>📍</span>
+                <strong style={{ fontSize: '0.85rem', display: 'block', color: 'var(--text-main)' }}>ALLIANCE Factory & Studio</strong>
+                <span style={{ fontSize: '0.78rem', color: 'var(--text-muted)' }}>Kalamassery, Ernakulam, Kochi</span>
               </div>
             </div>
           </div>

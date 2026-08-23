@@ -1,101 +1,95 @@
-import React from 'react';
+import React, { useState } from 'react';
+import ServiceModal from './ServiceModal';
 
-export default function ServicesGrid({ onSelectService }) {
+const SERVICES = [
+  {
+    id: 'jali',
+    title: 'Architectural CNC Jali Cutting',
+    description: 'Precision laser & router cut partition screens, ceiling grilles, and decorative MDF, WPC & Brass panels.',
+    img: '/assets/interior_jali_1.jpg',
+    features: ['0.1mm Laser Precision', 'Monsoon-Proof WPC & Teak', 'Custom 2D/3D CAD Vectors'],
+    fullDetails: 'Our CNC Jali cutting service offers unmatched precision for interior partitions, balcony screens, and decorative ceiling panels. We process WPC, PVC, Teak Wood, MDF, Stainless Steel, and Brass with 0.1mm micro-accuracy. Every piece is fabricated in our Kalamassery workshop to withstand Kerala weather.'
+  },
+  {
+    id: 'facade',
+    title: 'Parametric & Exterior Facades',
+    description: '3D curved wall louvers, ACP exterior cladding, and weather-resistant architectural elevation panels.',
+    img: '/assets/facade_1.jpg',
+    features: ['High-Grade ACP & HPL', 'UV & Heavy Rain Proof', 'Engineered Steel Mounting'],
+    fullDetails: 'Transform building exteriors with parametric 3D facades and ACP louvers engineered for Kerala climatic extremes. High-impact durability, zero rusting, and precision CNC jointing ensure long-lasting luxury aesthetics.'
+  },
+  {
+    id: 'residential',
+    title: 'Residential Interior Solutions',
+    description: 'Bespoke modular kitchens, living room wall paneling, CNC cut wardrobes, and custom furniture.',
+    img: '/assets/residential_1.jpg',
+    features: ['Marine Ply & Teak Finish', 'Hidden Soft-Close Hardware', 'Turnkey Factory Installation'],
+    fullDetails: 'Complete residential interior solutions fabricated in-house. From custom bed headboards and TV console paneling to full modular kitchens and dining partitions.'
+  },
+  {
+    id: 'commercial',
+    title: 'Commercial & Retail Fitouts',
+    description: 'Corporate office reception desks, boutique store displays, acoustic wall slating, and 3D signboards.',
+    img: '/assets/commercial_1.jpg',
+    features: ['3D Illuminated Logos', 'Heavy-Traffic Durability', 'Fast Factory Turnaround'],
+    fullDetails: 'Elevate your commercial brand identity with custom CNC routered reception counters, acoustic slatted walls, and 3D illuminated storefront branding built for high footfall traffic.'
+  }
+];
+
+export default function ServicesGrid() {
+  const [selectedService, setSelectedService] = useState(null);
+
   return (
-    <section className="section-padding services" id="services">
+    <section className="services section-padding" id="services">
       <div className="container">
         <div className="section-header">
-          <span className="arch-index">03. DESIGN & FABRICATION</span>
-          <h2 className="heading-md">
-            Our Core <span className="text-crimson">Services</span>
-          </h2>
+          <span className="arch-index">02 // WHAT WE FABRICATE</span>
+          <h2 className="heading-md">Our Core Architectural Services</h2>
           <p className="subheading">
-            Custom interior design packages combined with direct factory CNC cutting.
+            State-of-the-art CNC routering, 3D laser engraving, and turnkey interior & exterior fabrication directly from our Ernakulam factory.
           </p>
         </div>
 
         <div className="services-grid">
-          {/* Service 1 */}
-          <div className="service-card">
-            <img src="/assets/images/residential_interior.jpg" alt="Residential Interior Design" className="service-img" />
-            <div className="service-content">
-              <div>
-                <span className="arch-index">01. RESIDENTIAL</span>
-                <h3 className="service-title">Home Interior Design</h3>
-                <p className="service-desc">Complete interior design for living rooms, master bedrooms, kitchens, and custom furniture.</p>
-                <ul className="service-features">
-                  <li>3D Room Design & Floor Plans</li>
-                  <li>Custom CNC Wall Panels & Bed Backdrops</li>
-                  <li>Modular Kitchens & Built-in Wardrobes</li>
-                </ul>
+          {SERVICES.map((service) => (
+            <div key={service.id} className="service-card">
+              <div className="service-img-wrapper">
+                <img 
+                  src={service.img} 
+                  alt={service.title} 
+                  className="service-img" 
+                  loading="lazy"
+                />
               </div>
-              <button className="link-btn" onClick={() => onSelectService('residential')}>
-                See Full Specs →
-              </button>
-            </div>
-          </div>
-
-          {/* Service 2 */}
-          <div className="service-card">
-            <img src="/assets/images/commercial_fitout.jpg" alt="Commercial Shop Fit-outs" className="service-img" />
-            <div className="service-content">
-              <div>
-                <span className="arch-index">02. COMMERCIAL</span>
-                <h3 className="service-title">Shop & Office Fit-outs</h3>
-                <p className="service-desc">Eye-catching interior design for retail shops, offices, cafes, and showrooms built to attract customers.</p>
-                <ul className="service-features">
-                  <li>Decorative CNC Wooden Ceiling Waves</li>
-                  <li>Backlit Reception Desks & Display Racks</li>
-                  <li>Heavy-Duty Long Lasting Finishes</li>
-                </ul>
+              <div className="service-content">
+                <div>
+                  <h3 className="service-title">{service.title}</h3>
+                  <p className="service-desc">{service.description}</p>
+                  <ul className="service-features">
+                    {service.features.map((feat, idx) => (
+                      <li key={idx}>{feat}</li>
+                    ))}
+                  </ul>
+                </div>
+                <button 
+                  className="link-btn"
+                  onClick={() => setSelectedService(service)}
+                  aria-label={`View details for ${service.title}`}
+                >
+                  View Details & Specifications →
+                </button>
               </div>
-              <button className="link-btn" onClick={() => onSelectService('commercial')}>
-                See Full Specs →
-              </button>
             </div>
-          </div>
-
-          {/* Service 3 */}
-          <div className="service-card">
-            <img src="/assets/images/cnc_jali_panels.jpg" alt="Custom CNC Jali & Wall Panels" className="service-img" />
-            <div className="service-content">
-              <div>
-                <span className="arch-index">03. CNC JALI</span>
-                <h3 className="service-title">Custom CNC Jali & Wall Panels</h3>
-                <p className="service-desc">Intricate 2D and 3D CNC jali screens, room partition walls, mandir backdrops, and decorative wall art.</p>
-                <ul className="service-features">
-                  <li>Choose From 500+ Patterns</li>
-                  <li>Cut in MDF, Wood, Brass, and Acrylic</li>
-                  <li>Clean Seamless Joints for Big Walls</li>
-                </ul>
-              </div>
-              <button className="link-btn" onClick={() => onSelectService('jali')}>
-                See Patterns →
-              </button>
-            </div>
-          </div>
-
-          {/* Service 4 */}
-          <div className="service-card">
-            <img src="/assets/images/architectural_facade.jpg" alt="Architectural Facades & Ceilings" className="service-img" />
-            <div className="service-content">
-              <div>
-                <span className="arch-index">04. EXTERIOR</span>
-                <h3 className="service-title">Building Facades & Ceilings</h3>
-                <p className="service-desc">Weather-proof outdoor building front panels, window sunshades, and illuminated ceiling lattices.</p>
-                <ul className="service-features">
-                  <li>Outdoor Weather-Proof Aluminum Panels</li>
-                  <li>Built-in LED Backlight Channels</li>
-                  <li>Strong Frame Mounting Systems</li>
-                </ul>
-              </div>
-              <button className="link-btn" onClick={() => onSelectService('facade')}>
-                See Full Specs →
-              </button>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
+
+      {selectedService && (
+        <ServiceModal 
+          service={selectedService} 
+          onClose={() => setSelectedService(null)} 
+        />
+      )}
     </section>
   );
 }
