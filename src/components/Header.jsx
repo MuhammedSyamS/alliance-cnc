@@ -18,7 +18,7 @@ export default function Header() {
           <a href="#hero" className="nav-link active" onClick={() => setMobileOpen(false)}>Home</a>
           <a href="#about" className="nav-link" onClick={() => setMobileOpen(false)}>About Us</a>
           <a href="#services" className="nav-link" onClick={() => setMobileOpen(false)}>Services</a>
-          <a href="#quote" className="nav-link" onClick={() => setMobileOpen(false)}>Contact</a>
+          <a href="#quote" className="nav-link nav-link-contact" onClick={() => setMobileOpen(false)}>Contact</a>
         </nav>
 
         <div className="nav-actions">
