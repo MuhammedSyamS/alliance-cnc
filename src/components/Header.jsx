@@ -1,27 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 30) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   return (
-    <header className={`arch-header ${scrolled ? 'scrolled' : ''}`} id="header">
+    <header className="arch-header white-navbar" id="header">
       <div className="container header-container">
         <a href="#hero" className="logo-link">
           <img 
-            src={scrolled ? "/assets/logo/alliance_new_logo.png" : "/assets/logo/alliance_new_logo_dark.png"} 
+            src="/assets/logo/alliance_new_logo.png" 
             alt="ALLIANCE Interior & Exterior CNC Solutions Logo" 
             className="client-logo-img"
           />
