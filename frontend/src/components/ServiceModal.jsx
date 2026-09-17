@@ -44,28 +44,36 @@ const serviceModalData = {
 };
 
 export default function ServiceModal({ serviceKey, onClose }) {
+  React.useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape') onClose();
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [onClose]);
+
   if (!serviceKey) return null;
   const data = serviceModalData[serviceKey];
   if (!data) return null;
 
   return (
-    <div class="modal active" onClick={onClose}>
-      <div class="modal-content" onClick={(e) => e.stopPropagation()}>
-        <span class="modal-close" onClick={onClose}>&times;</span>
-        <h3 class="heading-sm text-crimson">{data.title}</h3>
+    <div className="modal active" onClick={onClose}>
+      <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+        <span className="modal-close" onClick={onClose} role="button" aria-label="Close modal">&times;</span>
+        <h3 className="heading-sm text-crimson">{data.title}</h3>
         <p style={{ color: 'var(--text-muted)', marginTop: '0.5rem', lineHeight: '1.6' }}>{data.desc}</p>
         
         <div style={{ marginTop: '1.5rem', background: 'var(--bg-base)', padding: '1.25rem', borderRadius: 'var(--radius-sm)', border: '1px solid var(--border-muted)' }}>
-          <h4 style={{ fontSize: '0.95rem', fontWeight: '700', marginBottom: '0.5rem' }}>Technical Capabilities & Materials:</h4>
+          <h4 style={{ fontSize: '0.95rem', fontWeight: '700', marginBottom: '0.5rem' }}>Technical Capabilities &amp; Materials:</h4>
           <ul style={{ color: 'var(--text-main)', fontSize: '0.88rem', display: 'flex', flexDirection: 'column', gap: '0.4rem' }}>
             {data.specs.map((item, idx) => (
-              <li key={idx}><i class="fa-solid fa-check text-crimson"></i> {item}</li>
+              <li key={idx}><i className="fa-solid fa-check text-crimson"></i> {item}</li>
             ))}
           </ul>
         </div>
 
-        <div style={{ marginTop: '1.5rem', display: 'flex', justifyContent: 'flex-end' }}>
-          <a href="#quote" class="btn btn-primary" onClick={onClose} style={{ padding: '0.6rem 1.4rem', fontSize: '0.88rem' }}>
+        <div style={{ marginTop: '1.5rem', display: 'flex', justifyContent: 'flex-end', flexWrap: 'wrap', gap: '0.75rem' }}>
+          <a href="#quote" className="btn btn-primary" onClick={onClose} style={{ padding: '0.6rem 1.4rem', fontSize: '0.88rem' }}>
             Request Quote for This Service
           </a>
         </div>

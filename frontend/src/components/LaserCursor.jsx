@@ -13,7 +13,15 @@ export default function LaserCursor() {
   const ringPosRef = useRef({ x: -200, y: -200 });
   const rafRef = useRef(null);
 
+  // Deactivate on touch screens (smartphones, tablets, iPads, foldable devices)
+  const isTouchDevice = typeof window !== 'undefined' && 
+    (window.matchMedia('(hover: none) and (pointer: coarse)').matches || 
+     'ontouchstart' in window || 
+     navigator.maxTouchPoints > 0);
+
   useEffect(() => {
+    if (isTouchDevice) return;
+
     const dot = cursorDotRef.current;
     const ring = cursorRingRef.current;
 
@@ -95,6 +103,8 @@ export default function LaserCursor() {
       setTimeout(() => spark.remove(), 600);
     }
   }
+
+  if (isTouchDevice) return null;
 
   return (
     <>

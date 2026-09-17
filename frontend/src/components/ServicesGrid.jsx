@@ -36,8 +36,16 @@ const SERVICES = [
   }
 ];
 
-export default function ServicesGrid() {
+export default function ServicesGrid({ onSelectService }) {
   const [selectedService, setSelectedService] = useState(null);
+
+  const handleOpenService = (serviceId) => {
+    if (onSelectService) {
+      onSelectService(serviceId);
+    } else {
+      setSelectedService(serviceId);
+    }
+  };
 
   return (
     <section className="services section-padding" id="services">
@@ -46,7 +54,7 @@ export default function ServicesGrid() {
           <span className="arch-index">WHAT WE FABRICATE</span>
           <h2 className="heading-md">Our Core Architectural Services</h2>
           <p className="subheading">
-            State-of-the-art CNC routering, 3D laser engraving, and turnkey interior & exterior fabrication directly from our Ernakulam factory.
+            State-of-the-art CNC routering, 3D laser engraving, and turnkey interior &amp; exterior fabrication directly from our Ernakulam factory.
           </p>
         </div>
 
@@ -72,11 +80,12 @@ export default function ServicesGrid() {
                   </ul>
                 </div>
                 <button 
+                  type="button"
                   className="link-btn"
-                  onClick={() => setSelectedService(service)}
+                  onClick={() => handleOpenService(service.id)}
                   aria-label={`View details for ${service.title}`}
                 >
-                  View Details & Specifications →
+                  View Details &amp; Specifications →
                 </button>
               </div>
             </div>
@@ -84,9 +93,9 @@ export default function ServicesGrid() {
         </div>
       </div>
 
-      {selectedService && (
+      {!onSelectService && selectedService && (
         <ServiceModal 
-          service={selectedService} 
+          serviceKey={selectedService} 
           onClose={() => setSelectedService(null)} 
         />
       )}

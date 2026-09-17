@@ -24,11 +24,19 @@ const ADVANTAGES = [
   }
 ];
 
-export default function CncEdge() {
+export default function CncEdge({ onOpenMaterialDetails }) {
   const [showModal, setShowModal] = useState(false);
 
+  const handleOpenModal = () => {
+    if (onOpenMaterialDetails) {
+      onOpenMaterialDetails();
+    } else {
+      setShowModal(true);
+    }
+  };
+
   return (
-    <section className="cnc-edge section-padding" id="about">
+    <section className="cnc-edge section-padding" id="capabilities">
       <div className="container">
         <div className="section-header">
           <span className="arch-index">WHY CHOOSE ALLIANCE</span>
@@ -57,8 +65,9 @@ export default function CncEdge() {
               <p style={{ fontSize: '0.88rem', color: 'var(--text-muted)' }}>Precision processed in our Ernakulam factory studio.</p>
             </div>
             <button 
+              type="button"
               className="btn btn-outline"
-              onClick={() => setShowModal(true)}
+              onClick={handleOpenModal}
               aria-label="View Full Factory Material Spec Sheet"
             >
               View Full Material Specs →
@@ -67,15 +76,15 @@ export default function CncEdge() {
           <div className="material-tags">
             <span className="mat-tag active">WPC Board (6mm - 25mm)</span>
             <span className="mat-tag">Solid Teak Wood (12mm - 50mm)</span>
-            <span className="mat-tag">MDF & HDF (3mm - 25mm)</span>
+            <span className="mat-tag">MDF &amp; HDF (3mm - 25mm)</span>
             <span className="mat-tag">ACP Exterior Cladding</span>
-            <span className="mat-tag">Acrylic & Polycarbonate</span>
-            <span className="mat-tag">Brass & SS Sheets</span>
+            <span className="mat-tag">Acrylic &amp; Polycarbonate</span>
+            <span className="mat-tag">Brass &amp; SS Sheets</span>
           </div>
         </div>
       </div>
 
-      {showModal && <CncEdgeModal onClose={() => setShowModal(false)} />}
+      {!onOpenMaterialDetails && showModal && <CncEdgeModal onClose={() => setShowModal(false)} />}
     </section>
   );
 }
