@@ -12,15 +12,16 @@
   <meta name="author" content="Alliance Interior & CNC Solutions">
   <meta name="robots" content="index, follow">
   
-  <!-- Browser Favicon & Mobile Touch Icons -->
+  <!-- Browser Favicons & Mobile Touch Icons (High-Contrast Opaque Dark Tiles) -->
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="/favicon-512.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="shortcut icon" href="/favicon.ico">
   
   <!-- Theme Color & Mobile Status Bar Styling -->
-  <meta name="theme-color" content="#1d1f1d">
-  <meta name="msapplication-TileColor" content="#1d1f1d">
+  <meta name="theme-color" content="#141614">
+  <meta name="msapplication-TileColor" content="#141614">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="apple-mobile-web-app-title" content="Alliance CNC">
@@ -30,13 +31,23 @@
   <meta property="og:site_name" content="ALLIANCE Interior & CNC Solutions">
   <meta property="og:title" content="ALLIANCE — Architectural CNC Routing, Fiber Laser & Turnkey Interior Solutions">
   <meta property="og:description" content="Turnkey architectural CNC routing, 3D wood milling, high-output fiber laser metal cutting, UV flatbed printing, and bespoke commercial fit-outs in Kochi, Kerala. 100% factory direct.">
+  <meta property="og:locale" content="en_IN">
+
+  <!-- Primary WhatsApp & Mobile Chat Thumbnail (Square 800x800 High-Contrast Solid Dark Background) -->
+  <meta property="og:image" content="/og-square.jpg">
+  <meta property="og:image:secure_url" content="/og-square.jpg">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="800">
+  <meta property="og:image:height" content="800">
+  <meta property="og:image:alt" content="ALLIANCE Interior & CNC Solutions - Kochi, Kerala Logo & Brand">
+
+  <!-- Landscape Preview Image (1200x630 for Facebook, LinkedIn, Twitter/X Large Cards) -->
   <meta property="og:image" content="/og-image.jpg">
   <meta property="og:image:secure_url" content="/og-image.jpg">
   <meta property="og:image:type" content="image/jpeg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="Alliance Architectural CNC Machining & Turnkey Fabrication - Kochi, Kerala">
-  <meta property="og:locale" content="en_IN">
+  <meta property="og:image:alt" content="ALLIANCE Architectural CNC Machining & Turnkey Fitouts">
   
   <!-- Twitter / X Cards -->
   <meta name="twitter:card" content="summary_large_image">
@@ -44,6 +55,24 @@
   <meta name="twitter:description" content="Turnkey architectural CNC routing, 3D wood milling, fiber laser metal cutting, and bespoke interior fit-outs in Kochi, Kerala. 100% factory direct.">
   <meta name="twitter:image" content="/og-image.jpg">
   <meta name="twitter:image:alt" content="Alliance Architectural Fabrication & Interior Solutions">
+
+  <!-- Ensure social meta images use absolute URLs dynamically based on current origin -->
+  <script>
+    (function() {
+      try {
+        var origin = window.location.origin;
+        if (origin && origin !== 'null') {
+          var metas = document.querySelectorAll('meta[property^="og:image"], meta[name^="twitter:image"]');
+          for (var i = 0; i < metas.length; i++) {
+            var val = metas[i].getAttribute('content');
+            if (val && val.charAt(0) === '/') {
+              metas[i].setAttribute('content', origin + val);
+            }
+          }
+        }
+      } catch(e) {}
+    })();
+  </script>
 
   <!-- Preload PP Neue Machina Inktrap Typeface -->
   <link rel="preload" href="/fonts/PPNeueMachina-InktrapRegular.woff2" as="font" type="font/woff2" crossorigin>
