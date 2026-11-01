@@ -3,148 +3,148 @@ import BlueprintModal from './BlueprintModal';
 
 const FLAGSHIP_PROJECTS = [
   {
-    id: 'adidas-avenues-2',
+    id: 'baindemer-saint-tropez',
     year: '2024',
-    title: 'Adidas Originals & Kids Flagship',
-    client: 'Adidas Global / The Avenues',
-    location: 'The Avenues Mall Phase 2, Bahrain',
-    category: 'Global Retail',
-    summary: 'Turnkey architectural storefront with bespoke neo-classical arch vectoring, parametric timber ceiling slats, and integrated illuminated retail gondolas.',
-    cadDetail: 'AutoCAD 2D Storefront Elevation & Plan DWG-01',
+    title: 'Baindemer Saint-Tropez Luxury Boutique',
+    client: 'Baindemer France / Marasi Galleria',
+    location: 'Marasi Galleria, Kingdom of Bahrain',
+    category: 'Luxury Boutiques',
+    summary: 'Turnkey architectural fitout for the French Riviera luxury resort wear icon. Features custom CNC fluted wall paneling, perimeter recessed cove lighting, and minimalist terrazzo cash counter.',
+    cadDetail: 'Boutique Plan, Wall Elevation & Fluted Joinery Details DWG-01',
     specs: [
-      'Islamic Arch Structural Shopfront Framing',
-      'Parametric Acoustic Timber Louvered Ceiling',
-      'Dual-Zone Brand Transition: Originals to Kids',
-      'In-House CNC Cut Cash Desk with Metallic Inlays'
+      'Precision CNC-Milled Fluted Architectural Feature Walls',
+      'Micro-Trimless Recessed Cove Architectural Lighting',
+      'Terrazzo Cash-Wrap Counter with Embedded Brand Detailing',
+      'Integrated Minimalist Matte Black Garment Display Rails'
     ],
-    fullImg: '/assets/founder/project_adidas_avenues_2.jpg',
-    badge: 'NEWEST FLAGSHIP 2024'
-  },
-  {
-    id: 'olympia-liwan',
-    year: '2023',
-    title: 'Olympia Sports Mega Retail Store',
-    client: 'Olympia Sports Group',
-    location: 'Al Liwan Hamala, Bahrain',
-    category: 'Mega Commercial',
-    summary: 'Massive commercial sports store featuring complete structural floor circulation CAD planning, custom modular footwear display gondolas, and industrial open-plenum ceiling coordination.',
-    cadDetail: 'Master Floor Zoning & Fixture Distribution DWG-02',
-    specs: [
-      'Over 8,500 Sq. Ft. Precision Floor Space Planning',
-      'High-Load Engineered Steel & Timber Display Racks',
-      'Dual Cash-Wrap Counters with Integrated POS Channels',
-      'Optimum Nutrition Dedicated Corner & Tasting Bar'
-    ],
-    fullImg: '/assets/founder/project_olympia_sports_liwan.jpg',
-    badge: 'MEGA RETAIL FITOUT'
+    fullImg: '/images/Works Done/20241019_100035.jpg',
+    badge: 'FRENCH LUXURY BOUTIQUE'
   },
   {
     id: 'adidas-performance-liwan',
     year: '2023',
-    title: 'Adidas Performance & Parametric Ceiling',
+    title: 'Adidas Performance Parametric Coffered Ceiling',
     client: 'Adidas Global',
     location: 'Al Liwan Hamala, Bahrain',
     category: 'Parametric Ceilings',
     summary: 'Spectacular geometric 3D parametric wooden coffered ceiling milled with micro-precision on multi-axis CNC machinery, paired with high-performance retail fixtures.',
-    cadDetail: 'Parametric Lattice Ceiling Matrix & Shop Drawings DWG-03',
+    cadDetail: 'Parametric Lattice Ceiling Matrix & Shop Drawings DWG-02',
     specs: [
       'Interlocking 3D CNC Diagonal Wooden Coffer Grid',
       'Precision Recessed Gimbal Spotlight Integration',
       'Natural Solid Wood Grain High-Traffic Polyurethane Finish',
       'Full CAD/CAM Vector Engineering & Rapid Site Assembly'
     ],
-    fullImg: '/assets/founder/project_adidas_performance_liwan.jpg',
+    fullImg: '/images/Works Done/20220428_111750.jpg',
     badge: 'PARAMETRIC CEILING'
   },
   {
-    id: 'olympia-seef',
-    year: '2021',
-    title: 'Olympia Health & Fitness Complex',
-    client: 'Olympia Fitness Group',
-    location: 'Seef Mall, Bahrain',
-    category: 'Commercial Wellness',
-    summary: 'State-of-the-art commercial gym facility, featuring heavy acoustic zoning, spinning studio with dynamic angled neon light tracking, and ergonomic equipment circulation layouts.',
-    cadDetail: 'Equipment Load Distribution & Acoustic Floor Plan DWG-04',
-    specs: [
-      'Dynamic Spinning Studio with Neon RGB Light Tracking',
-      'Heavy-Load Structural Rubber Floor Framing',
-      'Architectural Glass Partitions with CNC Frosting',
-      'Exposed Industrial Ductwork & Acoustic Baffles'
-    ],
-    fullImg: '/assets/founder/project_olympia_fitness_seef.jpg',
-    badge: 'COMMERCIAL FITNESS'
-  },
-  {
-    id: 'adidas-avenues-1',
-    year: '2020',
-    title: 'Adidas Performance Landmark Flagship',
-    client: 'Adidas Global',
-    location: 'The Avenues Mall Phase 1, Bahrain',
+    id: 'adidas-kids-avenues',
+    year: '2024',
+    title: 'Adidas Kids Landmark Entrance & Storefront',
+    client: 'Adidas Global / The Avenues',
+    location: 'The Avenues Mall Phase 2, Bahrain',
     category: 'Global Retail',
-    summary: 'Monumental flagship retail store featuring full-height industrial perforated facade, grand parametric wooden coffered ceiling, and branded immersive athletic portals.',
-    cadDetail: 'Architectural Facade & Master Ceiling Layout DWG-05',
+    summary: 'High-impact retail entrance with multi-colored illuminated prismatic facade framing, suspended industrial track channels, and child-safe rounded joinery.',
+    cadDetail: 'Illuminated Facade Portal & Fixture Elevation DWG-03',
     specs: [
-      'Perforated Industrial Steel Mesh Elevation Doors',
-      'Sculptural CNC Timber Acoustic Ceiling Drops',
-      'Illuminated 3D Brand Signage Portals',
-      'Full Turnkey Execution under Tight Mall Operational Timelines'
+      'Backlit Prismatic Multi-Color Geometric Entrance Arch',
+      'Suspended Overhead MEP Cable Trays & Linear Lighting',
+      'Modular Low-Profile Children Apparel Racks & Plinths',
+      'High-Gloss Polished Marble Floor Transition Framing'
     ],
-    fullImg: '/assets/founder/project_adidas_avenues_1.jpg',
+    fullImg: '/images/Works Done/2.jpg',
     badge: 'LANDMARK FLAGSHIP'
   },
   {
-    id: 'adidas-citycenter',
-    year: '2019',
-    title: 'Adidas Kids High-Impact Store',
-    client: 'Adidas Global',
-    location: 'City Centre Bahrain',
-    category: 'Global Retail',
-    summary: 'Vibrant, high-energy children’s concept store engineered with backlit diamond-mesh acoustic facade panels, CNC suspended lighting trays, and modular children-scale fixtures.',
-    cadDetail: 'Storefront Sections & Internal Fixture Schedule DWG-06',
-    specs: [
-      'Backlit Colorful Diamond-Grid Facade Portals',
-      'CNC Suspended Steel Electrical Conduit Channels',
-      'Custom Rounded-Corner Child-Safe Retail Joinery',
-      'Zero-Defect Handover under Global Brand Audits'
-    ],
-    fullImg: '/assets/founder/project_adidas_kids_citycenter.jpg',
-    badge: 'CITY CENTRE RETAIL'
-  },
-  {
-    id: 'olympia-galleria',
-    year: '2017',
-    title: 'Olympia Sports & Nutrition Galleria',
-    client: 'Olympia Sports / Reebok / Adidas',
-    location: 'Galleria Mall @ Zinj, Bahrain',
+    id: 'olympia-on-mega',
+    year: '2023',
+    title: 'Olympia Sports Mega Flagship & "On" Running Towers',
+    client: 'Olympia Sports / On Running Global',
+    location: 'Al Liwan & Avenues Mall, Bahrain',
     category: 'Mega Commercial',
-    summary: 'Multi-level flagship sporting goods superstore featuring escalator void integration, curved architectural gondolas, and shop-in-shop brand environments.',
-    cadDetail: 'Multi-Floor Escalator & Circulation Geometry DWG-07',
+    summary: 'Sprawling commercial retail store featuring aerodynamic curved dropped ceiling bulkheads, illuminated LED digital display monoliths, and modular footwear grids.',
+    cadDetail: 'Fluid Ceiling Reflected Plan & Gondola Grid DWG-04',
     specs: [
-      'Multi-Level Vertical Spatial Planning & Escalator Voids',
-      'Aerodynamic Curved Display Gondolas',
-      'Dedicated Reebok & Adidas Shop-in-Shop Zones',
-      'High-Lumen Architectural Suspended Linear Lighting'
+      'Fluid Parametric Curved Ceiling Cove with Recessed LEDs',
+      'Digital Monolith Tower Cladding with Custom Brackets',
+      'Wire-Mesh Industrial Column Encapsulation & Fixtures',
+      'Over 9,000 Sq. Ft. Commercial Footfall Optimization'
     ],
-    fullImg: '/assets/founder/project_olympia_galleria_zinj.jpg',
-    badge: 'MULTI-LEVEL RETAIL'
+    fullImg: '/images/Works Done/20220708_103450.jpg',
+    badge: 'MEGA RETAIL FITOUT'
   },
   {
-    id: 'highlight-3d-roster',
+    id: 'cosmetica-kryolan',
     year: '2024',
-    title: 'High-End Boutiques & 3D Spatial Roster',
-    client: 'Artdeco / Cosmetica / Baindemer / Benchmark',
-    location: 'Bahrain & Saudi Arabia Projects',
+    title: 'Cosmetica Essentials & Kryolan Flagship Boutique',
+    client: 'Kryolan Professional / Cosmetica',
+    location: 'Seef Mall, Kingdom of Bahrain',
     category: 'Luxury Boutiques',
-    summary: 'Portfolio of luxury cosmetics, haute boutiques, and commercial mall retail installations including Cosmetica Seef, Artdeco Wadi Al Sail, Baindemer Marasi Galleria, and Oasis Mall.',
-    cadDetail: '3ds Max Photorealistic Spatial Rendering & CAD DWG-08',
+    summary: 'Pristine cosmetics retail architecture featuring backlit halo-lit brand bulkheads, UV-bonded glass display vitrines, and high-gloss architectural millwork.',
+    cadDetail: 'Cosmetic Counter Elevation & Backlit Vitrine Joinery DWG-05',
     specs: [
-      'Cosmetica Seef: High-Gloss Acrylic & Gold Metal Inlays',
-      'Artdeco Wadi Al Sail: Architectural Slatted Ceiling & Stairs',
-      'Baindemer Marasi: Minimalist Luxury Beachwear Fitout',
-      'After You Saudi: Complete Exterior & Interior Turnkey Concept'
+      'Backlit Acrylic Kryolan Brand Signage Bulkheads',
+      'Tempered Glass Display Vitrines with Internal Micro-LEDs',
+      'High-Gloss Architectural Enamel Millwork Finish',
+      'Full Turnkey Execution from Spatial Layout to Handover'
     ],
-    fullImg: '/assets/founder/project_highlight_3d_grid.jpg',
-    badge: 'LUXURY BOUTIQUES'
+    fullImg: '/images/Works Done/505903424_122161491644495646_8352406097242840218_n.jpg',
+    badge: 'PRESTIGE COSMETICS'
+  },
+  {
+    id: 'olympia-fitness-baffles',
+    year: '2022',
+    title: 'Olympia Health & Fitness Floating Ceiling Baffles',
+    client: 'Olympia Fitness Group',
+    location: 'Seef Mall & Mega Complexes, Bahrain',
+    category: 'Commercial Wellness',
+    summary: 'Sculptural acoustic suspended cloud baffles angled geometrically across the mezzanine, with heavy-load athletic flooring and precision spatial zoning.',
+    cadDetail: 'Acoustic Cloud Hanger Layout & Load Distribution DWG-06',
+    specs: [
+      'Geometric Angular Floating Acoustic Ceiling Clouds',
+      'Heavy-Duty Structural Rigging & Combat Sports Trussing',
+      'Specialized Anti-Microbial Heavy Impact Rubber Flooring',
+      'Integrated HVAC Exhaust Plenum Concealment'
+    ],
+    fullImg: '/images/Works Done/10.JPG',
+    badge: 'COMMERCIAL FITNESS'
+  },
+  {
+    id: 'adidas-footwear-wall',
+    year: '2022',
+    title: 'Adidas Performance Slotted Wall & Modular Fixtures',
+    client: 'Adidas Global',
+    location: 'City Centre & Al Liwan, Bahrain',
+    category: 'Global Retail',
+    summary: 'Engineered slotted wall system with custom steel footwear brackets, panoramic continuous digital LED bulkhead, and modular solid wood bench joinery.',
+    cadDetail: 'Wall Panel Slotting CNC Program & Fixture Extrusions DWG-07',
+    specs: [
+      'CNC-Drilled Slotted Wall Matrix with Anti-Scratch Finish',
+      'Continuous Ultra-Wide Panoramic LED Brand Bulkhead',
+      'Natural Pine & Oak Footwear Trying Benches with Storage',
+      'Global Audit-Compliant Architectural Millwork Standards'
+    ],
+    fullImg: '/images/Works Done/20220428_111733.jpg',
+    badge: 'RETAIL ENGINEERING'
+  },
+  {
+    id: 'reebok-olympia-galleria',
+    year: '2022',
+    title: 'Reebok & Multi-Brand Athletic Megastore',
+    client: 'Reebok / Olympia Sports / Asics / Under Armour',
+    location: 'Galleria Mall & Destination Hubs',
+    category: 'Mega Commercial',
+    summary: 'Comprehensive multi-brand athletic superstore with illuminated signage fascia, overhead industrial spiral ducting, and perimeter wire mesh display system.',
+    cadDetail: 'Perimeter Wall Fixtures & Shopfront Bulkhead DWG-08',
+    specs: [
+      'Multi-Brand Illuminated Halo Lightbox Bulkheads',
+      'Black Matte Powder-Coated Gondolas & Apparel Hanging Rails',
+      'Custom Track Lighting Distribution & Open Ceiling Design',
+      'Turnkey Delivery with Zero Operational Disruption'
+    ],
+    fullImg: '/images/Works Done/2022_07_09_18_40_IMG_0759.JPG',
+    badge: 'MULTI-BRAND FLAGSHIP'
   }
 ];
 
@@ -179,7 +179,7 @@ export default function FlagshipProjects() {
             MNC Enterprise Projects <span className="text-crimson">Delivered to Perfection</span>
           </h2>
           <p className="subheading" style={{ maxWidth: '820px' }}>
-            Every flagship project below was designed and spearheaded by Niyaz Samad. 
+            Every flagship project below was designed and spearheaded by the Alliance architectural and engineering team. 
             From initial AutoCAD 2D drafting and 3ds Max spatial rendering through to factory CNC cutting and on-site handover.
           </p>
         </div>
@@ -263,7 +263,7 @@ export default function FlagshipProjects() {
           </div>
           <div className="cta-strip-right">
             <a href="#quote" className="btn btn-primary">
-              <i className="fa-solid fa-phone-volume"></i> Consult Niyaz Samad
+              <i className="fa-solid fa-phone-volume"></i> Consult Alliance Engineers
             </a>
           </div>
         </div>

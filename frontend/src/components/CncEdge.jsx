@@ -1,90 +1,84 @@
-import React, { useState } from 'react';
-import CncEdgeModal from './CncEdgeModal';
-
-const ADVANTAGES = [
-  {
-    id: 1,
-    title: '0.1mm Laser Precision',
-    description: 'Computer-controlled German router bits and high-wattage fiber lasers cut complex parametric vectors without material burn or splintering.'
-  },
-  {
-    id: 2,
-    title: 'Monsoon Waterproof Materials',
-    description: 'Specialized 100% moisture-proof WPC, Marine Plywood, and Anodized Aluminum engineered for high humidity & monsoon rain.'
-  },
-  {
-    id: 3,
-    title: 'Zero Middleman Markup',
-    description: 'Direct factory pricing with raw material procurement. You pay purely for design vectoring & machine cutting time.'
-  },
-  {
-    id: 4,
-    title: '24hr Drawing & Vector Review',
-    description: 'Send us your DXF, PDF or sketch — our CAD engineers generate 3D cut previews and material optimization sheets within 24 hours.'
-  }
-];
+import React from 'react';
 
 export default function CncEdge({ onOpenMaterialDetails }) {
-  const [showModal, setShowModal] = useState(false);
-
-  const handleOpenModal = () => {
-    if (onOpenMaterialDetails) {
-      onOpenMaterialDetails();
-    } else {
-      setShowModal(true);
+  const features = [
+    {
+      icon: 'fa-gear',
+      title: 'Advanced Technology',
+      desc: 'State-of-the-art CNC and laser machines'
+    },
+    {
+      icon: 'fa-users',
+      title: 'Skilled Team',
+      desc: 'Experienced professionals who care about details'
+    },
+    {
+      icon: 'fa-shield-halved',
+      title: 'Quality Assurance',
+      desc: 'Every project checked for perfection'
+    },
+    {
+      icon: 'fa-clock',
+      title: 'On-Time Delivery',
+      desc: 'Your time matters to us'
     }
-  };
+  ];
 
   return (
-    <section className="cnc-edge section-padding" id="capabilities">
+    <section className="crafted-perfection-section" id="why-choose-us">
       <div className="container">
-        <div className="section-header">
-          <span className="arch-index">WHY CHOOSE ALLIANCE</span>
-          <h2 className="heading-md">The ALLIANCE Factory Precision Standard</h2>
-          <p className="subheading">
-            Combining state-of-the-art multi-axis CNC machinery with experienced interior craftsmanship in Kalamassery, Kochi.
-          </p>
-        </div>
-
-        {/* Responsive Features Grid */}
-        <div className="features-grid">
-          {ADVANTAGES.map((item, idx) => (
-            <div key={item.id} className="feature-card">
-              <span className="arch-index">0{idx + 1}</span>
-              <h3>{item.title}</h3>
-              <p>{item.description}</p>
+        <div className="crafted-content-grid">
+          
+          {/* Left Column: Heading & Learn More */}
+          <div className="crafted-text-col">
+            <div className="section-subtitle-red">
+              <span>WHY CHOOSE ALLIANCE?</span>
+              <div className="subtitle-line-red"></div>
             </div>
-          ))}
-        </div>
-
-        {/* Material Capabilities Strip */}
-        <div className="material-strip">
-          <div className="material-header">
-            <div>
-              <h3 className="heading-sm">Supported CNC Materials & Thicknesses</h3>
-              <p style={{ fontSize: '0.88rem', color: 'var(--text-muted)' }}>Precision processed in our Ernakulam factory studio.</p>
+            <h2 className="crafted-main-title">
+              Crafted for<br /><span className="text-crimson">Perfection</span>
+            </h2>
+            <p className="crafted-main-desc">
+              We combine advanced technology with skilled craftsmanship to deliver exceptional results. Our focus is on quality, precision and customer satisfaction.
+            </p>
+            <div className="crafted-actions-row">
+              <a href="#about-precision" className="btn btn-pill-red">
+                Learn More <span className="arrow-icon">➔</span>
+              </a>
+              <a href="tel:+918891790094" className="btn btn-pill-glass">
+                <i className="fa-solid fa-phone"></i> +91 88917 90094
+              </a>
             </div>
-            <button 
-              type="button"
-              className="btn btn-outline"
-              onClick={handleOpenModal}
-              aria-label="View Full Factory Material Spec Sheet"
-            >
-              View Full Material Specs →
-            </button>
           </div>
-          <div className="material-tags">
-            <span className="mat-tag active">WPC Board (6mm - 25mm)</span>
-            <span className="mat-tag">Solid Teak Wood (12mm - 50mm)</span>
-            <span className="mat-tag">MDF &amp; HDF (3mm - 25mm)</span>
-            <span className="mat-tag">ACP Exterior Cladding</span>
-            <span className="mat-tag">Acrylic &amp; Polycarbonate</span>
-            <span className="mat-tag">Brass &amp; SS Sheets</span>
+
+          {/* Right Column: 4 Glowing Feature Cards with Circular Red Icons */}
+          <div className="crafted-features-col">
+            <div className="crafted-cards-grid">
+              {features.map((feat, idx) => (
+                <div key={idx} className="crafted-feature-item">
+                  <div className="crafted-icon-circle">
+                    <i className={`fa-solid ${feat.icon}`}></i>
+                  </div>
+                  <div className="crafted-feature-text">
+                    <h3 className="crafted-feature-name">{feat.title}</h3>
+                    <p className="crafted-feature-sub">{feat.desc}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
+
         </div>
       </div>
 
-      {!onOpenMaterialDetails && showModal && <CncEdgeModal onClose={() => setShowModal(false)} />}
+      {/* Subtle Background Ornament from reference */}
+      <div className="crafted-bg-ornament" aria-hidden="true">
+        <img 
+          src="/images/craft/laser_metal_ornate.jpg" 
+          alt="" 
+          className="crafted-ornament-img"
+        />
+      </div>
     </section>
   );
 }

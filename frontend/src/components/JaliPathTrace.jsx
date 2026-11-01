@@ -31,8 +31,8 @@ export default function JaliPathTrace() {
       >
         <defs>
           <radialGradient id="jali-fade" cx="50%" cy="50%" r="50%">
-            <stop offset="0%" stopColor="#E50914" stopOpacity="0.18" />
-            <stop offset="100%" stopColor="#E50914" stopOpacity="0" />
+            <stop offset="0%" stopColor="#cfe3c8" stopOpacity="0.18" />
+            <stop offset="100%" stopColor="#cfe3c8" stopOpacity="0" />
           </radialGradient>
         </defs>
 
@@ -53,7 +53,7 @@ export default function JaliPathTrace() {
                 key={`star-${row}-${col}`}
                 points={pts}
                 fill="none"
-                stroke="#E50914"
+                stroke="#cfe3c8"
                 strokeWidth="0.9"
                 opacity="0.7"
               />
@@ -64,8 +64,8 @@ export default function JaliPathTrace() {
         {/* Connecting diagonal lattice lines */}
         {Array.from({ length: 6 }, (_, i) => (
           <React.Fragment key={`lines-${i}`}>
-            <line x1={i * 96} y1="0" x2={480} y2={480 - i * 96} stroke="#E50914" strokeWidth="0.4" opacity="0.25" />
-            <line x1="0" y1={i * 96} x2={480 - i * 96} y2="480" stroke="#E50914" strokeWidth="0.4" opacity="0.25" />
+            <line x1={i * 96} y1="0" x2={480} y2={480 - i * 96} stroke="#cfe3c8" strokeWidth="0.4" opacity="0.25" />
+            <line x1="0" y1={i * 96} x2={480 - i * 96} y2="480" stroke="#cfe3c8" strokeWidth="0.4" opacity="0.25" />
           </React.Fragment>
         ))}
 
@@ -79,7 +79,7 @@ export default function JaliPathTrace() {
                 key={`dot-${row}-${col}`}
                 cx={cx} cy={cy} r="3"
                 fill="none"
-                stroke="#E50914"
+                stroke="#cfe3c8"
                 strokeWidth="1.2"
                 opacity="0.5"
               />
@@ -88,8 +88,8 @@ export default function JaliPathTrace() {
         )}
 
         {/* Outer border frame */}
-        <rect x="8" y="8" width="464" height="464" fill="none" stroke="#E50914" strokeWidth="1.5" opacity="0.3" rx="2" />
-        <rect x="18" y="18" width="444" height="444" fill="none" stroke="#E50914" strokeWidth="0.6" opacity="0.15" rx="2" />
+        <rect x="8" y="8" width="464" height="464" fill="none" stroke="#cfe3c8" strokeWidth="1.5" opacity="0.3" rx="2" />
+        <rect x="18" y="18" width="444" height="444" fill="none" stroke="#cfe3c8" strokeWidth="0.6" opacity="0.15" rx="2" />
 
         {/* Glow center wash */}
         <rect x="0" y="0" width="480" height="480" fill="url(#jali-fade)" />

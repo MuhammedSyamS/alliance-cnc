@@ -25,7 +25,7 @@ export default function BlueprintModal({ project, onClose }) {
             <p className="blueprint-modal-meta">
               <strong>Client:</strong> {project.client} &nbsp;|&nbsp; 
               <strong>Location:</strong> {project.location} &nbsp;|&nbsp; 
-              <strong>Lead Designer:</strong> Niyaz Samad
+              <strong>Engineering:</strong> Alliance CAD & Spatial Studio
             </p>
           </div>
           <button 
@@ -47,7 +47,7 @@ export default function BlueprintModal({ project, onClose }) {
             />
             <div className="blueprint-watermark-stamp">
               <span>AUTHENTIC CAD & REALIZED FITOUT</span>
-              <small>PRINCIPAL ARCHITECT: NIYAZ SAMAD</small>
+              <small>ALLIANCE ARCHITECTURAL & INTERIOR SOLUTIONS</small>
             </div>
           </div>
 
@@ -77,7 +77,7 @@ export default function BlueprintModal({ project, onClose }) {
               <h5>Inquire About Similar Architecture</h5>
               <p>Planning a retail, sports facility, or commercial space in Kerala or the GCC?</p>
               <a 
-                href={`https://wa.me/15559028811?text=${encodeURIComponent(`Hi Niyaz Samad & Alliance Team, I was inspecting the architectural case study for "${project.title}". I would like to discuss a similar commercial project.`)}`}
+                href={`https://wa.me/918891790094?text=${encodeURIComponent(`Hi Alliance Team, I was inspecting the architectural case study for "${project.title}". I would like to discuss a similar commercial project.`)}`}
                 target="_blank" 
                 rel="noreferrer" 
                 className="btn btn-primary"

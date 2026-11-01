@@ -1,104 +1,116 @@
-import React, { useState } from 'react';
-import ServiceModal from './ServiceModal';
+import React from 'react';
 
-const SERVICES = [
-  {
-    id: 'jali',
-    title: 'Architectural CNC Jali Cutting',
-    description: 'Precision laser & router cut partition screens, ceiling grilles, and decorative MDF, WPC & Brass panels.',
-    img: '/assets/images/cnc_jali_panels.jpg',
-    features: ['0.1mm Laser Precision', 'Monsoon-Proof WPC & Teak', 'Custom 2D/3D CAD Vectors'],
-    fullDetails: 'Our CNC Jali cutting service offers unmatched precision for interior partitions, balcony screens, and decorative ceiling panels. We process WPC, PVC, Teak Wood, MDF, Stainless Steel, and Brass with 0.1mm micro-accuracy. Every piece is fabricated in our Kalamassery workshop to withstand Kerala weather.'
-  },
-  {
-    id: 'facade',
-    title: 'Parametric & Exterior Facades',
-    description: '3D curved wall louvers, ACP exterior cladding, and weather-resistant architectural elevation panels.',
-    img: '/assets/images/architectural_facade.jpg',
-    features: ['High-Grade ACP & HPL', 'UV & Heavy Rain Proof', 'Engineered Steel Mounting'],
-    fullDetails: 'Transform building exteriors with parametric 3D facades and ACP louvers engineered for Kerala climatic extremes. High-impact durability, zero rusting, and precision CNC jointing ensure long-lasting luxury aesthetics.'
-  },
-  {
-    id: 'residential',
-    title: 'Residential Interior Solutions',
-    description: 'Bespoke modular kitchens, living room wall paneling, CNC cut wardrobes, and custom furniture.',
-    img: '/assets/images/residential_interior.jpg',
-    features: ['Marine Ply & Teak Finish', 'Hidden Soft-Close Hardware', 'Turnkey Factory Installation'],
-    fullDetails: 'Complete residential interior solutions fabricated in-house. From custom bed headboards and TV console paneling to full modular kitchens and dining partitions.'
-  },
-  {
-    id: 'commercial',
-    title: 'Commercial & Retail Fitouts',
-    description: 'Corporate office reception desks, boutique store displays, acoustic wall slating, and 3D signboards.',
-    img: '/assets/images/commercial_fitout.jpg',
-    features: ['3D Illuminated Logos', 'Heavy-Traffic Durability', 'Fast Factory Turnaround'],
-    fullDetails: 'Elevate your commercial brand identity with custom CNC routered reception counters, acoustic slatted walls, and 3D illuminated storefront branding built for high footfall traffic.'
-  }
-];
-
-export default function ServicesGrid({ onSelectService }) {
-  const [selectedService, setSelectedService] = useState(null);
-
-  const handleOpenService = (serviceId) => {
-    if (onSelectService) {
-      onSelectService(serviceId);
-    } else {
-      setSelectedService(serviceId);
+export default function ServicesGrid({ onSelectService, onNavigateToServices }) {
+  const services = [
+    {
+      id: 'cnc-engraving',
+      title: 'CNC Engraving',
+      desc: 'Detailed engravings on wood, acrylic, metal and more.',
+      img: '/images/craft/laser_wood_plaque.jpg',
+      tag: 'WOOD • ACRYLIC • METAL'
+    },
+    {
+      id: 'laser-cutting',
+      title: 'Laser Cutting',
+      desc: 'Clean and precise cuts for various materials.',
+      img: '/images/craft/hero_laser_sparks.jpg',
+      tag: 'MDF • STEEL • ACRYLIC'
+    },
+    {
+      id: 'laser-printing',
+      title: 'Laser Printing',
+      desc: 'High-quality prints on wood, acrylic, metal and other surfaces.',
+      img: '/images/craft/laser_metal_ornate.jpg',
+      tag: 'UV PRINT • MARKING'
+    },
+    {
+      id: 'custom-projects',
+      title: 'Custom Projects',
+      desc: 'Personalized gifts, signage, branding and more.',
+      img: '/images/craft/laser_tumbler_mug.jpg',
+      tag: 'GIFTS • SIGNAGE • BRANDING'
     }
-  };
+  ];
 
   return (
-    <section className="services section-padding" id="services">
+    <section className="services-overview-section" id="services-overview">
       <div className="container">
-        <div className="section-header">
-          <span className="arch-index">WHAT WE FABRICATE</span>
-          <h2 className="heading-md">Our Core Architectural Services</h2>
-          <p className="subheading">
-            State-of-the-art CNC routering, 3D laser engraving, and turnkey interior &amp; exterior fabrication directly from our Ernakulam factory.
-          </p>
+        
+        <div className="services-overview-header">
+          <div className="services-header-text">
+            <div className="section-subtitle-red">
+              <span>OUR SERVICES</span>
+              <div className="subtitle-line-red"></div>
+            </div>
+            <h2 className="services-main-heading">
+              Everything You Need<br />in <span className="text-crimson">One Place</span>
+            </h2>
+            <p className="services-main-desc">
+              We offer a complete range of CNC and laser services to meet the needs of businesses, creators and individuals.
+            </p>
+          </div>
+
+          <div className="services-header-action">
+            {onNavigateToServices ? (
+              <button type="button" className="btn-inline-explore" onClick={onNavigateToServices}>
+                Explore All Services <span className="arrow-icon">➔</span>
+              </button>
+            ) : (
+              <a href="#services-deepdive" className="btn-inline-explore">
+                Explore All Services <span className="arrow-icon">➔</span>
+              </a>
+            )}
+          </div>
         </div>
 
-        <div className="services-grid">
-          {SERVICES.map((service) => (
-            <div key={service.id} className="service-card">
-              <div className="service-img-wrapper">
+        {/* 4 Cards Grid */}
+        <div className="services-cards-grid">
+          {services.map((item) => (
+            <div 
+              key={item.id} 
+              className="service-feature-card"
+              onClick={() => onSelectService && onSelectService(item.id)}
+            >
+              <div className="service-card-img-wrapper">
                 <img 
-                  src={service.img} 
-                  alt={service.title} 
-                  className="service-img" 
+                  src={item.img} 
+                  alt={item.title} 
                   loading="lazy"
+                  className="service-card-img"
                 />
-              </div>
-              <div className="service-content">
-                <div>
-                  <h3 className="service-title">{service.title}</h3>
-                  <p className="service-desc">{service.description}</p>
-                  <ul className="service-features">
-                    {service.features.map((feat, idx) => (
-                      <li key={idx}>{feat}</li>
-                    ))}
-                  </ul>
+                <div className="service-card-hover-overlay">
+                  <span>Explore Specs</span>
                 </div>
-                <button 
-                  type="button"
-                  className="link-btn"
-                  onClick={() => handleOpenService(service.id)}
-                  aria-label={`View details for ${service.title}`}
-                >
-                  View Details &amp; Specifications →
-                </button>
+              </div>
+              <div className="service-card-body">
+                <h3 className="service-card-title">{item.title}</h3>
+                <p className="service-card-desc">{item.desc}</p>
+                <div className="service-card-footer">
+                  <span className="service-card-tag">{item.tag}</span>
+                  <div className="service-card-arrow-circle">
+                    <i className="fa-solid fa-arrow-right"></i>
+                  </div>
+                </div>
               </div>
             </div>
           ))}
         </div>
-      </div>
 
-      {!onSelectService && selectedService && (
-        <ServiceModal 
-          serviceKey={selectedService} 
-          onClose={() => setSelectedService(null)} 
-        />
-      )}
+        {/* Full Services Page CTA */}
+        {onNavigateToServices && (
+          <div style={{ marginTop: '3.5rem', textAlign: 'center' }}>
+            <button 
+              type="button" 
+              className="btn btn-pill-sage"
+              onClick={onNavigateToServices}
+            >
+              <span>Explore All 5 Specialized Services & Technical Specifications</span>
+              <span className="arrow-icon">➔</span>
+            </button>
+          </div>
+        )}
+
+      </div>
     </section>
   );
 }

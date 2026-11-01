@@ -65,8 +65,7 @@ export default function Leadership() {
             Architectural Vision Backed by <span className="text-crimson">Global MNC Pedigree</span>
           </h2>
           <p className="subheading" style={{ maxWidth: '820px' }}>
-            Alliance is steered by seasoned architectural designer and spatial director Niyaz Samad. 
-            Blending international luxury retail architecture with our state-of-the-art in-house CNC router and laser manufacturing facilities.
+            Alliance is steered by seasoned architectural designers, spatial engineers, and master CNC fabricators with over 15 years of turnkey delivery experience across India and the GCC.
           </p>
         </div>
 
@@ -74,13 +73,14 @@ export default function Leadership() {
         <div className="founder-executive-card">
           <div className="founder-card-grid">
             
-            {/* Left Column: Portrait & Direct Contact */}
+            {/* Left Column: Factory Facility */}
             <div className="founder-visual-col">
               <div className="founder-img-wrapper">
                 <img 
-                  src="/assets/founder/niyaz_samad.jpg" 
-                  alt="Niyaz Samad - Architecture 3D Graphics Designer & Founder" 
+                  src="/assets/images/cnc_machinery.jpg" 
+                  alt="Alliance In-House CNC & Laser Cutting Facility" 
                   className="founder-portrait-img"
+                  style={{ objectFit: 'cover', objectPosition: 'center' }}
                 />
                 <div className="founder-blueprint-watermark">
                   <span>CAD / 3DS MAX / CNC CAM</span>
@@ -90,11 +90,25 @@ export default function Leadership() {
                 </div>
               </div>
 
-              {/* Direct Contact & GCC Line */}
+              {/* Direct Contact & Corporate Line */}
               <div className="founder-direct-box">
                 <h4 className="founder-direct-title">Direct Corporate Consultation</h4>
                 <div className="founder-contact-item">
                   <i className="fa-solid fa-phone text-crimson"></i>
+                  <div>
+                    <span className="contact-label">Alliance Mobile & WhatsApp</span>
+                    <a href="tel:+918891790094" className="contact-val">+91 88917 90094</a>
+                  </div>
+                </div>
+                <div className="founder-contact-item">
+                  <i className="fa-brands fa-whatsapp" style={{ color: '#25D366' }}></i>
+                  <div>
+                    <span className="contact-label">Instant WhatsApp Desk</span>
+                    <a href="https://wa.me/918891790094?text=Hello%20Alliance%2C%20I%20would%20like%20to%20discuss%20an%20architectural%20CNC%20project." target="_blank" rel="noreferrer" className="contact-val">Chat with Alliance Team</a>
+                  </div>
+                </div>
+                <div className="founder-contact-item">
+                  <i className="fa-solid fa-globe text-crimson"></i>
                   <div>
                     <span className="contact-label">GCC Executive Line</span>
                     <a href="tel:+97335985107" className="contact-val">+973 35985107</a>
@@ -104,14 +118,7 @@ export default function Leadership() {
                   <i className="fa-solid fa-envelope text-crimson"></i>
                   <div>
                     <span className="contact-label">Direct Design Desk</span>
-                    <a href="mailto:niyazsamad@outlook.com" className="contact-val">niyazsamad@outlook.com</a>
-                  </div>
-                </div>
-                <div className="founder-contact-item">
-                  <i className="fa-solid fa-globe text-crimson"></i>
-                  <div>
-                    <span className="contact-label">Operational Reach</span>
-                    <span className="contact-val">Kingdom of Bahrain • GCC • Kerala, India</span>
+                    <a href="mailto:info@alliancecnc.in" className="contact-val">info@alliancecnc.in</a>
                   </div>
                 </div>
               </div>
@@ -121,20 +128,20 @@ export default function Leadership() {
             <div className="founder-bio-col">
               <div className="founder-title-badge-row">
                 <div>
-                  <h3 className="founder-name">NIYAZ SAMAD</h3>
-                  <p className="founder-role">FOUNDER & PRINCIPAL ARCHITECTURAL 3D DESIGNER</p>
+                  <h3 className="founder-name">ALLIANCE ENGINEERING</h3>
+                  <p className="founder-role">TURNKEY ARCHITECTURAL & INDUSTRIAL CNC SOLUTIONS</p>
                 </div>
                 <div className="founder-credentials-tag">
-                  <span>MNC RETAIL SPECIALIST</span>
+                  <span>FACTORY DIRECT PRECISION</span>
                 </div>
               </div>
 
               <p className="founder-quote">
-                “True architectural excellence is the seamless collision between high-concept 3D spatial vision and micron-level factory execution. We don’t just design spaces — we engineer every component for industrial manufacturability.”
+                “True architectural excellence is the seamless collision between high-concept 3D spatial vision and micron-level factory execution. We engineer every component for industrial manufacturability.”
               </p>
 
               <p className="founder-description">
-                With a decorated international career leading high-stakes architectural design and store rollouts for global retail titans including <strong>Adidas Global</strong>, <strong>Reebok</strong>, <strong>Olympia Sports</strong>, and premier destination malls across the Gulf (The Avenues, City Centre, Al Liwan, Seef Mall), Niyaz brings multinational corporate rigor to Alliance.
+                With a decorated track record leading high-stakes architectural design and store rollouts for global retail titans including <strong>Adidas Global</strong>, <strong>Reebok</strong>, <strong>Olympia Sports</strong>, <strong>Baindemer Saint-Tropez</strong>, <strong>Kryolan Professional Make-Up</strong>, and premier commercial spaces across the Gulf and India, Alliance brings multinational corporate rigor to every project.
               </p>
 
               {/* Key Credentials Strip */}

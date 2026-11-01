@@ -28,31 +28,31 @@ export default function JaliEstimator() {
       case 'arabic':
         return (
           <pattern id="grid-pattern" width="40" height="40" patternUnits="userSpaceOnUse">
-            <path d="M 20,0 L 40,20 L 20,40 L 0,20 Z" fill="none" stroke="#E50914" strokeWidth="2"/>
-            <circle cx="20" cy="20" r="8" fill="none" stroke="#E50914" strokeWidth="1.5"/>
+            <path d="M 20,0 L 40,20 L 20,40 L 0,20 Z" fill="none" stroke="#cfe3c8" strokeWidth="2"/>
+            <circle cx="20" cy="20" r="8" fill="none" stroke="#cfe3c8" strokeWidth="1.5"/>
           </pattern>
         );
       case 'floral':
         return (
           <pattern id="grid-pattern" width="40" height="40" patternUnits="userSpaceOnUse">
-            <path d="M 20,0 C 30,10 30,30 20,40 C 10,30 10,10 20,0 Z" fill="none" stroke="#E50914" strokeWidth="2"/>
-            <path d="M 0,20 C 10,30 30,30 40,20 C 30,10 10,10 0,20 Z" fill="none" stroke="#E50914" strokeWidth="2"/>
+            <path d="M 20,0 C 30,10 30,30 20,40 C 10,30 10,10 20,0 Z" fill="none" stroke="#cfe3c8" strokeWidth="2"/>
+            <path d="M 0,20 C 10,30 30,30 40,20 C 30,10 10,10 0,20 Z" fill="none" stroke="#cfe3c8" strokeWidth="2"/>
           </pattern>
         );
       case 'wave':
         return (
           <pattern id="grid-pattern" width="40" height="40" patternUnits="userSpaceOnUse">
-            <path d="M 0 20 Q 10 5, 20 20 T 40 20" fill="none" stroke="#E50914" strokeWidth="2.5"/>
-            <path d="M 0 30 Q 10 15, 20 30 T 40 30" fill="none" stroke="#E50914" strokeWidth="2"/>
+            <path d="M 0 20 Q 10 5, 20 20 T 40 20" fill="none" stroke="#cfe3c8" strokeWidth="2.5"/>
+            <path d="M 0 30 Q 10 15, 20 30 T 40 30" fill="none" stroke="#cfe3c8" strokeWidth="2"/>
           </pattern>
         );
       case 'geometric':
       default:
         return (
           <pattern id="grid-pattern" width="30" height="30" patternUnits="userSpaceOnUse">
-            <rect x="0" y="0" width="30" height="30" fill="none" stroke="#E50914" strokeWidth="1.5"/>
-            <line x1="0" y1="0" x2="30" y2="30" stroke="#E50914" strokeWidth="1.5"/>
-            <line x1="30" y1="0" x2="0" y2="30" stroke="#E50914" strokeWidth="1.5"/>
+            <rect x="0" y="0" width="30" height="30" fill="none" stroke="#cfe3c8" strokeWidth="1.5"/>
+            <line x1="0" y1="0" x2="30" y2="30" stroke="#cfe3c8" strokeWidth="1.5"/>
+            <line x1="30" y1="0" x2="0" y2="30" stroke="#cfe3c8" strokeWidth="1.5"/>
           </pattern>
         );
     }
@@ -136,7 +136,7 @@ export default function JaliEstimator() {
           {/* Right Live SVG Preview */}
           <div className="preview-container">
             <div style={{ width: '100%', textAlign: 'left', marginBottom: '1rem' }}>
-              <span className="arch-index" style={{ color: '#E50914' }}>LIVE 2D VECTOR RENDERING</span>
+              <span className="arch-index" style={{ color: '#cfe3c8' }}>LIVE 2D VECTOR RENDERING</span>
               <h3 style={{ fontSize: '1.1rem', color: '#FFFFFF' }}>{selectedPattern.name}</h3>
               <p style={{ fontSize: '0.82rem', color: '#A19A8F' }}>
                 Area: <strong>{sqFt} Sq.Ft</strong> | Scale: {width}' x {height}'

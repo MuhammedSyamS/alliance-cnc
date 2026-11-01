@@ -1,98 +1,167 @@
 import React, { useState } from 'react';
 import LightboxModal from './LightboxModal';
+import BeforeAfterCard from './BeforeAfterCard';
+import { BEFORE_AFTER_WORKS } from '../data/beforeAfterData';
 
-const PORTFOLIO_ITEMS = [
+const FEATURED_PROJECTS = [
   {
-    id: 1,
-    title: 'Luxury Villa Jali Partition',
-    category: 'Jali Screens',
-    location: 'Kochi, Ernakulam',
-    material: 'Waterproof WPC Board (18mm)',
-    img: '/assets/images/cnc_jali_panels.jpg'
+    id: 'adidas-parametric-ceiling',
+    title: 'Adidas Performance 3D Coffered Ceiling',
+    category: '3D CNC Milling',
+    client: 'Adidas Global Flagship',
+    location: 'Al Liwan, Bahrain',
+    img: '/images/Works Done/20220428_111750.jpg',
+    material: 'Natural Solid Hardwood & High-Load Trussing',
+    specs: ['Interlocking 3D Diamond Grid', 'Multi-Axis CNC Milling', 'Integrated Gimbal Spotlight Matrix', 'Polyurethane High-Traffic Coat']
   },
   {
-    id: 2,
-    title: 'Parametric Hotel Elevation Facade',
-    category: 'Facades',
-    location: 'Calicut, Kerala',
-    material: 'High-Grade ACP & Aluminum',
-    img: '/assets/images/architectural_facade.jpg'
+    id: 'baindemer-saint-tropez',
+    title: 'Bain de Mer Luxury Boutique',
+    category: 'Hardwood & Joinery',
+    client: 'Bain de Mer France',
+    location: 'Marasi Galleria, Bahrain',
+    img: '/images/Works Done/Baindaimer.jpg',
+    material: 'CNC Fluted Wall Panels, Terrazzo, Minimalist Steel',
+    specs: ['CNC Fluted Feature Wall', 'Recessed Micro-Cove Lighting', 'Custom Terrazzo Cash-Wrap', 'Matte Black Display Racks']
   },
   {
-    id: 3,
-    title: 'Teak Wood Pooja Room Backdrop',
-    category: 'Interior Fitouts',
-    location: 'Trivandrum, Kerala',
-    material: 'Solid Teak Wood 3D Engraved',
-    img: '/assets/images/residential_interior.jpg'
+    id: 'artdeco-luxury-counter',
+    title: 'Artdeco Cosmetics Island Architecture',
+    category: 'Retail Fit-Out',
+    client: 'Artdeco Cosmetics Europe',
+    location: 'Premier Department Store',
+    img: '/images/Works Done/Artdeco 2.jpg',
+    material: 'Multi-Tier Acrylic Trays, Corian Cash-Wrap, LED Channels',
+    specs: ['Curved Solid Surface Routing', 'Multi-Tier Acrylic Trays', 'Backlit Visual Lightboxes', 'High-Gloss Enamel Millwork']
   },
   {
-    id: 4,
-    title: 'Corporate Office Acoustic Wall Slats',
-    category: 'Commercial Fitouts',
-    location: 'Kalamassery, Kochi',
-    material: 'MDF Veneered Louvers',
-    img: '/assets/images/commercial_fitout.jpg'
+    id: 'reebok-retail-space',
+    title: 'Reebok Commercial Flagship Architecture',
+    category: 'Commercial Fit-Out',
+    client: 'Reebok International',
+    location: 'Commercial Mall Flagship',
+    img: '/images/Works Done/Reebok.JPG',
+    material: 'Architectural Timber Baffles & Display Modules',
+    specs: ['Acoustic Cloud Baffles', 'Precision CNC Joinery', 'Recessed LED Strips', 'Custom Display Fixtures']
   }
 ];
 
-const CATEGORIES = ['All Projects', 'Jali Screens', 'Facades', 'Interior Fitouts', 'Commercial Fitouts'];
-
-export default function Portfolio() {
-  const [activeFilter, setActiveFilter] = useState('All Projects');
+export default function Portfolio({ onNavigateToPortfolio }) {
+  const [activeTab, setActiveTab] = useState('featured'); // 'featured' | 'before-after'
   const [activeLightbox, setActiveLightbox] = useState(null);
 
-  const filteredItems = activeFilter === 'All Projects'
-    ? PORTFOLIO_ITEMS
-    : PORTFOLIO_ITEMS.filter(item => item.category === activeFilter);
+  const handleOpenLightbox = (imageSrc, title) => {
+    setActiveLightbox({
+      title: title || 'Project Inspection',
+      img: imageSrc,
+      category: 'Architectural Realization',
+      client: 'Alliance Portfolio',
+      location: 'Turnkey Handover',
+      material: 'Architectural Specification',
+      specs: ['High-Resolution Photographic Inspection', 'In-House Factory Precision', 'Millimeter Tolerance Quality Control']
+    });
+  };
 
   return (
-    <section className="portfolio section-padding" id="portfolio">
+    <section className="our-work-section" id="our-work">
       <div className="container">
-        <div className="section-header">
-          <span className="arch-index">RECENT CRAFTSMANSHIP</span>
-          <h2 className="heading-md">Featured Kerala CNC Projects</h2>
-          <p className="subheading">
-            Browse through our portfolio of custom CNC routered partitions, parametric facades, and bespoke interior installations completed across Kerala.
-          </p>
-        </div>
+        
+        {/* Simple & Minimal Header */}
+        <div className="our-work-simple-header">
+          <div className="our-work-header-text">
+            <span className="section-eyebrow-dark">PORTFOLIO</span>
+            <h2 className="our-work-main-title">Selected Works</h2>
+            <p className="our-work-main-desc">
+              A curated look at our turnkey spatial fabrications, CNC joinery, and architectural retail transformations.
+            </p>
+          </div>
 
-        {/* Responsive Filter Bar */}
-        <div className="filter-tabs">
-          {CATEGORIES.map(category => (
+          {/* Clean 2-Way View Toggle */}
+          <div className="our-work-toggle-pill">
             <button
-              key={category}
-              className={`filter-tab ${activeFilter === category ? 'active' : ''}`}
-              onClick={() => setActiveFilter(category)}
+              type="button"
+              className={`work-toggle-btn ${activeTab === 'featured' ? 'is-active' : ''}`}
+              onClick={() => setActiveTab('featured')}
             >
-              {category}
+              <span>Featured Works (4)</span>
             </button>
-          ))}
+            <button
+              type="button"
+              className={`work-toggle-btn ${activeTab === 'before-after' ? 'is-active' : ''}`}
+              onClick={() => setActiveTab('before-after')}
+            >
+              <span>Before & After (4)</span>
+            </button>
+          </div>
         </div>
 
-        {/* Responsive Portfolio Grid */}
-        <div className="portfolio-grid">
-          {filteredItems.map(item => (
-            <div 
-              key={item.id} 
-              className="portfolio-item"
-              onClick={() => setActiveLightbox(item)}
+        {/* Content: Featured Works Tab */}
+        {activeTab === 'featured' && (
+          <div className="our-work-simple-grid">
+            {FEATURED_PROJECTS.map((item) => (
+              <article 
+                key={item.id} 
+                className="simple-work-card"
+                onClick={() => setActiveLightbox(item)}
+                role="button"
+                tabIndex={0}
+                onKeyDown={(e) => { if (e.key === 'Enter') setActiveLightbox(item); }}
+              >
+                <div className="simple-card-media">
+                  <img 
+                    src={item.img} 
+                    alt={item.title} 
+                    loading="lazy"
+                    className="simple-card-img"
+                  />
+                  <span className="simple-card-tag">{item.category}</span>
+                </div>
+                <div className="simple-card-body">
+                  <div className="simple-card-meta">
+                    <span className="simple-card-client">{item.client}</span>
+                    <span className="meta-bullet">•</span>
+                    <span className="simple-card-loc">{item.location}</span>
+                  </div>
+                  <h3 className="simple-card-title">{item.title}</h3>
+                </div>
+              </article>
+            ))}
+          </div>
+        )}
+
+        {/* Content: Before & After Tab */}
+        {activeTab === 'before-after' && (
+          <div className="ba-simple-grid">
+            {BEFORE_AFTER_WORKS.slice(0, 4).map((item) => (
+              <BeforeAfterCard 
+                key={item.id} 
+                item={item} 
+                onOpenLightbox={handleOpenLightbox} 
+              />
+            ))}
+          </div>
+        )}
+
+        {/* Simple Quiet Footer CTA */}
+        <div className="our-work-quiet-cta">
+          <span>Looking for full architectural case studies, CAD blueprints, and all project handovers?</span>
+          {onNavigateToPortfolio ? (
+            <button 
+              type="button" 
+              onClick={onNavigateToPortfolio} 
+              className="btn btn-pill-sage"
             >
-              <div className="portfolio-img-box">
-                <img 
-                  src={item.img} 
-                  alt={item.title} 
-                  loading="lazy"
-                />
-                <span className="portfolio-badge">{item.category}</span>
-              </div>
-              <div className="portfolio-info">
-                <h3 className="portfolio-title">{item.title}</h3>
-                <p className="portfolio-meta">📍 {item.location} | {item.material}</p>
-              </div>
-            </div>
-          ))}
+              <span>View Full Portfolio & Case Studies</span>
+              <span className="arrow-icon">➔</span>
+            </button>
+          ) : (
+            <a href="#contact" className="btn btn-pill-sage">
+              <span>Inquire Directly</span>
+              <span className="arrow-icon">➔</span>
+            </a>
+          )}
         </div>
+
       </div>
 
       {activeLightbox && (
