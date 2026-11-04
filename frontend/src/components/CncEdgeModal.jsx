@@ -17,7 +17,7 @@ export default function CncEdgeModal({ isOpen, onClose }) {
           Our Nedumangad, Trivandrum workshop handles all interior and exterior materials suited for Kerala homes, villas, and commercial buildings.
         </p>
 
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem', marginTop: '1rem' }}>
+        <div className="cnc-edge-materials-grid">
           <div style={{ background: 'var(--bg-pitch-black)', padding: '1rem', borderRadius: 'var(--radius-sm)', border: '1px solid var(--border-muted)' }}>
             <h4 style={{ color: 'var(--crimson-primary)', fontWeight: 700 }}>Solid Teak Wood & Hardwood</h4>
             <p style={{ fontSize: '0.85rem', color: 'var(--text-muted)', marginTop: '0.3rem' }}>Classic Kerala traditional carving, temple doors, pooja room jalis, and staircase balustrades.</p>

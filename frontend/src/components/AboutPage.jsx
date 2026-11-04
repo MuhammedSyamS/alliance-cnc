@@ -133,7 +133,7 @@ export default function AboutPage({ onBackToHome, onNavigateToContact }) {
       {/* Story & Facility Overview Section */}
       <section className="about-deepdive-section" style={{ padding: '5.5rem 0', background: '#FFFFFF', color: '#1d1f1d' }}>
         <div className="container">
-          <div className="about-story-grid" style={{ display: 'grid', gridTemplateColumns: '1.1fr 1fr', gap: '4rem', alignItems: 'center' }}>
+          <div className="about-story-grid">
             <div>
               <div className="section-subtitle-red">
                 <span>OUR MANUFACTURING PHILOSOPHY</span>
@@ -211,7 +211,7 @@ export default function AboutPage({ onBackToHome, onNavigateToContact }) {
             </p>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(310px, 1fr))', gap: '1.75rem' }}>
+          <div className="about-machinery-grid">
             {machinerySpecs.map((m, idx) => (
               <div 
                 key={idx} 
@@ -270,7 +270,7 @@ export default function AboutPage({ onBackToHome, onNavigateToContact }) {
             </p>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(210px, 1fr))', gap: '1.5rem' }}>
+          <div className="about-workflow-grid">
             {workflowSteps.map((wf, idx) => (
               <div 
                 key={idx} 

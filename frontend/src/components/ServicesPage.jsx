@@ -174,20 +174,10 @@ export default function ServicesPage({ onBackToHome, onNavigateToContact, onSele
               <article 
                 key={srv.id} 
                 id={srv.id}
-                style={{ 
-                  display: 'grid', 
-                  gridTemplateColumns: index % 2 === 0 ? '1.1fr 1fr' : '1fr 1.1fr', 
-                  gap: '3.5rem', 
-                  alignItems: 'center',
-                  background: index % 2 === 0 ? '#FFFFFF' : '#f7faf5',
-                  padding: '3rem',
-                  borderRadius: '24px',
-                  border: '1px solid #dbe5d8',
-                  boxShadow: '0 8px 30px rgba(29,31,29,0.04)'
-                }}
+                className={`service-detail-card ${index % 2 === 0 ? 'even-row' : 'odd-row'}`}
               >
-                {/* Media Column (left or right depending on alternate) */}
-                <div style={{ order: index % 2 === 0 ? 1 : 2 }}>
+                {/* Information Column */}
+                <div className="service-detail-info">
                   <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '0.75rem' }}>
                     <span style={{ fontSize: '1.75rem', fontWeight: 900, color: '#b9d6b1', fontFamily: 'var(--font-heading)' }}>
                       {srv.num}
@@ -260,7 +250,7 @@ export default function ServicesPage({ onBackToHome, onNavigateToContact, onSele
                 </div>
 
                 {/* Image & Machine Specs Column */}
-                <div style={{ order: index % 2 === 0 ? 2 : 1 }}>
+                <div className="service-detail-media">
                   <div style={{ borderRadius: '18px', overflow: 'hidden', boxShadow: '0 12px 35px rgba(0,0,0,0.1)', border: '1px solid #dbe5d8', marginBottom: '1.5rem', maxHeight: '340px' }}>
                     <img 
                       src={srv.img} 

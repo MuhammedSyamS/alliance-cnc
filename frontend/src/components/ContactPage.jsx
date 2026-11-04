@@ -74,7 +74,7 @@ export default function ContactPage({ onBackToHome }) {
       <section style={{ padding: '5.5rem 0', background: '#FFFFFF', color: '#1d1f1d' }}>
         <div className="container">
           
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '4rem', alignItems: 'flex-start' }}>
+          <div className="contact-page-layout-grid">
             
             {/* Left Column: Direct Channels & Map */}
             <div>
@@ -235,7 +235,7 @@ export default function ContactPage({ onBackToHome }) {
                     />
                   </div>
 
-                  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1rem' }}>
+                  <div className="contact-form-row-2col">
                     <div className="form-group">
                       <label className="form-label">Email Address *</label>
                       <input 
@@ -261,7 +261,7 @@ export default function ContactPage({ onBackToHome }) {
                     </div>
                   </div>
 
-                  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1rem' }}>
+                  <div className="contact-form-row-2col">
                     <div className="form-group">
                       <label className="form-label">Service Required</label>
                       <select 

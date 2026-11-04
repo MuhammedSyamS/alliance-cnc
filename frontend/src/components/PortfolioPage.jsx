@@ -191,7 +191,7 @@ export default function PortfolioPage({ onBackToHome, onNavigateToContact }) {
                 </div>
               )}
 
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '2rem' }}>
+              <div className="portfolio-projects-grid">
                 {ALL_PORTFOLIO_PROJECTS.map((project) => (
                   <article 
                     key={project.id}
@@ -273,7 +273,7 @@ export default function PortfolioPage({ onBackToHome, onNavigateToContact }) {
                 </div>
               )}
 
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '2rem' }}>
+              <div className="portfolio-projects-grid">
                 {BEFORE_AFTER_WORKS.map((item) => (
                   <BeforeAfterCard 
                     key={item.id} 
