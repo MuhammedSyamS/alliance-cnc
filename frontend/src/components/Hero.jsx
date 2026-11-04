@@ -1,6 +1,13 @@
 import React from 'react';
 
 export default function Hero({ onNavigate }) {
+  const baselineSpecs = [
+    { tag: 'MACHINING & CUTTING', detail: '5-Axis CNC & Fiber Laser' },
+    { tag: 'SUBSTRATES', detail: 'Wood • Metal • Acrylic • Corian' },
+    { tag: 'ARCHITECTURAL', detail: 'Interior & Exterior Execution' },
+    { tag: 'FACILITY', detail: 'Nedumangad, Trivandrum (Factory Direct)' }
+  ];
+
   return (
     <section className="minimal-hero" id="hero">
       {/* Cinematic Machine & Craft Video Backdrop */}
@@ -27,7 +34,12 @@ export default function Hero({ onNavigate }) {
           </h1>
 
           <p className="minimal-hero-lead">
-            High-precision 5-axis CNC machining, industrial fiber laser metal cutting, and complex 3D routing across timber, brass, acrylic, and composite substrates. Manufactured factory-direct in Nedumangad, Trivandrum, with turnkey capabilities for custom architectural interiors and exterior facades.
+            <span className="hero-lead-desktop">
+              High-precision 5-axis CNC machining, industrial fiber laser metal cutting, and complex 3D routing across timber, brass, acrylic, and composite substrates. Manufactured factory-direct in Nedumangad, Trivandrum, with turnkey capabilities for custom architectural interiors and exterior facades.
+            </span>
+            <span className="hero-lead-mobile">
+              Industrial 5-axis CNC machining & precision fiber laser cutting. Factory-direct in Nedumangad, Trivandrum.
+            </span>
           </p>
 
           <div className="minimal-hero-cta-group">
@@ -50,26 +62,34 @@ export default function Hero({ onNavigate }) {
           </div>
         </div>
 
-        {/* Quiet Minimalist Editorial Baseline */}
-        <div className="minimal-hero-baseline">
-          <div className="baseline-cell">
-            <span className="baseline-tag">MACHINING & CUTTING</span>
-            <span className="baseline-detail">5-Axis CNC & Fiber Laser</span>
-          </div>
-          <div className="baseline-divider"></div>
-          <div className="baseline-cell">
-            <span className="baseline-tag">SUBSTRATES</span>
-            <span className="baseline-detail">Wood • Metal • Acrylic • Corian</span>
-          </div>
-          <div className="baseline-divider"></div>
-          <div className="baseline-cell">
-            <span className="baseline-tag">ARCHITECTURAL</span>
-            <span className="baseline-detail">Interior & Exterior Execution</span>
-          </div>
-          <div className="baseline-divider"></div>
-          <div className="baseline-cell">
-            <span className="baseline-tag">FACILITY</span>
-            <span className="baseline-detail">Nedumangad, Trivandrum (Factory Direct)</span>
+        {/* Quiet Minimalist Editorial Baseline (Auto-scrolling carousel on mobile) */}
+        <div className="minimal-hero-baseline-wrapper">
+          <div className="minimal-hero-baseline">
+            {/* Primary Track */}
+            <div className="baseline-track">
+              {baselineSpecs.map((spec, i) => (
+                <React.Fragment key={`orig-${i}`}>
+                  <div className="baseline-cell">
+                    <span className="baseline-tag">{spec.tag}</span>
+                    <span className="baseline-detail">{spec.detail}</span>
+                  </div>
+                  <div className="baseline-divider"></div>
+                </React.Fragment>
+              ))}
+            </div>
+
+            {/* Cloned Track for continuous seamless infinite auto-scroll carousel on smaller devices */}
+            <div className="baseline-track baseline-track-clone" aria-hidden="true">
+              {baselineSpecs.map((spec, i) => (
+                <React.Fragment key={`clone-${i}`}>
+                  <div className="baseline-cell">
+                    <span className="baseline-tag">{spec.tag}</span>
+                    <span className="baseline-detail">{spec.detail}</span>
+                  </div>
+                  <div className="baseline-divider"></div>
+                </React.Fragment>
+              ))}
+            </div>
           </div>
         </div>
       </div>

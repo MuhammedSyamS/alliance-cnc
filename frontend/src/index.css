@@ -4088,15 +4088,44 @@ a, button, [role="button"], input[type="submit"], select {
   transform: translateX(4px);
 }
 
-/* Minimalist Editorial Baseline */
+/* Responsive Editorial Lead Text */
+.hero-lead-desktop {
+  display: inline;
+}
+
+.hero-lead-mobile {
+  display: none;
+}
+
+/* Minimalist Editorial Baseline & Auto-Scroll Carousel Wrapper */
+.minimal-hero-baseline-wrapper {
+  width: 100%;
+  overflow: hidden;
+  border-top: 1px solid rgba(207, 227, 200, 0.14);
+  margin-top: 2rem;
+  padding-top: 1.8rem;
+}
+
 .minimal-hero-baseline {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 1.8rem;
-  border-top: 1px solid rgba(207, 227, 200, 0.14);
-  margin-top: 2rem;
   width: 100%;
+}
+
+.baseline-track {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.baseline-track > .baseline-divider:last-child {
+  display: none;
+}
+
+.baseline-track-clone {
+  display: none;
 }
 
 .baseline-cell {
@@ -4125,7 +4154,7 @@ a, button, [role="button"], input[type="submit"], select {
 .baseline-divider {
   width: 1px;
   height: 26px;
-  background: rgba(207, 227, 200, 0.12);
+  background: rgba(207, 227, 200, 0.14);
 }
 
 /* --------------------------------------------------------------------------
@@ -5955,36 +5984,80 @@ a, button, [role="button"], input[type="submit"], select {
     padding: 2rem 0;
   }
 
+  .hero-lead-desktop {
+    display: none;
+  }
+
+  .hero-lead-mobile {
+    display: inline;
+    font-size: clamp(0.88rem, 3.2vw, 1rem);
+    line-height: 1.55;
+    color: #e2ede0;
+  }
+
   .minimal-hero-lead {
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem !important;
+    max-width: 100%;
+  }
+
+  /* Auto-Scrolling Carousel on Smaller Devices */
+  .minimal-hero-baseline-wrapper {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    padding: 1.1rem 0;
+    margin-top: 1.5rem;
+    border-top: 1px solid rgba(207, 227, 200, 0.14);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 4%, black 96%, transparent);
+    mask-image: linear-gradient(to right, transparent, black 4%, black 96%, transparent);
   }
 
   .minimal-hero-baseline {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: flex-start;
-    gap: 1.25rem;
-    width: 100%;
-    overflow-x: auto;
-    overflow-y: hidden;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-    padding-top: 1.35rem;
-    padding-bottom: 0.5rem;
+    width: max-content;
+    overflow: visible;
+    padding: 0;
+    border-top: none;
+    margin-top: 0;
+    will-change: transform;
+    animation: heroBaselineMarquee 24s linear infinite;
   }
 
-  .minimal-hero-baseline::-webkit-scrollbar {
-    display: none;
+  .minimal-hero-baseline:hover,
+  .minimal-hero-baseline:active {
+    animation-play-state: paused;
+  }
+
+  .baseline-track {
+    display: flex;
+    align-items: center;
+    gap: 1.4rem;
+    flex-shrink: 0;
+    width: auto;
+    justify-content: flex-start;
+  }
+
+  .baseline-track > .baseline-divider:last-child {
+    display: block;
+  }
+
+  .baseline-track-clone {
+    display: flex;
+    align-items: center;
+    gap: 1.4rem;
+    flex-shrink: 0;
   }
 
   .baseline-cell {
     flex-shrink: 0;
     white-space: nowrap;
+    gap: 0.18rem;
   }
 
   .baseline-tag {
-    font-size: 0.6rem;
+    font-size: 0.58rem;
     letter-spacing: 0.14em;
   }
 
@@ -5993,10 +6066,10 @@ a, button, [role="button"], input[type="submit"], select {
   }
 
   .baseline-divider {
-    display: block;
+    display: block !important;
     width: 1px;
     height: 22px;
-    background: rgba(207, 227, 200, 0.14);
+    background: rgba(207, 227, 200, 0.15);
     flex-shrink: 0;
   }
 
@@ -6127,18 +6200,18 @@ a, button, [role="button"], input[type="submit"], select {
     letter-spacing: 0.01em;
   }
 
-  .minimal-hero-baseline {
-    gap: 0.95rem;
-    padding-top: 1.15rem;
+  .baseline-track,
+  .baseline-track-clone {
+    gap: 1.15rem;
   }
 
   .baseline-tag {
-    font-size: 0.56rem;
+    font-size: 0.54rem;
     letter-spacing: 0.12em;
   }
 
   .baseline-detail {
-    font-size: 0.74rem;
+    font-size: 0.72rem;
   }
 
   .about-stats-badges {
@@ -6277,6 +6350,11 @@ a, button, [role="button"], input[type="submit"], select {
 @keyframes marqueeRight {
   0% { transform: translateX(-50%); }
   100% { transform: translateX(0); }
+}
+
+@keyframes heroBaselineMarquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
 
 /* Client Logo Card in Ticker (Clean White Theme) */
