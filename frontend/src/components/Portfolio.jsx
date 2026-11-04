@@ -69,10 +69,10 @@ export default function Portfolio({ onNavigateToPortfolio }) {
         {/* Simple & Minimal Header */}
         <div className="our-work-simple-header">
           <div className="our-work-header-text">
-            <span className="section-eyebrow-dark">PORTFOLIO</span>
-            <h2 className="our-work-main-title">Selected Works</h2>
+            <span className="section-eyebrow-dark">CNC MACHINING & SPATIAL PORTFOLIO</span>
+            <h2 className="our-work-main-title">Featured CNC Works & Projects</h2>
             <p className="our-work-main-desc">
-              A curated look at our turnkey spatial fabrications, CNC joinery, and architectural retail transformations.
+              A curated showcase of precision CNC routing, 3D relief carving, fiber laser metal fabrication, and turnkey interior fit-outs.
             </p>
           </div>
 

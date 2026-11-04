@@ -5158,7 +5158,7 @@ a, button, [role="button"], input[type="submit"], select {
    9. CONTACT US (DARK BACKGROUND)
    -------------------------------------------------------------------------- */
 .contact-great-section {
-  background: #edf1ea;
+  background: #FFFFFF;
   color: #1d1f1d;
   padding: 6.5rem 0;
   border-top: 1px solid #dbe5d8;
@@ -5200,7 +5200,7 @@ a, button, [role="button"], input[type="submit"], select {
   display: flex;
   align-items: flex-start;
   gap: 1.2rem;
-  background: #FFFFFF;
+  background: #f7faf5;
   border: 1px solid #dbe5d8;
   border-radius: 14px;
   padding: 1.1rem 1.4rem;
@@ -5337,7 +5337,7 @@ a, button, [role="button"], input[type="submit"], select {
 
 /* Contact Form Card (Crisp White in Grey Section) */
 .contact-form-card {
-  background: #FFFFFF;
+  background: #f7faf5;
   border: 1px solid #dbe5d8;
   border-radius: 18px;
   padding: 2.8rem;
@@ -5424,10 +5424,10 @@ a, button, [role="button"], input[type="submit"], select {
 }
 
 /* --------------------------------------------------------------------------
-   10. MATERIALS TICKER & TURNING IDEAS BANNER (WHITE BACKGROUND)
+   10. MATERIALS TICKER & TURNING IDEAS BANNER (GREY BACKGROUND)
    -------------------------------------------------------------------------- */
 .materials-ticker-section {
-  background: #FFFFFF;
+  background: #edf1ea;
   padding: 2.8rem 0;
   border-top: 1px solid #dbe5d8;
   border-bottom: 1px solid #dbe5d8;
@@ -5468,7 +5468,7 @@ a, button, [role="button"], input[type="submit"], select {
   width: 34px;
   height: 34px;
   border-radius: 8px;
-  background: #f7faf5;
+  background: #FFFFFF;
   border: 1px solid #dbe5d8;
   display: flex;
   align-items: center;
@@ -5488,7 +5488,7 @@ a, button, [role="button"], input[type="submit"], select {
   align-items: center;
   justify-content: space-between;
   gap: 1.5rem;
-  background: #edf1ea;
+  background: #FFFFFF;
   border: 1px solid #dbe5d8;
   border-radius: 14px;
   padding: 1.2rem 1.6rem;
@@ -6092,7 +6092,7 @@ a, button, [role="button"], input[type="submit"], select {
    ENTERPRISE CLIENT LOGOS & MARQUEE SHOWCASE (WHITE BACKGROUND)
    ========================================================================== */
 .client-marquee-section {
-  padding: 6.5rem 0;
+  padding: 5.5rem 0;
   background: #FFFFFF;
   color: #1d1f1d;
   position: relative;

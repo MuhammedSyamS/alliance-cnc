@@ -32,29 +32,29 @@ export default function About({ onOpenAboutDetails, onNavigateToAbout }) {
         <div className="about-header-row">
           <div className="about-title-block">
             <div className="section-subtitle-red">
-              <span>ABOUT US</span>
+              <span>PRECISION CNC & INDUSTRIAL FABRICATION</span>
               <div className="subtitle-line-red"></div>
             </div>
             <h2 className="about-main-heading">
-              Precision in <span className="text-crimson">Every Detail</span>
+              Industrial CNC Machining & <span className="text-crimson">Precision Fabrication</span>
             </h2>
             <p className="about-main-desc">
-              We are a team of innovators, creators and craftsmen passionate about turning ideas into reality. With advanced technology and a commitment to quality, we deliver custom solutions that make an enduring impact.
+              Alliance is an industrial CNC machining and precision fabrication facility based in Nedumangad, Trivandrum. We specialize in heavy-duty 5-axis CNC routing, industrial fiber laser metal cutting, 3D wood relief carving, and high-tolerance sheet nesting across solid timber, brass, steel, and acrylic — with full turnkey support for custom architectural interior and exterior installations.
             </p>
           </div>
 
           <div className="about-stats-badges">
             <div className="about-stat-chip">
               <span className="stat-number">100+</span>
-              <span className="stat-text">Projects Completed</span>
+              <span className="stat-text">CNC Projects Handed Over</span>
             </div>
             <div className="about-stat-chip">
               <span className="stat-number">15+</span>
-              <span className="stat-text">Years of Experience</span>
+              <span className="stat-text">Years CNC Machining</span>
             </div>
             <div className="about-stat-chip">
               <span className="stat-number">100%</span>
-              <span className="stat-text">Client Satisfaction</span>
+              <span className="stat-text">Factory Direct Machining</span>
             </div>
           </div>
         </div>
@@ -107,13 +107,13 @@ export default function About({ onOpenAboutDetails, onNavigateToAbout }) {
             </div>
           </div>
           <div className="founder-bio-col">
-            <span className="founder-lead-tag">INFRASTRUCTURE & FACILITY</span>
-            <h3 className="founder-name">Alliance Production & Engineering Hub</h3>
+            <span className="founder-lead-tag">INDUSTRIAL CNC & LASER FACILITY</span>
+            <h3 className="founder-name">Alliance CNC Machining & Engineering Hub</h3>
             <p className="founder-designation">
-              Industrial Multi-Axis CNC Routers, High-Power Fiber Lasers & 3D Drafting Studio
+              Industrial Multi-Axis CNC Routers, High-Power Fiber Lasers & Turnkey Joinery Studio
             </p>
             <p className="founder-bio-text">
-              Alliance operates a turnkey spatial fabrication facility in Kochi, Kerala, executing end-to-end architectural routing, laser sheet metal cutting, UV flatbed printing, and bespoke spatial fitouts. With over 15 years of industry experience across India and the GCC, we provide factory-direct precision for marquee retail flagships, luxury residential interiors, and architectural facades.
+              Alliance operates an industrial CNC machining and laser fabrication facility in Nedumangad, Trivandrum. Equipped with heavy-duty multi-axis CNC routers, high-power fiber lasers, and UV flatbed printing systems, our shop floor executes intricate 3D carvings, decorative jali screens, custom brass inlays, and metal facade components with sub-millimeter accuracy. Beyond precision cutting and machining, our integrated design and joinery studio assists clients with complete interior fitouts and exterior architectural facade execution.
             </p>
             <div className="founder-contact-pills">
               <a href="tel:+918891790094" className="founder-pill-link">
@@ -137,7 +137,7 @@ export default function About({ onOpenAboutDetails, onNavigateToAbout }) {
               className="btn btn-pill-sage"
               onClick={onNavigateToAbout}
             >
-              <span>Discover Our Full Story & In-House Machinery</span>
+              <span>Discover Our Full Story & In-House CNC Machinery</span>
               <span className="arrow-icon">➔</span>
             </button>
           </div>

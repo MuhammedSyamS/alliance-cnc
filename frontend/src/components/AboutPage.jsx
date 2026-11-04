@@ -62,7 +62,7 @@ export default function AboutPage({ onBackToHome, onNavigateToContact }) {
     {
       step: '03',
       title: 'Multi-Axis CNC & Laser Machining',
-      desc: 'High-precision machining runs in our Kalamassery facility with real-time spindle monitoring and continuous dimension checks.'
+      desc: 'High-precision machining runs in our Nedumangad facility with real-time spindle monitoring and continuous dimension checks.'
     },
     {
       step: '04',
@@ -98,33 +98,33 @@ export default function AboutPage({ onBackToHome, onNavigateToContact }) {
       <section className="testimonials-hero-section">
         <div className="container">
           <div className="section-subtitle-red">
-            <span>ABOUT ALLIANCE INTERIOR & CNC SOLUTIONS</span>
+            <span>ABOUT ALLIANCE CNC & LASER SOLUTIONS</span>
             <div className="subtitle-line-red"></div>
           </div>
           <h1 className="testimonials-hero-title">
-            Where Master Craftsmanship Meets <span className="text-crimson">Industrial Precision</span>
+            Industrial CNC Machining & <span className="text-crimson">Architectural Fabrication</span>
           </h1>
           <p className="testimonials-hero-sub">
-            Alliance is an architectural CNC machining, laser fabrication, and turnkey interior manufacturing company based in Kalamassery, Kochi, Kerala. For over 15 years, we have brought digital design concepts to life for global retail flagships, luxury villas, and commercial spaces across India and the GCC.
+            Alliance is a heavy-duty CNC routing, multi-axis milling, and industrial fiber laser cutting facility based in Nedumangad, Trivandrum. Backed by digital manufacturing machinery and high-tolerance fabrication systems, we deliver precision components and turnkey interior-exterior spatial execution.
           </p>
 
           {/* Metrics summary bar */}
           <div className="testimonials-stats-bar">
             <div className="stat-pill-box">
-              <span className="stat-bold-num">15+</span>
-              <span className="stat-label">Years of Craft</span>
-            </div>
-            <div className="stat-pill-box">
-              <span className="stat-bold-num">100+</span>
-              <span className="stat-label">Turnkey Projects</span>
-            </div>
-            <div className="stat-pill-box">
               <span className="stat-bold-num">5-Axis</span>
-              <span className="stat-label">CNC Machining</span>
+              <span className="stat-label">Industrial CNC</span>
+            </div>
+            <div className="stat-pill-box">
+              <span className="stat-bold-num">12mm</span>
+              <span className="stat-label">Fiber Laser Capacity</span>
+            </div>
+            <div className="stat-pill-box">
+              <span className="stat-bold-num">15+</span>
+              <span className="stat-label">Years CNC Precision</span>
             </div>
             <div className="stat-pill-box">
               <span className="stat-bold-num">100%</span>
-              <span className="stat-label">Factory Direct</span>
+              <span className="stat-label">Factory Direct Pricing</span>
             </div>
           </div>
         </div>
@@ -136,20 +136,20 @@ export default function AboutPage({ onBackToHome, onNavigateToContact }) {
           <div className="about-story-grid" style={{ display: 'grid', gridTemplateColumns: '1.1fr 1fr', gap: '4rem', alignItems: 'center' }}>
             <div>
               <div className="section-subtitle-red">
-                <span>OUR STORY & PHILOSOPHY</span>
+                <span>OUR MANUFACTURING PHILOSOPHY</span>
                 <div className="subtitle-line-red"></div>
               </div>
               <h2 className="heading-md" style={{ fontSize: 'clamp(1.8rem, 3.2vw, 2.6rem)', fontWeight: 800, margin: '0.75rem 0 1.5rem', lineHeight: 1.2 }}>
-                Pioneering Architectural Spatial Fabrication in Kerala
+                High-Tolerance CNC & Laser Machining Powerhouse in Kerala
               </h2>
               <p style={{ color: '#353834', lineHeight: 1.7, marginBottom: '1.25rem', fontSize: '1.02rem' }}>
-                Founded with a mission to eliminate the compromises between creative architectural design and practical manufacturing, Alliance has grown into Kerala’s foremost specialized fabrication house.
+                Alliance is built from the ground up as a precision manufacturing powerhouse. Our facility is equipped with industrial 5-axis CNC routers, high-power fiber laser metal cutters, and automated nesting systems to handle the most demanding architectural challenges.
               </p>
               <p style={{ color: '#353834', lineHeight: 1.7, marginBottom: '1.25rem', fontSize: '1.02rem' }}>
-                While traditional carpentry struggles with complex 3D parametric curves and modern metal inlays, and generic industrial machine shops lack the finesse of fine woodworking, Alliance bridges both worlds. Our factory houses high-speed multi-axis CNC routers, precision fiber lasers, and master joinery artisans under one roof.
+                While traditional carpentry cannot achieve the sub-millimeter tolerances required for modern parametric architecture, and generic interior designers must outsource their machining to third parties, Alliance executes all cutting, routing, and fabrication in-house. In addition, our integrated design and joinery studio assists architects, builders, and brands with complete turnkey interior and exterior spatial execution.
               </p>
               <p style={{ color: '#353834', lineHeight: 1.7, marginBottom: '2rem', fontSize: '1.02rem' }}>
-                We operate on a <strong>100% factory-direct model</strong>. There are no middlemen, broker markups, or outsourced quality risks—you collaborate directly with our engineering draughtsmen and factory craftsmen.
+                We operate on a <strong>100% factory-direct model</strong>. Whether you require standalone CNC routing components or a complete turnkey interior fitout, you work directly with our engineering machinists.
               </p>
 
               <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
@@ -187,7 +187,7 @@ export default function AboutPage({ onBackToHome, onNavigateToContact }) {
                 </div>
                 <div>
                   <h4 style={{ fontSize: '0.92rem', fontWeight: 700, color: '#1d1f1d', margin: 0 }}>Alliance Production & Engineering Hub</h4>
-                  <p style={{ fontSize: '0.82rem', color: '#60685f', margin: '2px 0 0 0' }}>Kalamassery, Ernakulam, Kerala 683104 • GCC Desk: +973 35985107</p>
+                  <p style={{ fontSize: '0.82rem', color: '#60685f', margin: '2px 0 0 0' }}>Nedumangad, Trivandrum, Kerala 695541 • GCC Desk: +973 35985107</p>
                 </div>
               </div>
             </div>

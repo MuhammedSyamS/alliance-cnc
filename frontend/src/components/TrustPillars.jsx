@@ -3,24 +3,24 @@ import React from 'react';
 export default function TrustPillars() {
   const pillars = [
     {
-      icon: 'fa-gem',
-      title: 'High Precision',
-      desc: 'Clean and accurate cuts and engravings'
-    },
-    {
-      icon: 'fa-shield-halved',
-      title: 'Premium Materials',
-      desc: 'Wood, Acrylic, Metal, Aluminium & more'
-    },
-    {
-      icon: 'fa-shapes',
-      title: 'Custom Designs',
-      desc: 'Your ideas, our expertise'
+      icon: 'fa-gears',
+      title: '5-Axis CNC Precision',
+      desc: 'High-speed 3D routing, milling & deep architectural fluting'
     },
     {
       icon: 'fa-bolt',
-      title: 'Fast Turnaround',
-      desc: 'On-time delivery, without compromise'
+      title: 'Fiber Laser Slicing',
+      desc: 'Clean, burr-free sheet metal & brass cutting up to 12mm'
+    },
+    {
+      icon: 'fa-layer-group',
+      title: 'Engineered Substrates',
+      desc: 'Hardwood, Brass, Stainless Steel, Acrylic, Corian & ACP'
+    },
+    {
+      icon: 'fa-pen-ruler',
+      title: 'Turnkey Architectural Design',
+      desc: 'CAD drafting, bespoke interior fit-outs & on-site assembly'
     }
   ];
 

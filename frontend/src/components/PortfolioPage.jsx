@@ -110,14 +110,14 @@ export default function PortfolioPage({ onBackToHome, onNavigateToContact }) {
       <section className="testimonials-hero-section">
         <div className="container">
           <div className="section-subtitle-red">
-            <span>ARCHITECTURAL REALIZATIONS & HANDOVERS</span>
+            <span>CNC MACHINING, LASER CUTTING & SPATIAL HANDOVERS</span>
             <div className="subtitle-line-red"></div>
           </div>
           <h1 className="testimonials-hero-title">
-            The Work of <span className="text-crimson">Alliance</span>
+            Precision CNC Works & <span className="text-crimson">Engineered Spaces</span>
           </h1>
           <p className="testimonials-hero-sub">
-            Explore our curated portfolio of global flagship retail fitouts, 3D parametric ceilings, luxury joinery, and interactive before-and-after spatial transformations across India and the GCC.
+            Explore our curated portfolio of multi-axis CNC milling, high-output fiber laser metal cutting, architectural joinery, and custom residential and commercial spatial designs across India and the GCC.
           </p>
 
           {/* Quick Metrics Bar */}

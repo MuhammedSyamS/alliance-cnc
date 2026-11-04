@@ -4,31 +4,31 @@ export default function ServicesGrid({ onSelectService, onNavigateToServices }) 
   const services = [
     {
       id: 'cnc-engraving',
-      title: 'CNC Engraving',
-      desc: 'Detailed engravings on wood, acrylic, metal and more.',
+      title: 'CNC 3D Routing & Milling',
+      desc: 'High-speed 3D relief carving, grooving and deep fluting on wood, acrylic, corian and WPC.',
       img: '/images/craft/laser_wood_plaque.jpg',
-      tag: 'WOOD • ACRYLIC • METAL'
+      tag: 'WOOD • ACRYLIC • CORIAN'
     },
     {
       id: 'laser-cutting',
-      title: 'Laser Cutting',
-      desc: 'Clean and precise cuts for various materials.',
+      title: 'Fiber Laser Metal Cutting',
+      desc: 'Mirror-clean, burr-free slicing up to 12mm in brass, stainless steel and aluminum.',
       img: '/images/craft/hero_laser_sparks.jpg',
-      tag: 'MDF • STEEL • ACRYLIC'
+      tag: 'BRASS • STEEL • ALUMINUM'
     },
     {
       id: 'laser-printing',
-      title: 'Laser Printing',
-      desc: 'High-quality prints on wood, acrylic, metal and other surfaces.',
+      title: 'UV Flatbed Printing & Marking',
+      desc: 'Direct-to-substrate permanent color printing and raised tactile embossing on rigid surfaces.',
       img: '/images/craft/laser_metal_ornate.jpg',
-      tag: 'UV PRINT • MARKING'
+      tag: 'UV PRINT • EMBOSSING'
     },
     {
       id: 'custom-projects',
-      title: 'Custom Projects',
-      desc: 'Personalized gifts, signage, branding and more.',
+      title: 'Interior & Facade Design',
+      desc: 'Complete architectural interior fit-outs, bespoke commercial joinery, parametric ceilings, and exterior facades.',
       img: '/images/craft/laser_tumbler_mug.jpg',
-      tag: 'GIFTS • SIGNAGE • BRANDING'
+      tag: 'INTERIOR • FACADE • JOINERY'
     }
   ];
 
@@ -39,14 +39,14 @@ export default function ServicesGrid({ onSelectService, onNavigateToServices }) 
         <div className="services-overview-header">
           <div className="services-header-text">
             <div className="section-subtitle-red">
-              <span>OUR SERVICES</span>
+              <span>ADVANCED CNC & FABRICATION CAPABILITIES</span>
               <div className="subtitle-line-red"></div>
             </div>
             <h2 className="services-main-heading">
-              Everything You Need<br />in <span className="text-crimson">One Place</span>
+              Heavy-Duty CNC Machining & <br /><span className="text-crimson">Custom Fabrication</span>
             </h2>
             <p className="services-main-desc">
-              We offer a complete range of CNC and laser services to meet the needs of businesses, creators and individuals.
+              From 5-axis CNC routing and high-power fiber laser cutting to direct UV printing and turnkey interior fit-outs, we deliver factory-direct precision for architects, builders, and commercial brands.
             </p>
           </div>
 

@@ -20,7 +20,7 @@ export default function Header({
       setScrolled(window.scrollY > 20);
 
       // ScrollSpy to highlight active nav link on Home page
-      const sections = ['hero', 'about-precision', 'services-overview', 'our-work', 'testimonials', 'contact'];
+      const sections = ['hero', 'testimonials', 'about-precision', 'services-overview', 'our-work', 'contact'];
       const scrollPos = window.scrollY + 120;
 
       for (let i = sections.length - 1; i >= 0; i--) {

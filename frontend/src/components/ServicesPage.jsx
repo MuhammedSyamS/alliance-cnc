@@ -133,14 +133,14 @@ export default function ServicesPage({ onBackToHome, onNavigateToContact, onSele
       <section className="testimonials-hero-section">
         <div className="container">
           <div className="section-subtitle-red">
-            <span>SPECIALIZED ARCHITECTURAL MANUFACTURING</span>
+            <span>COMPREHENSIVE CNC & FABRICATION SERVICES</span>
             <div className="subtitle-line-red"></div>
           </div>
           <h1 className="testimonials-hero-title">
-            Complete Industrial CNC & <span className="text-crimson">Laser Services</span>
+            Industrial CNC Machining & <span className="text-crimson">Custom Fabrication</span>
           </h1>
           <p className="testimonials-hero-sub">
-            From precision 3D multi-axis wood carving and high-power fiber laser metal slicing to turnkey commercial retail fitouts and weatherproof building facades. Manufactured factory-direct in our Kochi facility.
+            Specializing in multi-axis CNC router 3D milling, high-output fiber laser metal cutting, precision sheet nesting, and UV flatbed printing — complemented by turnkey architectural interior and exterior design execution. Manufactured factory-direct in Nedumangad, Trivandrum.
           </p>
 
           {/* Quick Metrics Bar */}

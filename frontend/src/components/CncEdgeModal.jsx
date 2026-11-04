@@ -14,7 +14,7 @@ export default function CncEdgeModal({ isOpen, onClose }) {
         </h2>
 
         <p style={{ color: 'var(--text-muted)', marginBottom: '1rem', lineHeight: 1.7 }}>
-          Our Kochi workshop handles all interior and exterior materials suited for Kerala homes, villas, and commercial buildings.
+          Our Nedumangad, Trivandrum workshop handles all interior and exterior materials suited for Kerala homes, villas, and commercial buildings.
         </p>
 
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem', marginTop: '1rem' }}>

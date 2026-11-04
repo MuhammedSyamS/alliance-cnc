@@ -38,14 +38,14 @@ export default function ContactPage({ onBackToHome }) {
       <section className="testimonials-hero-section">
         <div className="container">
           <div className="section-subtitle-red">
-            <span>GET IN TOUCH WITH ALLIANCE</span>
+            <span>DIRECT CNC MACHINING & DESIGN INQUIRIES</span>
             <div className="subtitle-line-red"></div>
           </div>
           <h1 className="testimonials-hero-title">
-            Let's Engineer Your <span className="text-crimson">Next Project</span>
+            Request CNC Machining & <span className="text-crimson">Custom Design Estimates</span>
           </h1>
           <p className="testimonials-hero-sub">
-            Directly connect with our Kerala factory engineering desk for architectural CNC routing, fiber laser metal cutting, and turnkey interior fitouts. We offer instant WhatsApp estimates, DWG review, and factory-direct pricing.
+            Directly connect with our Kerala factory engineering desk for industrial CNC routing, fiber laser metal cutting, and supporting turnkey interior fitouts. We offer instant WhatsApp estimates, DWG review, and factory-direct pricing.
           </p>
 
           {/* Quick Metrics Bar */}
@@ -59,8 +59,8 @@ export default function ContactPage({ onBackToHome }) {
               <span className="stat-label">Factory Direct</span>
             </div>
             <div className="stat-pill-box">
-              <span className="stat-bold-num">Kochi</span>
-              <span className="stat-label">Kerala Facility</span>
+              <span className="stat-bold-num">Trivandrum</span>
+              <span className="stat-label">Nedumangad Hub</span>
             </div>
             <div className="stat-pill-box">
               <span className="stat-bold-num">GCC Desk</span>
@@ -86,7 +86,7 @@ export default function ContactPage({ onBackToHome }) {
                 Factory Desk & Workshop Location
               </h2>
               <p style={{ color: '#353834', lineHeight: 1.7, marginBottom: '2.5rem', fontSize: '1.02rem' }}>
-                Visit our Kalamassery fabrication studio or reach our design engineers directly. We provide rapid feasibility assessments, material samples, and transparent itemized estimates.
+                Visit our Nedumangad fabrication studio or reach our design engineers directly. We provide rapid feasibility assessments, material samples, and transparent itemized estimates.
               </p>
 
               {/* Contact Channels Grid */}
@@ -169,13 +169,13 @@ export default function ContactPage({ onBackToHome }) {
                     </div>
                   </div>
                   <div className="map-label-chip">
-                    <span>📍 Kalamassery Industrial Zone, Kochi, Kerala</span>
+                    <span>📍 Nedumangad, Trivandrum, Kerala</span>
                   </div>
                 </div>
                 <div style={{ padding: '0.9rem 1.25rem', background: '#f7faf5', display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderTop: '1px solid #dbe5d8' }}>
                   <span style={{ fontSize: '0.85rem', color: '#1d1f1d', fontWeight: 600 }}>Alliance Production Studio</span>
                   <a 
-                    href="https://maps.google.com/?q=Kalamassery,Kochi,Kerala" 
+                    href="https://maps.google.com/?q=Nedumangad,Trivandrum,Kerala" 
                     target="_blank" 
                     rel="noreferrer"
                     style={{ fontSize: '0.82rem', fontWeight: 700, color: '#1d1f1d', textDecoration: 'none' }}

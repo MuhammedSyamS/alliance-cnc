@@ -22,12 +22,12 @@ export default function Hero({ onNavigate }) {
         {/* Main Editorial Content */}
         <div className="minimal-hero-body">
           <h1 className="minimal-hero-title">
-            Complete Interior & Exterior <br />
-            <span className="minimal-hero-accent">Design Solutions</span>
+            Industrial CNC Routing & <br />
+            <span className="minimal-hero-accent">Precision Laser Solutions</span>
           </h1>
 
           <p className="minimal-hero-lead">
-            Bespoke 3D architectural panels, luxury facades, and turnkey commercial interior fit-outs. Manufactured factory-direct across timber, sheet metal, acrylic, and composite substrates.
+            High-precision 5-axis CNC machining, industrial fiber laser metal cutting, and complex 3D routing across timber, brass, acrylic, and composite substrates. Manufactured factory-direct in Nedumangad, Trivandrum, with turnkey capabilities for custom architectural interiors and exterior facades.
           </p>
 
           <div className="minimal-hero-cta-group">
@@ -36,7 +36,7 @@ export default function Hero({ onNavigate }) {
               className="minimal-hero-btn-solid"
               onClick={(e) => { if (onNavigate) { e.preventDefault(); onNavigate('work'); } }}
             >
-              <span>Explore Works</span>
+              <span>Explore CNC Works</span>
               <span className="cta-arrow">→</span>
             </a>
             <a 
@@ -44,7 +44,7 @@ export default function Hero({ onNavigate }) {
               className="minimal-hero-btn-ghost"
               onClick={(e) => { if (onNavigate) { e.preventDefault(); onNavigate('contact'); } }}
             >
-              <span>Start a Project</span>
+              <span>Request CNC Quote</span>
               <span className="cta-arrow">→</span>
             </a>
           </div>
@@ -53,8 +53,8 @@ export default function Hero({ onNavigate }) {
         {/* Quiet Minimalist Editorial Baseline */}
         <div className="minimal-hero-baseline">
           <div className="baseline-cell">
-            <span className="baseline-tag">FACILITY</span>
-            <span className="baseline-detail">Kochi, Kerala</span>
+            <span className="baseline-tag">MACHINING & CUTTING</span>
+            <span className="baseline-detail">5-Axis CNC & Fiber Laser</span>
           </div>
           <div className="baseline-divider"></div>
           <div className="baseline-cell">
@@ -63,13 +63,13 @@ export default function Hero({ onNavigate }) {
           </div>
           <div className="baseline-divider"></div>
           <div className="baseline-cell">
-            <span className="baseline-tag">EXECUTION</span>
-            <span className="baseline-detail">Turnkey Commercial & Retail</span>
+            <span className="baseline-tag">ARCHITECTURAL</span>
+            <span className="baseline-detail">Interior & Exterior Execution</span>
           </div>
           <div className="baseline-divider"></div>
           <div className="baseline-cell">
-            <span className="baseline-tag">EXPERIENCE</span>
-            <span className="baseline-detail">15+ Years Factory Direct</span>
+            <span className="baseline-tag">FACILITY</span>
+            <span className="baseline-detail">Nedumangad, Trivandrum (Factory Direct)</span>
           </div>
         </div>
       </div>

@@ -134,29 +134,29 @@ export default function App() {
           {/* 1. HERO: CNC & Laser Cutting Video Backdrop, Headline, Capabilities & Metrics */}
           <Hero onNavigate={navigateTo} />
 
-          {/* 2. ABOUT US SUMMARY: Engineering Vision, Facility Standards, Core Values & Metrics */}
+          {/* 2. CLIENTS & ENTERPRISE LOGO SHOWCASE: Positioned Under Hero */}
+          <ClientLogoMarquee 
+            onNavigateToTestimonials={() => navigateTo('testimonials')} 
+          />
+
+          {/* 3. ABOUT US SUMMARY: Engineering Vision, Facility Standards, Core Values & Metrics */}
           <About 
             onOpenAboutDetails={() => setIsAboutModalOpen(true)} 
             onNavigateToAbout={() => navigateTo('about')}
           />
 
-          {/* 3. CAPABILITIES & TRUST PILLARS */}
+          {/* 4. CAPABILITIES & TRUST PILLARS */}
           <TrustPillars />
 
-          {/* 4. SERVICES SUMMARY: Core Services (CNC Router, Laser Cutting, Interior Fit-Outs, Exterior Facades) */}
+          {/* 5. SERVICES SUMMARY: Core Services (CNC Router, Laser Cutting, Interior Fit-Outs, Exterior Facades) */}
           <ServicesGrid 
             onSelectService={(key) => setActiveServiceModal(key)} 
             onNavigateToServices={() => navigateTo('services')}
           />
 
-          {/* 5. OUR WORK SUMMARY: Before & After Transformations & Flagship Projects */}
+          {/* 6. OUR WORK SUMMARY: Before & After Transformations & Flagship Projects */}
           <Portfolio 
             onNavigateToPortfolio={() => navigateTo('work')}
-          />
-
-          {/* 6. CLIENTS & TESTIMONIALS SUMMARY: Marquee of 20+ Enterprise Logos & Direct Access to Full Stories */}
-          <ClientLogoMarquee 
-            onNavigateToTestimonials={() => navigateTo('testimonials')} 
           />
 
           {/* 7. CONTACT US SUMMARY: Direct Inquiry, WhatsApp Desk, Location & Map */}

@@ -23,16 +23,16 @@ export default function QuoteContact({ onNavigateToContact }) {
           {/* Left Column: Info & Dark Map */}
           <div className="contact-info-col">
             <div className="section-subtitle-red">
-              <span>CONTACT US</span>
+              <span>CNC MACHINING & PROJECT INQUIRIES</span>
               <div className="subtitle-line-red"></div>
             </div>
             
             <h2 className="contact-main-heading">
-              Let's Build<br /><span className="text-crimson">Something Great</span>
+              Request a CNC<br /><span className="text-crimson">& Design Quote</span>
             </h2>
             
             <p className="contact-main-desc">
-              Get in touch with us. We're here to help you with your ideas and custom projects.
+              Get in touch with our factory engineering desk for 5-axis CNC routing, fiber laser metal slicing, and custom interior design solutions.
             </p>
 
             <div className="contact-channels-list">
@@ -55,8 +55,8 @@ export default function QuoteContact({ onNavigateToContact }) {
                   <i className="fa-solid fa-envelope"></i>
                 </div>
                 <div className="channel-text">
-                  <a href="mailto:info@alliancecnc.in" className="channel-primary-val">
-                    info@alliancecnc.in
+                  <a href="mailto:info@alliancecncwork.com" className="channel-primary-val">
+                    info@alliancecncwork.com
                   </a>
                   <span className="channel-secondary-note">We reply within 24 hours</span>
                 </div>
@@ -69,7 +69,7 @@ export default function QuoteContact({ onNavigateToContact }) {
                 </div>
                 <div className="channel-text">
                   <span className="channel-primary-val">
-                    Kochi, Kerala, India
+                    Nedumangad, Trivandrum, Kerala
                   </span>
                   <span className="channel-secondary-note">Visit us for an engineering consultation</span>
                 </div>
@@ -88,13 +88,13 @@ export default function QuoteContact({ onNavigateToContact }) {
                   <div className="pin-ripple"></div>
                 </div>
                 <div className="map-label-chip">
-                  <span>Alliance Industrial Park, Kochi</span>
+                  <span>Alliance Fabrication Facility, Nedumangad</span>
                 </div>
               </div>
               <div className="map-card-bar">
-                <span>📍 Ernakulam / Kochi Workshop</span>
+                <span>📍 Nedumangad, Trivandrum Workshop</span>
                 <a 
-                  href="https://maps.google.com/?q=Kochi,Kerala" 
+                  href="https://maps.google.com/?q=Nedumangad,Trivandrum,Kerala" 
                   target="_blank" 
                   rel="noreferrer" 
                   className="map-directions-btn"

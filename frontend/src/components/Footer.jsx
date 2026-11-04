@@ -28,7 +28,7 @@ export default function Footer({ onNavigate = () => {}, onNavigateToTestimonials
               <span className="brand-main-name">ALLIANCE</span>
             </a>
             <p className="footer-brand-bio">
-              Turnkey architectural CNC routing, industrial fiber laser cutting, high-precision UV printing, and custom spatial fabrications.
+              Industrial-grade CNC routing, multi-axis 3D milling, and high-power fiber laser cutting, backed by complete architectural interior and exterior design execution.
             </p>
             <div className="footer-social-row">
               <a href="https://instagram.com" target="_blank" rel="noreferrer" aria-label="Instagram">
@@ -79,13 +79,13 @@ export default function Footer({ onNavigate = () => {}, onNavigateToTestimonials
                 <i className="fa-solid fa-phone text-crimson"></i>
                 <span>+91 88917 90094</span>
               </a>
-              <a href="mailto:info@alliancecnc.in" className="footer-contact-link">
+              <a href="mailto:info@alliancecncwork.com" className="footer-contact-link">
                 <i className="fa-solid fa-envelope text-crimson"></i>
-                <span>info@alliancecnc.in</span>
+                <span>info@alliancecncwork.com</span>
               </a>
               <div className="footer-contact-link">
                 <i className="fa-solid fa-location-dot text-crimson"></i>
-                <span>Kochi, Kerala, India</span>
+                <span>Nedumangad, Trivandrum, Kerala</span>
               </div>
               <div className="footer-contact-link" style={{ fontSize: '0.82rem', color: '#a4b3a2' }}>
                 <i className="fa-solid fa-building-shield text-crimson"></i>
@@ -102,7 +102,7 @@ export default function Footer({ onNavigate = () => {}, onNavigateToTestimonials
             <span>&copy; {currentYear} ALLIANCE INTERIOR & CNC SOLUTIONS. ALL RIGHTS RESERVED.</span>
           </div>
           <div className="footer-bottom-badges">
-            <span className="craft-badge-item">📍 FACTORY: KALAMASSERY, ERNAKULAM, KERALA</span>
+            <span className="craft-badge-item">📍 FACTORY: NEDUMANGAD, TRIVANDRUM, KERALA</span>
             <span className="craft-badge-item">✦ 100% FACTORY DIRECT PRICING</span>
           </div>
         </div>

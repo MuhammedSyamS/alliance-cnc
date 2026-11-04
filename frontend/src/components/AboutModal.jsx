@@ -10,11 +10,11 @@ export default function AboutModal({ isOpen, onClose }) {
         
         <span className="arch-index">01. OUR KERALA FACTORY STORY</span>
         <h2 className="heading-md" style={{ marginBottom: '1rem' }}>
-          Alliance Interior & CNC Solutions <span className="text-crimson">Kochi, Kerala</span>
+          Alliance CNC & Laser Solutions <span className="text-crimson">Nedumangad, Trivandrum</span>
         </h2>
 
         <p style={{ color: 'var(--text-muted)', marginBottom: '1rem', lineHeight: 1.7 }}>
-          Founded in Kalamassery, Ernakulam, ALLIANCE has grown into one of Kerala's premier architectural CNC cutting and complete interior design companies. We bridge the gap between traditional Kerala woodwork craftsmanship and modern 5-axis computer numerical control (CNC) technology.
+          Located in Nedumangad, Trivandrum, ALLIANCE is an industrial CNC routing, multi-axis milling, and fiber laser cutting facility. We combine 5-axis digital manufacturing and precision sheet metal cutting with turnkey architectural interior and exterior design capabilities.
         </p>
 
         <h3 className="heading-sm" style={{ marginTop: '1.5rem', marginBottom: '0.5rem' }}>
