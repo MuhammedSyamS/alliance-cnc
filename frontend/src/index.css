@@ -4009,14 +4009,16 @@ a, button, [role="button"], input[type="submit"], select {
 
 .minimal-hero-cta-group {
   display: flex;
+  flex-direction: row;
   align-items: center;
-  gap: 1.8rem;
-  flex-wrap: wrap;
+  gap: 1.4rem;
+  flex-wrap: nowrap;
 }
 
 .minimal-hero-btn-solid {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 0.75rem;
   padding: 0.9rem 2.2rem;
   background: #cfe3c8;
@@ -4029,6 +4031,7 @@ a, button, [role="button"], input[type="submit"], select {
   text-transform: uppercase;
   font-family: var(--font-heading);
   text-decoration: none;
+  white-space: nowrap;
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   box-shadow: 0 4px 20px rgba(207, 227, 200, 0.22);
 }
@@ -4052,8 +4055,9 @@ a, button, [role="button"], input[type="submit"], select {
 .minimal-hero-btn-ghost {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 0.65rem;
-  padding: 0.9rem 1.6rem;
+  padding: 0.9rem 2rem;
   color: #f2f7f0;
   font-size: 0.88rem;
   font-weight: 700;
@@ -4061,14 +4065,19 @@ a, button, [role="button"], input[type="submit"], select {
   text-transform: uppercase;
   font-family: var(--font-heading);
   text-decoration: none;
-  border-bottom: 1px solid rgba(207, 227, 200, 0.4);
-  transition: all 0.25s ease;
+  white-space: nowrap;
+  border: 1px solid rgba(207, 227, 200, 0.4);
+  border-radius: 999px;
+  background: rgba(20, 22, 20, 0.35);
+  backdrop-filter: blur(8px);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .minimal-hero-btn-ghost:hover {
-  color: #cfe3c8;
+  background: rgba(207, 227, 200, 0.15);
   border-color: #cfe3c8;
-  padding-left: 1.8rem;
+  color: #cfe3c8;
+  transform: translateY(-2px);
 }
 
 .minimal-hero-btn-ghost .cta-arrow {
@@ -6005,18 +6014,35 @@ a, button, [role="button"], input[type="submit"], select {
 /* Mobile Portrait & Small Mobiles (<= 520px) */
 @media (max-width: 520px) {
   .minimal-hero-cta-group {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 0.85rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.65rem;
     width: 100%;
+    max-width: 100%;
+    flex-wrap: nowrap;
   }
 
   .minimal-hero-btn-solid,
   .minimal-hero-btn-ghost {
-    width: 100%;
+    flex: 1 1 0;
+    min-width: 0;
+    width: auto;
     justify-content: center;
     text-align: center;
-    min-height: 48px;
+    min-height: 44px;
+    padding: 0.75rem 0.5rem;
+    font-size: clamp(0.68rem, 3vw, 0.82rem);
+    letter-spacing: 0.02em;
+    white-space: nowrap;
+    border-radius: 999px;
+    box-sizing: border-box;
+    gap: 0.35rem;
+  }
+
+  .minimal-hero-btn-solid .cta-arrow,
+  .minimal-hero-btn-ghost .cta-arrow {
+    font-size: 0.75rem;
   }
 
   .craft-input,
@@ -6058,6 +6084,17 @@ a, button, [role="button"], input[type="submit"], select {
   .container {
     padding-left: 14px;
     padding-right: 14px;
+  }
+
+  .minimal-hero-cta-group {
+    gap: 0.45rem;
+  }
+
+  .minimal-hero-btn-solid,
+  .minimal-hero-btn-ghost {
+    padding: 0.7rem 0.35rem;
+    font-size: 0.68rem;
+    letter-spacing: 0.01em;
   }
 
   .minimal-hero-baseline {
