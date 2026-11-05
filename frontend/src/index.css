@@ -3599,6 +3599,7 @@ a, button, [role="button"], input[type="submit"], select {
 .text-crimson-gradient {
   background: linear-gradient(135deg, #cfe3c8 0%, #a3c49a 100%);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
