@@ -7,11 +7,11 @@ export default function ServicesPage({ onBackToHome, onNavigateToContact, onSele
     {
       id: 'cnc-engraving',
       num: '01',
-      title: 'CNC Router Engraving & 3D Milling',
-      tagline: 'Multi-Axis Precision for Complex 3D Reliefs & Architectural Paneling',
-      desc: 'Our heavy-duty 5-axis industrial CNC routing systems execute precision multi-depth relief carving, parametric wave contours, blind pocketing, and high-speed sheet nesting across both natural and synthetic substrates.',
+      title: 'Industrial CNC Cutting & 3D Routing (Priority #1)',
+      tagline: 'Primary Heavy-Duty CNC Cutting, Sizing & High-Accuracy 3D Routing',
+      desc: 'CNC cutting is our primary facility priority. Our industrial CNC machining systems execute precision sizing, sheet nesting, multi-depth relief carving, parametric wave contours, and intricate jali fretwork across all architectural flat sheets.',
       img: '/images/craft/laser_wood_plaque.jpg',
-      substrates: ['Solid Hardwood & Teak', 'Marine Plywood (IS 710)', 'Waterproof WPC & PVC', 'Corian Solid Surface', 'High-Density MDF & Acrylic'],
+      substrates: ['Wood (Solid & Engineered)', 'Acrylic Sheets', 'ACP (Aluminium Composite)', 'MDF & Plywood', 'WPC & PVC Boards', 'Gypsum Board', 'Foam Board & Forex Sheet'],
       applications: [
         '3D Parametric Wall & Ceiling Acoustic Baffles',
         'Deep-Fluted Wall Paneling for Luxury Retail & Boutiques',
@@ -28,11 +28,11 @@ export default function ServicesPage({ onBackToHome, onNavigateToContact, onSele
     {
       id: 'laser-cutting',
       num: '02',
-      title: 'Precision Fiber Laser Metal Slicing',
-      tagline: 'High-Output Sheet Metal & Brass Cutting with Mirror-Clean Edges',
+      title: 'Precision Fiber Laser Metal Cutting',
+      tagline: 'High-Output Sheet Metal, GI Sheet & Stainless Steel Slicing',
       desc: 'Utilizing state-of-the-art fiber laser cutting technology with high-purity nitrogen assist gas, Alliance cuts sheet metals with zero thermal distortion, razor-sharp geometric corners, and burr-free edges ready for immediate assembly.',
       img: '/images/craft/hero_laser_sparks.jpg',
-      substrates: ['Architectural Brass & Bronze', 'Stainless Steel (SS 304 / SS 316)', 'Aerospace Aluminum Alloy', 'Cold-Rolled Carbon & Mild Steel'],
+      substrates: ['Stainless Steel (SS 304 / SS 316)', 'GI Sheet (Galvanised Iron)', 'Industrial Metal & Carbon Steel', 'Architectural Brass & Bronze'],
       applications: [
         'Luxury Villa Main Entry Doors & Ornate Metal Gates',
         'Perforated Architectural Facade Envelopes & Sunshades',
@@ -49,11 +49,11 @@ export default function ServicesPage({ onBackToHome, onNavigateToContact, onSele
     {
       id: 'laser-printing',
       num: '03',
-      title: 'Large-Format UV Flatbed Printing & Laser Marking',
-      tagline: 'Permanent Direct-to-Substrate Architectural Graphics & Signage',
-      desc: 'We print high-definition vector graphics, photo-realistic art, and raised tactile textures directly onto rigid substrates. Instantly cured by intense UV lamps, the prints resist scratch, moisture, UV degradation, and chemical cleaning.',
+      title: 'Precision Engraving (Mirror, Glass & Rigid Substrates)',
+      tagline: 'High-Detail Frosted Glass Etching, Mirror Monograms & Surface Engraving',
+      desc: 'Specializing in dedicated precision surface engraving for Glass and Mirror panels, along with high-definition deep relief engraving across Wood, Acrylic, and metals. Perfect for luxury mirrors, illuminated signage, and architectural brand walls.',
       img: '/images/craft/laser_metal_ornate.jpg',
-      substrates: ['Clear & Frosted Acrylic Sheets', 'Brushed Aluminum & Brass Sheets', 'Natural Wood Slabs & Veneer', 'Glass & Architectural Mirrors', 'ACP & Composite Boards'],
+      substrates: ['Mirror (Engraving Only)', 'Glass (Engraving Only)', 'Clear & Frosted Acrylic', 'Natural Wood & Veneer', 'Stainless Steel & Metals'],
       applications: [
         'Flagship Retail Visual Merchandising Panels',
         'Backlit Acrylic Lightbox Displays & Wayfinding Signage',

@@ -32,9 +32,9 @@ export default function Hero({ onNavigate }) {
   }, []);
 
   const baselineSpecs = [
-    { tag: 'MACHINING & CUTTING', detail: '5-Axis CNC & Fiber Laser' },
-    { tag: 'SUBSTRATES', detail: 'Wood • Metal • Acrylic • Corian' },
-    { tag: 'ARCHITECTURAL', detail: 'Interior & Exterior Execution' },
+    { tag: 'PRIORITY CAPABILITY', detail: 'CNC Cutting (Primary Priority)' },
+    { tag: 'CUTTING & ENGRAVING', detail: 'Wood • Acrylic • ACP • MDF • Plywood • WPC • Metal' },
+    { tag: 'ENGRAVING ONLY', detail: 'Mirror & Glass Precision Engraving' },
     { tag: 'FACILITY', detail: 'Nedumangad, Trivandrum (Factory Direct)' }
   ];
 
@@ -60,16 +60,16 @@ export default function Hero({ onNavigate }) {
         {/* Main Editorial Content */}
         <div className="minimal-hero-body">
           <h1 className="minimal-hero-title">
-            Industrial CNC Routing & <br />
-            <span className="minimal-hero-accent">Precision Laser Solutions</span>
+            Industrial CNC Cutting & <br />
+            <span className="minimal-hero-accent">Precision Engraving</span>
           </h1>
 
           <p className="minimal-hero-lead">
             <span className="hero-lead-desktop">
-              High-precision 5-axis CNC machining, industrial fiber laser metal cutting, and complex 3D routing across timber, brass, acrylic, and composite substrates. Manufactured factory-direct in Nedumangad, Trivandrum, with turnkey capabilities for custom architectural interiors and exterior facades.
+              Priority heavy-duty CNC cutting and high-accuracy engraving across Wood, Acrylic, ACP, MDF, Plywood, WPC, PVC, Gypsum board, Stainless Steel, Metal, GI sheet, Foam board, and Forex sheet — plus specialty engraving on Mirror and Glass. Manufactured factory-direct in Nedumangad, Trivandrum.
             </span>
             <span className="hero-lead-mobile">
-              Industrial 5-axis CNC machining & precision fiber laser cutting. Factory-direct in Nedumangad, Trivandrum.
+              Priority CNC cutting & engraving across Wood, Acrylic, ACP, Metal, WPC & GI sheet, plus Mirror & Glass engraving. Nedumangad, Trivandrum.
             </span>
           </p>
 

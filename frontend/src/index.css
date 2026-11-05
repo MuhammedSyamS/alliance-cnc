@@ -5493,61 +5493,246 @@ a, button, [role="button"], input[type="submit"], select {
 /* --------------------------------------------------------------------------
    10. MATERIALS TICKER & TURNING IDEAS BANNER (GREY BACKGROUND)
    -------------------------------------------------------------------------- */
+/* ==========================================================================
+   MATERIALS & CAPABILITIES SECTION (CLEAN ARCHITECTURAL PALE SAGE)
+   ========================================================================== */
 .materials-ticker-section {
   background: #edf1ea;
-  padding: 2.8rem 0;
+  padding: 4.5rem 0;
   border-top: 1px solid #dbe5d8;
   border-bottom: 1px solid #dbe5d8;
 }
 
-.materials-layout-grid {
-  display: grid;
-  grid-template-columns: 1.2fr 1fr;
-  gap: 3rem;
-  align-items: center;
+.materials-section-header {
+  margin-bottom: 2.8rem;
 }
 
-.materials-label-text {
-  display: block;
-  font-size: 0.75rem;
-  font-weight: 800;
-  letter-spacing: 0.12em;
-  color: #556254;
-  text-transform: uppercase;
-  margin-bottom: 0.85rem;
-  font-family: var(--font-heading);
-}
-
-.materials-icons-row {
+.materials-title-row {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
+  justify-content: space-between;
   gap: 1.5rem;
   flex-wrap: wrap;
 }
 
-.material-chip-item {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
+.materials-section-title {
+  font-size: clamp(1.85rem, 3.2vw, 2.5rem);
+  font-weight: 800;
+  color: #1d1f1d;
+  margin: 0.4rem 0 0.5rem;
+  font-family: var(--font-heading);
 }
 
-.material-chip-box {
-  width: 34px;
-  height: 34px;
-  border-radius: 8px;
+.materials-section-sub {
+  font-size: 0.98rem;
+  color: #556254;
+  margin: 0;
+  max-width: 620px;
+}
+
+.cnc-priority-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  background: #141614;
+  color: #cfe3c8;
+  padding: 0.65rem 1.25rem;
+  border-radius: 999px;
+  border: 1px solid rgba(207, 227, 200, 0.35);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.15);
+}
+
+.priority-pulse-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #25D366;
+  box-shadow: 0 0 10px #25D366;
+  display: inline-block;
+  animation: pulsePriorityDot 1.8s infinite;
+}
+
+@keyframes pulsePriorityDot {
+  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+  70% { transform: scale(1.15); box-shadow: 0 0 0 8px rgba(37, 211, 102, 0); }
+  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+}
+
+.priority-badge-text {
+  font-size: 0.84rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  font-family: var(--font-heading);
+  text-transform: uppercase;
+}
+
+.materials-group-block {
+  background: #FFFFFF;
+  border: 1px solid #dbe5d8;
+  border-radius: 18px;
+  padding: 2.2rem 2.4rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 6px 20px rgba(29, 31, 29, 0.04);
+}
+
+.materials-group-block.engraving-only-block {
+  background: linear-gradient(135deg, #FFFFFF 0%, #f7f9f6 100%);
+  border: 1px solid #cfe3c8;
+  box-shadow: 0 8px 24px rgba(207, 227, 200, 0.2);
+}
+
+.materials-group-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.6rem;
+  padding-bottom: 1.2rem;
+  border-bottom: 1px solid #eef3ec;
+  flex-wrap: wrap;
+}
+
+.group-header-left {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  flex-wrap: wrap;
+}
+
+.materials-group-tag {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  padding: 0.3rem 0.7rem;
+  background: #edf1ea;
+  color: #353834;
+  border-radius: 6px;
+  font-family: var(--font-heading);
+}
+
+.materials-group-tag.specialty-tag {
+  background: #141614;
+  color: #cfe3c8;
+}
+
+.materials-group-title {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #1d1f1d;
+  margin: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-family: var(--font-heading);
+}
+
+.group-count-badge {
+  font-size: 0.74rem;
+  font-weight: 800;
+  background: #edf1ea;
+  color: #455244;
+  padding: 0.25rem 0.65rem;
+  border-radius: 999px;
+  border: 1px solid #dbe5d8;
+}
+
+.group-count-badge.gold {
+  background: #141614;
+  color: #cfe3c8;
+  border-color: rgba(207, 227, 200, 0.4);
+}
+
+.materials-group-note {
+  font-size: 0.85rem;
+  color: #60685f;
+  font-weight: 500;
+}
+
+.materials-chips-wrap {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  gap: 0.9rem;
+}
+
+.material-substrate-chip {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  background: #f7faf5;
+  border: 1px solid #dbe5d8;
+  border-radius: 12px;
+  padding: 0.75rem 0.95rem;
+  transition: all 0.25s ease;
+}
+
+.material-substrate-chip:hover {
+  background: #FFFFFF;
+  border-color: #cfe3c8;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(29, 31, 29, 0.08);
+}
+
+.material-substrate-chip.specialty-chip {
+  background: #fcfdfa;
+  border-color: #cfe3c8;
+}
+
+.material-substrate-chip.specialty-chip:hover {
+  background: #FFFFFF;
+  border-color: #25D366;
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.15);
+}
+
+.substrate-icon-box {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
   background: #FFFFFF;
   border: 1px solid #dbe5d8;
   display: flex;
   align-items: center;
   justify-content: center;
   color: #1d1f1d;
-  font-size: 0.88rem;
+  font-size: 0.95rem;
+  flex-shrink: 0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
 }
 
-.material-chip-name {
-  font-size: 0.86rem;
+.substrate-icon-box.specialty-box {
+  background: #141614;
+  color: #cfe3c8;
+  border-color: #141614;
+}
+
+.substrate-meta {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.substrate-name {
+  font-size: 0.92rem;
+  font-weight: 800;
   color: #1d1f1d;
+  font-family: var(--font-heading);
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.substrate-capability {
+  font-size: 0.68rem;
   font-weight: 700;
+  color: #556254;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  margin-top: 2px;
+}
+
+.substrate-capability.engraving-tag {
+  color: #2b7a3e;
+  font-weight: 800;
 }
 
 .turning-ideas-banner {
@@ -5557,21 +5742,23 @@ a, button, [role="button"], input[type="submit"], select {
   gap: 1.5rem;
   background: #FFFFFF;
   border: 1px solid #dbe5d8;
-  border-radius: 14px;
-  padding: 1.2rem 1.6rem;
+  border-radius: 16px;
+  padding: 1.4rem 2rem;
+  margin-top: 2.2rem;
+  box-shadow: 0 6px 20px rgba(29, 31, 29, 0.04);
 }
 
 .turning-ideas-title {
-  font-size: 1.05rem;
+  font-size: 1.15rem;
   font-weight: 800;
   color: #1d1f1d;
-  margin-bottom: 0.2rem;
+  margin-bottom: 0.25rem;
   font-family: var(--font-heading);
 }
 
 .turning-ideas-sub {
-  font-size: 0.8rem;
-  color: #353834;
+  font-size: 0.88rem;
+  color: #556254;
   margin: 0;
 }
 
@@ -6134,6 +6321,71 @@ a, button, [role="button"], input[type="submit"], select {
     justify-content: center;
   }
 
+  .materials-ticker-section {
+    padding: 3rem 0;
+  }
+
+  .materials-section-header {
+    margin-bottom: 1.8rem;
+  }
+
+  .materials-title-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .materials-section-title {
+    font-size: clamp(1.4rem, 5vw, 1.85rem);
+  }
+
+  .cnc-priority-badge {
+    padding: 0.5rem 1rem;
+    font-size: 0.78rem;
+  }
+
+  .materials-group-block {
+    padding: 1.5rem 1.25rem;
+    border-radius: 14px;
+    margin-bottom: 1.4rem;
+  }
+
+  .materials-group-header {
+    margin-bottom: 1.2rem;
+    padding-bottom: 0.85rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.4rem;
+  }
+
+  .materials-group-title {
+    font-size: 1.15rem;
+  }
+
+  .materials-chips-wrap {
+    grid-template-columns: repeat(auto-fill, minmax(145px, 1fr));
+    gap: 0.65rem;
+  }
+
+  .material-substrate-chip {
+    padding: 0.55rem 0.7rem;
+    gap: 0.65rem;
+  }
+
+  .substrate-icon-box {
+    width: 32px;
+    height: 32px;
+    font-size: 0.82rem;
+  }
+
+  .substrate-name {
+    font-size: 0.82rem;
+  }
+
+  .substrate-capability {
+    font-size: 0.62rem;
+  }
+
   /* Responsive Client Showcase & About Section (Clean & Uncongested) */
   .client-sub-desktop,
   .client-btn-text-desktop {
@@ -6452,6 +6704,34 @@ a, button, [role="button"], input[type="submit"], select {
 
   .stat-text {
     font-size: 0.66rem;
+  }
+
+  .materials-ticker-section {
+    padding: 2.2rem 0;
+  }
+
+  .materials-chips-wrap {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.55rem;
+  }
+
+  .material-substrate-chip {
+    padding: 0.5rem 0.6rem;
+    gap: 0.5rem;
+  }
+
+  .substrate-icon-box {
+    width: 28px;
+    height: 28px;
+    font-size: 0.75rem;
+  }
+
+  .substrate-name {
+    font-size: 0.76rem;
+  }
+
+  .substrate-capability {
+    font-size: 0.58rem;
   }
 }
 

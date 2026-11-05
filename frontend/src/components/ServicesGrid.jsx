@@ -4,24 +4,24 @@ export default function ServicesGrid({ onSelectService, onNavigateToServices }) 
   const services = [
     {
       id: 'cnc-engraving',
-      title: 'CNC 3D Routing & Milling',
-      desc: 'High-speed 3D relief carving, grooving and deep fluting on wood, acrylic, corian and WPC.',
+      title: 'CNC Cutting & 3D Routing',
+      desc: 'High-speed CNC sheet cutting, sizing and 3D routing for Wood, Acrylic, ACP, MDF, Plywood, WPC, PVC, Gypsum board, Foam board, and Forex sheet.',
       img: '/images/craft/laser_wood_plaque.jpg',
-      tag: 'WOOD • ACRYLIC • CORIAN'
+      tag: 'CNC CUTTING PRIORITY'
     },
     {
       id: 'laser-cutting',
       title: 'Fiber Laser Metal Cutting',
-      desc: 'Mirror-clean, burr-free slicing up to 12mm in brass, stainless steel and aluminum.',
+      desc: 'Precision laser slicing for Stainless Steel, GI sheet, and metals with mirror-clean, burr-free edge tolerances.',
       img: '/images/craft/hero_laser_sparks.jpg',
-      tag: 'BRASS • STEEL • ALUMINUM'
+      tag: 'STAINLESS STEEL • GI SHEET • METAL'
     },
     {
       id: 'laser-printing',
-      title: 'UV Flatbed Printing & Marking',
-      desc: 'Direct-to-substrate permanent color printing and raised tactile embossing on rigid surfaces.',
+      title: 'Precision Engraving (Glass & Mirror)',
+      desc: 'Specialty high-detail surface engraving for Glass and Mirror, plus deep relief surface engraving on Wood, Acrylic, and metals.',
       img: '/images/craft/laser_metal_ornate.jpg',
-      tag: 'UV PRINT • EMBOSSING'
+      tag: 'MIRROR & GLASS ENGRAVING'
     },
     {
       id: 'custom-projects',

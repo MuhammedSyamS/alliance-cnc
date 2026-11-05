@@ -36,10 +36,10 @@ export default function About({ onOpenAboutDetails, onNavigateToAbout }) {
               <div className="subtitle-line-red"></div>
             </div>
             <h2 className="about-main-heading">
-              Industrial CNC Machining & <span className="text-crimson">Precision Fabrication</span>
+              Industrial CNC Cutting & <span className="text-crimson">Precision Fabrication</span>
             </h2>
             <p className="about-main-desc">
-              Alliance is an industrial CNC machining and precision fabrication facility based in Nedumangad, Trivandrum. We specialize in heavy-duty 5-axis CNC routing, industrial fiber laser metal cutting, 3D wood relief carving, and high-tolerance sheet nesting across solid timber, brass, steel, and acrylic — with full turnkey support for custom architectural interior and exterior installations.
+              Alliance is an industrial CNC machining and fabrication facility based in Nedumangad, Trivandrum. CNC cutting is our primary priority — engineered for Wood, Acrylic, ACP, MDF, Plywood, WPC, PVC, Gypsum board, Stainless Steel, Metal, GI sheet, Foam board, and Forex sheet, along with dedicated engraving on Mirror and Glass.
             </p>
           </div>
 

@@ -5,33 +5,33 @@ export default function ServicesListNumbered({ onSelectService }) {
     {
       num: '01',
       id: 'cnc-engraving',
-      title: 'CNC Engraving',
-      desc: 'Detailed high-accuracy engravings on wood, acrylic, metal and more.',
-      points: ['Wood Engraving', 'Acrylic Engraving', 'Metal Engraving', 'Custom Designs'],
+      title: 'CNC Cutting (Priority #1)',
+      desc: 'High-precision CNC cutting, routing and sizing across all flat sheet and architectural substrates.',
+      points: ['Wood & Plywood Cutting', 'Acrylic & ACP Cutting', 'MDF, WPC & PVC Cutting', 'Gypsum, Foam Board & Forex'],
       img: '/images/craft/laser_wood_plaque.jpg'
     },
     {
       num: '02',
       id: 'laser-cutting',
-      title: 'Laser Cutting',
-      desc: 'Clean and precise cuts for various architectural and custom materials.',
-      points: ['Wood Cutting', 'Acrylic Cutting', 'Metal Cutting', 'MDF Cutting', 'Custom Shapes'],
+      title: 'Laser Metal Cutting',
+      desc: 'Clean, burr-free industrial cutting for Stainless Steel, GI sheet, and structural metals.',
+      points: ['Stainless Steel (SS 304/316)', 'GI Sheet Slicing', 'Metal Fabrication', 'Burr-Free Clean Edges'],
       img: '/images/craft/hero_laser_sparks.jpg'
     },
     {
       num: '03',
       id: 'laser-printing',
-      title: 'Laser Printing & Marking',
-      desc: 'Vibrant and permanent marking on wood, acrylic, metal and other surfaces.',
-      points: ['UV Printing', 'Laser Marking', 'Colour Printing', 'Custom Branding'],
+      title: 'Precision Engraving',
+      desc: 'Specialty surface etching for Glass and Mirror, alongside Wood, Acrylic, and metal engraving.',
+      points: ['Mirror Engraving Only', 'Glass Engraving Only', 'Wood & Acrylic 3D Engraving', 'Architectural Branding'],
       img: '/images/craft/laser_metal_ornate.jpg'
     },
     {
       num: '04',
       id: 'custom-projects',
-      title: 'Custom Projects',
-      desc: 'Personalized gifts, luxury retail fixtures, architectural signage and more.',
-      points: ['Corporate Gifts', 'Home Decor', 'Signage', 'Product Branding'],
+      title: 'Custom Architectural Projects',
+      desc: 'Bespoke commercial joinery, decorative jali screens, acoustic baffles, and turnkey installations.',
+      points: ['Jali Lattice Screens', 'Interior Fit-Outs', 'Exterior Facades', 'Architectural Signage'],
       img: '/images/craft/laser_tumbler_mug.jpg'
     }
   ];

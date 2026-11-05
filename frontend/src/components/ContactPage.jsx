@@ -270,12 +270,11 @@ export default function ContactPage({ onBackToHome }) {
                         onChange={(e) => setFormData({ ...formData, serviceType: e.target.value })}
                         style={{ cursor: 'pointer' }}
                       >
-                        <option value="CNC 3D Wood Routing">CNC 3D Wood Routing</option>
-                        <option value="Fiber Laser Metal Slicing">Fiber Laser Metal Slicing</option>
-                        <option value="UV Flatbed Printing">UV Flatbed Printing</option>
-                        <option value="Turnkey Interior Fit-Out">Turnkey Interior Fit-Out</option>
-                        <option value="Exterior Facade / Jali">Exterior Facade / Jali</option>
-                        <option value="Multiple / Turnkey Spatial">Multiple / Turnkey Spatial</option>
+                        <option value="CNC Cutting (Priority #1)">CNC Cutting (Priority #1)</option>
+                        <option value="Cutting & Engraving">Cutting & Engraving (Wood, Acrylic, ACP, Metal, etc.)</option>
+                        <option value="Fiber Laser Metal Cutting">Fiber Laser Metal Cutting (SS & GI Sheet)</option>
+                        <option value="Engraving Only (Mirror & Glass)">Engraving Only (Mirror & Glass)</option>
+                        <option value="Turnkey Interior & Exterior Execution">Turnkey Interior & Exterior Execution</option>
                       </select>
                     </div>
 
@@ -287,12 +286,21 @@ export default function ContactPage({ onBackToHome }) {
                         onChange={(e) => setFormData({ ...formData, materialPreference: e.target.value })}
                         style={{ cursor: 'pointer' }}
                       >
-                        <option value="Solid Hardwood & Teak">Solid Hardwood & Teak</option>
-                        <option value="Brass / Stainless Steel">Brass / Stainless Steel</option>
-                        <option value="Marine Ply / WPC (Waterproof)">Marine Ply / WPC (Waterproof)</option>
-                        <option value="Corian Solid Surface">Corian Solid Surface</option>
-                        <option value="Acrylic / Clear Sheet">Acrylic / Clear Sheet</option>
-                        <option value="ACP (Exterior Grade)">ACP (Exterior Grade)</option>
+                        <option value="Wood">Wood</option>
+                        <option value="Acrylic">Acrylic</option>
+                        <option value="ACP">ACP (Aluminium Composite Panel)</option>
+                        <option value="MDF">MDF</option>
+                        <option value="Plywood">Plywood</option>
+                        <option value="WPC">WPC</option>
+                        <option value="PVC">PVC</option>
+                        <option value="Gypsum board">Gypsum board</option>
+                        <option value="Stainless Steel">Stainless Steel</option>
+                        <option value="Metal">Metal</option>
+                        <option value="GI sheet">GI sheet</option>
+                        <option value="Foam board">Foam board</option>
+                        <option value="Forex sheet">Forex sheet</option>
+                        <option value="Mirror (Engraving Only)">Mirror (Engraving Only)</option>
+                        <option value="Glass (Engraving Only)">Glass (Engraving Only)</option>
                         <option value="Other / Need Recommendation">Other / Need Recommendation</option>
                       </select>
                     </div>

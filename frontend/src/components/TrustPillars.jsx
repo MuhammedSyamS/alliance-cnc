@@ -4,18 +4,18 @@ export default function TrustPillars() {
   const pillars = [
     {
       icon: 'fa-gears',
-      title: '5-Axis CNC Precision',
-      desc: 'High-speed 3D routing, milling & deep architectural fluting'
-    },
-    {
-      icon: 'fa-bolt',
-      title: 'Fiber Laser Slicing',
-      desc: 'Clean, burr-free sheet metal & brass cutting up to 12mm'
+      title: 'CNC Cutting (Priority #1)',
+      desc: 'Heavy-duty 2D/3D CNC sheet cutting, routing & precision sizing'
     },
     {
       icon: 'fa-layer-group',
-      title: 'Engineered Substrates',
-      desc: 'Hardwood, Brass, Stainless Steel, Acrylic, Corian & ACP'
+      title: 'Cutting & Engraving',
+      desc: 'Wood, Acrylic, ACP, MDF, Plywood, WPC, PVC, Metal, GI & Foam board'
+    },
+    {
+      icon: 'fa-gem',
+      title: 'Engraving Only',
+      desc: 'High-detail precision surface engraving for Mirror and Glass'
     },
     {
       icon: 'fa-pen-ruler',
