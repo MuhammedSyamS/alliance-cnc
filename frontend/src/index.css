@@ -3936,15 +3936,19 @@ a, button, [role="button"], input[type="submit"], select {
    -------------------------------------------------------------------------- */
 .minimal-hero {
   position: relative;
-  min-height: 100vh;
+  height: 100vh;
+  height: 100dvh;
+  max-height: 100vh;
+  max-height: 100dvh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   background: #141614;
   color: #f2f7f0;
   overflow: hidden;
-  padding-top: 130px;
-  padding-bottom: 2.5rem;
+  padding-top: clamp(75px, 11vh, 120px);
+  padding-bottom: clamp(0.75rem, 2vh, 1.6rem);
+  box-sizing: border-box;
 }
 
 .minimal-hero-bg {
@@ -3954,6 +3958,14 @@ a, button, [role="button"], input[type="submit"], select {
   height: 100%;
   overflow: hidden;
   z-index: 0;
+  transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.4s ease;
+  will-change: opacity;
+}
+
+.minimal-hero-bg.is-scrolled-hidden {
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
 }
 
 .minimal-hero-video {
@@ -3973,22 +3985,24 @@ a, button, [role="button"], input[type="submit"], select {
   justify-content: space-between;
   flex: 1;
   width: 100%;
+  height: 100%;
+  min-height: 0;
 }
 
 .minimal-hero-body {
   max-width: 860px;
   margin-top: auto;
   margin-bottom: auto;
-  padding: 3rem 0;
+  padding: 0;
 }
 
 .minimal-hero-title {
-  font-size: clamp(1.95rem, 5.4vw, 4.6rem);
+  font-size: clamp(1.75rem, 4.4vw, 4.2rem);
   font-weight: 800;
   line-height: 1.08;
   letter-spacing: -0.025em;
   color: #f5f9f3;
-  margin-bottom: 1.8rem;
+  margin-bottom: clamp(0.6rem, 1.8vh, 1.4rem);
   font-family: var(--font-heading);
   text-shadow: 0 4px 24px rgba(0, 0, 0, 0.75);
 }
@@ -3999,11 +4013,11 @@ a, button, [role="button"], input[type="submit"], select {
 }
 
 .minimal-hero-lead {
-  font-size: clamp(0.95rem, 2vw, 1.2rem);
-  line-height: 1.65;
+  font-size: clamp(0.88rem, 1.8vw, 1.15rem);
+  line-height: 1.55;
   color: #e2ede0;
   max-width: 660px;
-  margin-bottom: 2.8rem;
+  margin-bottom: clamp(0.9rem, 2.2vh, 2.2rem);
   font-weight: 400;
   text-shadow: 0 2px 14px rgba(0, 0, 0, 0.85);
 }
@@ -4103,8 +4117,9 @@ a, button, [role="button"], input[type="submit"], select {
   width: 100%;
   overflow: hidden;
   border-top: 1px solid rgba(207, 227, 200, 0.14);
-  margin-top: 2rem;
-  padding-top: 1.8rem;
+  margin-top: auto;
+  padding-top: clamp(0.6rem, 1.6vh, 1.25rem);
+  flex-shrink: 0;
 }
 
 .minimal-hero-baseline {
@@ -5980,8 +5995,12 @@ a, button, [role="button"], input[type="submit"], select {
   }
 
   .minimal-hero {
-    padding-top: 110px;
-    padding-bottom: 2rem;
+    height: 100vh;
+    height: 100dvh;
+    max-height: 100vh;
+    max-height: 100dvh;
+    padding-top: clamp(68px, 11vh, 90px);
+    padding-bottom: clamp(0.5rem, 1.6vh, 1rem);
   }
 
   .minimal-hero-video {
@@ -5991,7 +6010,9 @@ a, button, [role="button"], input[type="submit"], select {
   }
 
   .minimal-hero-body {
-    padding: 2rem 0;
+    padding: 0;
+    margin-top: auto;
+    margin-bottom: auto;
   }
 
   .hero-lead-desktop {
@@ -6006,7 +6027,7 @@ a, button, [role="button"], input[type="submit"], select {
   }
 
   .minimal-hero-lead {
-    margin-bottom: 1.5rem !important;
+    margin-bottom: clamp(0.8rem, 1.8vh, 1.25rem) !important;
     max-width: 100%;
   }
 
@@ -6015,8 +6036,8 @@ a, button, [role="button"], input[type="submit"], select {
     width: 100%;
     overflow: hidden;
     position: relative;
-    padding: 1.1rem 0;
-    margin-top: 1.5rem;
+    padding: clamp(0.5rem, 1.4vh, 0.85rem) 0;
+    margin-top: auto;
     border-top: 1px solid rgba(207, 227, 200, 0.14);
     -webkit-mask-image: linear-gradient(to right, transparent, black 4%, black 96%, transparent);
     mask-image: linear-gradient(to right, transparent, black 4%, black 96%, transparent);

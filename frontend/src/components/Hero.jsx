@@ -1,6 +1,36 @@
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 export default function Hero({ onNavigate }) {
+  const [isScrolledDown, setIsScrolledDown] = useState(false);
+  const videoRef = useRef(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      // Hide video once the user scrolls down past the initial screen threshold
+      const scrolled = window.scrollY > 40;
+      setIsScrolledDown(scrolled);
+      if (videoRef.current) {
+        if (scrolled) {
+          if (!videoRef.current.paused) {
+            videoRef.current.pause();
+          }
+        } else {
+          if (videoRef.current.paused) {
+            videoRef.current.play().catch(() => {});
+          }
+        }
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    // Run once on initial render
+    handleScroll();
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   const baselineSpecs = [
     { tag: 'MACHINING & CUTTING', detail: '5-Axis CNC & Fiber Laser' },
     { tag: 'SUBSTRATES', detail: 'Wood • Metal • Acrylic • Corian' },
@@ -10,9 +40,10 @@ export default function Hero({ onNavigate }) {
 
   return (
     <section className="minimal-hero" id="hero">
-      {/* Cinematic Machine & Craft Video Backdrop */}
-      <div className="minimal-hero-bg">
+      {/* Cinematic Machine & Craft Video Backdrop (Shown ONLY on 1st screen, fades & pauses when scrolled down) */}
+      <div className={`minimal-hero-bg ${isScrolledDown ? 'is-scrolled-hidden' : ''}`}>
         <video
+          ref={videoRef}
           autoPlay
           loop
           muted
