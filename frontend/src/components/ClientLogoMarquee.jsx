@@ -20,7 +20,12 @@ export default function ClientLogoMarquee({ onNavigateToTestimonials }) {
             Trusted by <span className="text-crimson">Industry Leaders</span> & Global Brands
           </h2>
           <p className="client-marquee-sub">
-            From international sportswear flagships and French luxury boutiques to commercial wellness centers and corporate headquarters across India and the GCC.
+            <span className="client-sub-desktop">
+              From international sportswear flagships and French luxury boutiques to commercial wellness centers and corporate headquarters across India and the GCC.
+            </span>
+            <span className="client-sub-mobile">
+              Trusted by commercial retail flagships, luxury boutiques, and architectural brands across India and the GCC.
+            </span>
           </p>
           
           <div className="client-marquee-actions">
@@ -28,7 +33,8 @@ export default function ClientLogoMarquee({ onNavigateToTestimonials }) {
               className="btn btn-pill-sage client-view-all-btn"
               onClick={onNavigateToTestimonials}
             >
-              <span>View All 20+ Client Stories & Testimonials</span>
+              <span className="client-btn-text-desktop">View All 20+ Client Stories & Testimonials</span>
+              <span className="client-btn-text-mobile">View Client Stories</span>
               <span className="arrow-icon">➔</span>
             </button>
           </div>
