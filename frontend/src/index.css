@@ -528,14 +528,16 @@ i.text-crimson {
   background-color: var(--crimson-primary);
 }
 
-/* Mobile Drawer Backdrop */
-.nav-backdrop {
+/* Mobile Drawer Backdrop - Crisp, Zero Blur */
+.nav-backdrop,
+.craft-backdrop {
   position: fixed;
   inset: 0;
   background: rgba(0, 0, 0, 0.65);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-  z-index: 998;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  filter: none !important;
+  z-index: 1000;
   animation: fadeInBackdrop 0.25s ease forwards;
 }
 
@@ -3612,9 +3614,10 @@ a, button, [role="button"], input[type="submit"], select {
   left: 0;
   width: 100%;
   z-index: 1000;
-  background: rgba(26, 29, 26, 0.94);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  background: #151815;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  filter: none !important;
   border-bottom: 1px solid rgba(207, 227, 200, 0.12);
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   height: 74px;
@@ -3623,10 +3626,20 @@ a, button, [role="button"], input[type="submit"], select {
 }
 
 .craft-header.scrolled {
-  background: rgba(18, 20, 18, 0.98);
+  background: #111311;
   height: 68px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.55);
   border-bottom-color: rgba(207, 227, 200, 0.2);
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  filter: none !important;
+}
+
+.craft-header.mobile-menu-open {
+  background: #141614 !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  filter: none !important;
 }
 
 .craft-header-container {
@@ -3730,7 +3743,7 @@ a, button, [role="button"], input[type="submit"], select {
 
 .craft-brand-logo:hover .brand-main-name {
   color: #cfe3c8;
-  text-shadow: 0 0 10px rgba(207, 227, 200, 0.45);
+  text-shadow: none !important;
 }
 
 .drawer-logo-wrap {
@@ -3821,13 +3834,13 @@ a, button, [role="button"], input[type="submit"], select {
 
 .craft-nav-link:hover {
   color: #cfe3c8;
-  text-shadow: 0 0 10px rgba(207, 227, 200, 0.4);
+  text-shadow: none !important;
 }
 
 .craft-nav-link.active {
   color: #cfe3c8;
   font-weight: 800;
-  text-shadow: 0 0 12px rgba(207, 227, 200, 0.5);
+  text-shadow: none !important;
 }
 
 .craft-nav-link::after {
@@ -5766,6 +5779,7 @@ a, button, [role="button"], input[type="submit"], select {
     box-shadow: -10px 0 35px rgba(0, 0, 0, 0.7);
     backdrop-filter: none !important;
     -webkit-backdrop-filter: none !important;
+    filter: none !important;
   }
 
   .craft-nav-menu.mobile-active {
@@ -5830,6 +5844,8 @@ a, button, [role="button"], input[type="submit"], select {
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    text-shadow: none !important;
+    filter: none !important;
   }
 
   .craft-nav-link.active {
@@ -5837,6 +5853,8 @@ a, button, [role="button"], input[type="submit"], select {
     color: #cfe3c8;
     box-shadow: none;
     font-weight: 700;
+    text-shadow: none !important;
+    filter: none !important;
   }
 
   .mobile-drawer-actions {
@@ -5870,6 +5888,7 @@ a, button, [role="button"], input[type="submit"], select {
     background: rgba(0, 0, 0, 0.65);
     backdrop-filter: none !important;
     -webkit-backdrop-filter: none !important;
+    filter: none !important;
     z-index: 1000;
   }
 

@@ -81,7 +81,7 @@ export default function Header({
 
   return (
     <>
-      <header className={`craft-header ${scrolled ? 'scrolled' : ''}`} id="header">
+      <header className={`craft-header ${scrolled ? 'scrolled' : ''} ${mobileOpen ? 'mobile-menu-open' : ''}`} id="header">
         <div className="container craft-header-container">
           
           {/* Brand Logo: Logo on top, ALLIANCE directly underneath */}
