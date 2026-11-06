@@ -6422,9 +6422,15 @@ a, button, [role="button"], input[type="submit"], select {
     margin-right: auto;
   }
 
+  .client-marquee-bottom-actions {
+    margin-top: 0.35rem;
+    margin-bottom: 1.6rem;
+  }
+
   .client-view-all-btn {
-    padding: 0.65rem 1.4rem;
-    font-size: 0.82rem;
+    padding: 0.55rem 1.2rem;
+    font-size: 0.76rem;
+    gap: 0.5rem;
     letter-spacing: 0.03em;
   }
 
@@ -6612,11 +6618,17 @@ a, button, [role="button"], input[type="submit"], select {
     margin-bottom: 1rem;
   }
 
+  .client-marquee-bottom-actions {
+    margin-top: 0.2rem;
+    margin-bottom: 1.25rem;
+  }
+
   .client-view-all-btn {
     width: auto;
     max-width: 100%;
-    padding: 0.6rem 1.25rem;
-    font-size: 0.76rem;
+    padding: 0.45rem 1rem;
+    font-size: 0.72rem;
+    gap: 0.45rem;
     justify-content: center;
   }
 
@@ -6804,6 +6816,11 @@ a, button, [role="button"], input[type="submit"], select {
     font-size: 0.76rem;
   }
 
+  .client-view-all-btn {
+    padding: 0.4rem 0.85rem;
+    font-size: 0.68rem;
+  }
+
   .stat-number {
     font-size: 1.15rem;
   }
@@ -6874,27 +6891,30 @@ a, button, [role="button"], input[type="submit"], select {
   display: none;
 }
 
-.client-marquee-actions {
+.client-marquee-bottom-actions {
   display: flex;
   justify-content: center;
+  align-items: center;
+  margin-top: 0.5rem;
+  margin-bottom: 2.2rem;
 }
 
 .client-view-all-btn {
   display: inline-flex;
   align-items: center;
-  gap: 0.75rem;
-  padding: 0.85rem 1.8rem;
-  font-size: 0.95rem;
+  gap: 0.6rem;
+  padding: 0.65rem 1.45rem;
+  font-size: 0.82rem;
   cursor: pointer;
   background: #cfe3c8;
   border: 1px solid #cfe3c8;
   border-radius: 999px;
   color: #1d1f1d;
-  font-weight: 800;
+  font-weight: 700;
   font-family: var(--font-heading);
   text-transform: uppercase;
   letter-spacing: 0.04em;
-  box-shadow: 0 4px 18px rgba(207, 227, 200, 0.3);
+  box-shadow: 0 4px 14px rgba(207, 227, 200, 0.25);
   transition: all 0.25s ease;
 }
 
@@ -6902,7 +6922,7 @@ a, button, [role="button"], input[type="submit"], select {
   background: #e4f3e1;
   border-color: #e4f3e1;
   transform: translateY(-2px);
-  box-shadow: 0 8px 26px rgba(207, 227, 200, 0.45);
+  box-shadow: 0 6px 22px rgba(207, 227, 200, 0.4);
 }
 
 /* Infinite Marquee Outer */

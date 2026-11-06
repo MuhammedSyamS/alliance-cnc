@@ -27,17 +27,6 @@ export default function ClientLogoMarquee({ onNavigateToTestimonials }) {
               Trusted by commercial retail flagships, luxury boutiques, and architectural brands across India and the GCC.
             </span>
           </p>
-          
-          <div className="client-marquee-actions">
-            <button 
-              className="btn btn-pill-sage client-view-all-btn"
-              onClick={onNavigateToTestimonials}
-            >
-              <span className="client-btn-text-desktop">View All 20+ Client Stories & Testimonials</span>
-              <span className="client-btn-text-mobile">View Client Stories</span>
-              <span className="arrow-icon">➔</span>
-            </button>
-          </div>
         </div>
 
       </div>
@@ -97,8 +86,21 @@ export default function ClientLogoMarquee({ onNavigateToTestimonials }) {
         </div>
       </div>
 
-      {/* Bottom Proof Strip */}
+      {/* Action Button Under Scrolling Tracks & Proof Strip */}
       <div className="container">
+        <div className="client-marquee-bottom-actions">
+          <button 
+            className="btn btn-pill-sage client-view-all-btn"
+            onClick={onNavigateToTestimonials}
+            aria-label="View all client stories and testimonials"
+          >
+            <span className="client-btn-text-desktop">View All 20+ Client Stories & Testimonials</span>
+            <span className="client-btn-text-mobile">View Client Stories</span>
+            <span className="arrow-icon">➔</span>
+          </button>
+        </div>
+
+        {/* Bottom Proof Strip */}
         <div className="client-proof-strip">
           <div className="proof-item">
             <i className="fa-solid fa-shield-halved text-crimson"></i>
